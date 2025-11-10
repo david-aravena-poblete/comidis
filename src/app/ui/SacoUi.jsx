@@ -1,6 +1,7 @@
-export const SacoUi = ({product}) => {
+export const SacoUi = ({product, children}) => {
     // Define tus estilos como un objeto de JavaScript
     const cardStyle = {
+        width:"100%",
         border: "1px solid #ddd",
         padding: "16px",
         margin: "0",
@@ -8,6 +9,8 @@ export const SacoUi = ({product}) => {
         boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
         backgroundColor: "#f9f9f9",
         fontFamily: "sans-serif",
+        display:"flex",
+        justifyContent:"space-between"
     };
 
     const paragraphStyle = {
@@ -20,18 +23,19 @@ export const SacoUi = ({product}) => {
         fontWeight: "bold"
     }
 
-    const priceStyle = {
-        fontWeight: "bold",
-        color: "#0070f3",
-        fontSize: "1.2rem",
-        marginTop: "12px"
-    };
+   
 
     return(
         <div style={cardStyle}>
-            <p style={paragraphStyle}><span style={labelStyle}>Nombre:</span> {product.nombre}</p>
-            <p style={paragraphStyle}><span style={labelStyle}>Peso:</span> {product.peso}</p>
-            <p style={priceStyle}><span style={labelStyle}>Precio:</span> ${product.precioPublico}</p>
+            <div>
+                <p style={paragraphStyle}><span style={labelStyle}>Nombre:</span> {product.nombre}</p>
+                <p style={paragraphStyle}><span style={labelStyle}>Peso:</span> {product.peso}</p>
+                {children[0]}
+            </div>
+            <div>
+                {children[1]}
+            </div>
+
         </div>
     )
 }
