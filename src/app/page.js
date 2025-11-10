@@ -1,66 +1,65 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+'use client'
+import {useState} from "react"
+import ListProducts from "./components/listProducts/"
+import FormSearchProducts from "./components/formSearchProducts/"
+import ListSelectedProducts from "./components/listSelectedProducts"
+import {SacoUi} from "./ui/SacoUi"
 
 export default function Home() {
+
+  const [products, setProducts] = useState([
+    {nombre: "whiskas", peso: 10, precioPublico: 1000 },
+    {nombre: "pedigree", peso: 15, precioPublico: 1200 },
+    {nombre: "dog chow", peso: 20, precioPublico: 1500 }
+  ]);
+
+  const [selectedProducts, setSelectedProducts] = useState([]);
+
+  console.log(selectedProducts)
+
+  const handleQuantityChange = (product, newQuantity) => {
+    const quantity = Math.max(0, newQuantity);
+    setSelectedProducts(prevSelected => {
+        const existingProductIndex = prevSelected.findIndex(
+            item => item.product.nombre === product.nombre
+        );
+
+        if (existingProductIndex > -1) {
+            const updatedSelected = [...prevSelected];
+            updatedSelected[existingProductIndex] = { ...updatedSelected[existingProductIndex], quantity };
+            return updatedSelected.filter(item => item.quantity > 0); // Opcional: remover si la cantidad es 0
+        } else if (quantity > 0) {
+            return [...prevSelected, { product, quantity }];
+        }
+        return prevSelected;
+    });
+  };
+
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.js file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+    <div style={{
+      width:"100vw",
+      minHeight:"100vh",
+      display:"flex",
+      flexDirection:"column",
+      padding:"1rem"
+    }}>
+      <div style={{flexGrow:1, overflowY:"auto", padding: "0 1rem"}}>
+           <h1>Productos Disponibles</h1>
+           <ListProducts 
+            products={products} 
+            Card={SacoUi} 
+            onQuantityChange={handleQuantityChange} 
+            selectedProducts={selectedProducts}
+           />
+           <ListSelectedProducts 
+            selectedProducts={selectedProducts} 
+            Card={SacoUi} 
+            onQuantityChange={handleQuantityChange}
+           />
+      </div>
+      <div style={{padding:"1rem"}}>
+       <FormSearchProducts />
+      </div>
     </div>
   );
 }
