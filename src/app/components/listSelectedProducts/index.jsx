@@ -1,7 +1,7 @@
 import ButtonSumRest from "./components/buttonSumRest";
 import PriceSelector from "../priceSelector";
 
-const ListSelectedProducts = ({ selectedProducts, Card, onQuantityChange, onPriceChange, selectedPrices }) => {
+const ListSelectedProducts = ({ selectedProducts, Card, onQuantityChange, onPriceChange, onRemoveProduct }) => {
     const listContainerStyle = {
       display: 'flex',
       flexDirection: 'column',
@@ -43,16 +43,29 @@ const ListSelectedProducts = ({ selectedProducts, Card, onQuantityChange, onPric
         color: '#0070f3'
     };
 
+    const removeButtonStyle = {
+        backgroundColor: '#ff4d4f',
+        color: 'white',
+        border: 'none',
+        borderRadius: '5px',
+        padding: '5px 10px',
+        cursor: 'pointer',
+        fontSize: '0.8rem',
+        marginTop: '0.5rem'
+    };
+
     const selectedProductArray = selectedProducts.filter(p => p.quantity > 0);
 
     const totalPrice = selectedProductArray.reduce((total, { product, quantity }) => {
-        const price = product[selectedPrices[product.nombre] || 'precioPublico'];
+        const price = product.selectedPrice ? product.selectedPrice.price : product.precioPublico;
         return total + (price * quantity);
     }, 0);
 
     if (selectedProductArray.length === 0) {
         return null; // No mostrar nada si no hay productos seleccionados
     }
+
+    console.log(selectedProducts)
 
     return (
             <div>
@@ -62,16 +75,16 @@ const ListSelectedProducts = ({ selectedProducts, Card, onQuantityChange, onPric
                 </div>
                 <div style={listContainerStyle}>
                     {selectedProductArray.map(({ product, quantity }) => {
-                        const price = product[selectedPrices[product.nombre] || 'precioPublico'];
+                        const price = product.selectedPrice ? product.selectedPrice.price : product.precioPublico;
                         const subtotal = price * quantity;
 
                         return (
-                        <div key={product.nombre} style={productItemStyle}>
+                        <div key={product.id} style={productItemStyle}>
                             <div style={{flexGrow: 1}}>
                                 <Card product={product}>
                                     <PriceSelector
                                         product={product}
-                                        selectedPrice={selectedPrices[product.nombre] || 'precioPublico'}
+                                        selectedPrice={product.selectedPrice || { type: 'precioPublico', price: product.precioPublico }}
                                         onPriceChange={onPriceChange}
                                     />
                                     <div style={{textAlign: 'right', display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
@@ -83,6 +96,9 @@ const ListSelectedProducts = ({ selectedProducts, Card, onQuantityChange, onPric
                                         <p style={totalProductStyle}>
                                             Subtotal: ${subtotal.toFixed(2)}
                                         </p>
+                                        <button onClick={() => onRemoveProduct(product)} style={removeButtonStyle}>
+                                            Quitar
+                                        </button>
                                     </div>
                                 </Card>
                             </div>
@@ -96,4 +112,4 @@ const ListSelectedProducts = ({ selectedProducts, Card, onQuantityChange, onPric
         );
     };
 
-    export default ListSelectedProducts;
+export default ListSelectedProducts;

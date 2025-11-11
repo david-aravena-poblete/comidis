@@ -7,15 +7,9 @@ import {SacoUi} from "./ui/SacoUi"
 
 export default function Home() {
 
-  const [products, setProducts] = useState([
-    {nombre: "whiskas", peso: 10, precioPublico: 1000, precioComerciante: 900, preciox5sacos: 850, preciox10sacos: 800, preciox15sacos: 750 },
-    {nombre: "pedigree", peso: 15, precioPublico: 1200, precioComerciante: 1100, preciox5sacos: 1050, preciox10sacos: 1000, preciox15sacos: 950 },
-    {nombre: "dog chow", peso: 20, precioPublico: 1500, precioComerciante: 1400, preciox5sacos: 1350, preciox10sacos: 1300, preciox15sacos: 1250 }
-  ]);
-
+  const [products, setProducts] = useState(null);
   const [selectedProducts, setSelectedProducts] = useState([]);
   const [isListSelectedVisible, setIsListSelectedVisible] = useState(false);
-  const [selectedPrices, setSelectedPrices] = useState({});
 
   const handleQuantityChange = (product, newQuantity) => {
     const quantity = Math.max(0, newQuantity);
@@ -34,18 +28,44 @@ export default function Home() {
                 newSelected.splice(existingProductIndex, 1);
             }
         } else if (quantity > 0) {
-            newSelected.push({ product, quantity });
+            const initialPriceType = 'precioPublico';
+            const initialPriceValue = product[initialPriceType];
+            newSelected.push({ 
+                product: { 
+                    ...product, 
+                    selectedPrice: { 
+                        type: initialPriceType, 
+                        price: initialPriceValue 
+                    } 
+                }, 
+                quantity 
+            });
         }
 
         return newSelected;
     });
   };
 
-  const handlePriceChange = (productName, newPrice) => {
-    setSelectedPrices(prevPrices => ({
-        ...prevPrices,
-        [productName]: newPrice
-    }));
+  const handlePriceChange = (productName, newPriceObject) => {
+    setSelectedProducts(prevSelected =>
+      prevSelected.map(item =>
+        item.product.nombre === productName
+          ? {
+              ...item,
+              product: {
+                ...item.product,
+                selectedPrice: newPriceObject,
+              },
+            }
+          : item
+      )
+    );
+  };
+
+  const handleRemoveProduct = (productToRemove) => {
+    if (window.confirm(`¿Estás seguro de que quieres quitar ${productToRemove.nombre} de la lista?`)) {
+      handleQuantityChange(productToRemove, 0);
+    }
   };
 
   const buttonStyle = {
@@ -76,7 +96,7 @@ export default function Home() {
                  Card={SacoUi} 
                  onQuantityChange={handleQuantityChange}
                  onPriceChange={handlePriceChange}
-                 selectedPrices={selectedPrices}
+                 onRemoveProduct={handleRemoveProduct}
                 />
              </>
            ) : (
@@ -97,7 +117,7 @@ export default function Home() {
            )}
       </div>
       <div style={{padding:"1rem"}}>
-       <FormSearchProducts />
+       <FormSearchProducts onSearchResults={setProducts} />
       </div>
     </div>
   );

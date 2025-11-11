@@ -18,11 +18,17 @@ const PriceSelector = ({ product, selectedPrice, onPriceChange }) => {
     minWidth: '200px',
   };
 
+  const handleChange = (e) => {
+    const priceType = e.target.value;
+    const priceValue = product[priceType];
+    onPriceChange(product.nombre, { type: priceType, price: priceValue });
+  };
+
   return (
     <select
       style={selectStyle}
-      value={selectedPrice}
-      onChange={(e) => onPriceChange(product.nombre, e.target.value)}
+      value={selectedPrice.type}
+      onChange={handleChange}
     >
       {priceOptions.map((option) => (
         <option key={option.value} value={option.value}>

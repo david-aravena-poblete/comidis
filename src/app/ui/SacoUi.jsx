@@ -26,7 +26,7 @@ export const SacoUi = ({product, children}) => {
    
 
     return(
-        <div style={cardStyle}>
+        <div style={cardStyle} key={product.id}>
             <div>
                 <p style={paragraphStyle}><span style={labelStyle}>Nombre:</span> {product.nombre}</p>
                 <p style={paragraphStyle}><span style={labelStyle}>Peso:</span> {product.peso}</p>

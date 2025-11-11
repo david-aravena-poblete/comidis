@@ -24,10 +24,16 @@ const ListProducts = ({products, Card, onQuantityChange, selectedProducts}) => {
     fontWeight: "bold"
   }
 
+  if (products?.length === 0){
+     return(
+      <h2> No se encontraron productos que coincidan </h2>
+    )
+  }
+
     return(
       <div style={listContainerStyle}>
         {products?.map((product) => (
-          <div key={product.nombre} style={productItemStyle}>
+          <div key={product.id} style={productItemStyle}>
             <div style={{flexGrow: 1}}>
               <Card product={product}>
                 <p style={priceStyle}><span style={labelStyle}>Precio:</span> ${product.precioPublico}</p>
