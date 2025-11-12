@@ -1,7 +1,7 @@
 import ButtonSumRest from "./components/buttonSumRest";
 import PriceSelector from "../priceSelector";
 
-const ListSelectedProducts = ({ selectedProducts, Card, onQuantityChange, onPriceChange, onRemoveProduct }) => {
+const ListSelectedProducts = ({ selectedProducts, Card, onQuantityChange, onPriceChange, onRemoveProduct, handlerCrearPedido }) => {
     const listContainerStyle = {
       display: 'flex',
       flexDirection: 'column',
@@ -65,13 +65,13 @@ const ListSelectedProducts = ({ selectedProducts, Card, onQuantityChange, onPric
         return null; // No mostrar nada si no hay productos seleccionados
     }
 
-    console.log(selectedProducts)
+    
 
     return (
             <div>
                 <div style={{display:"flex", justifyContent:"space-between"}}>
                     <h2>Productos Seleccionados</h2>
-                    <button style={buttonStyle}>Crear pedido</button>
+                    <button style={buttonStyle} onClick={handlerCrearPedido}>Crear pedido</button>
                 </div>
                 <div style={listContainerStyle}>
                     {selectedProductArray.map(({ product, quantity }) => {

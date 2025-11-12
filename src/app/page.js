@@ -3,6 +3,7 @@ import {useState} from "react"
 import ListProducts from "./components/listProducts/"
 import FormSearchProducts from "./components/formSearchProducts/"
 import ListSelectedProducts from "./components/listSelectedProducts"
+import {getNewPedido} from './utils/'
 import {SacoUi} from "./ui/SacoUi"
 
 export default function Home() {
@@ -68,6 +69,14 @@ export default function Home() {
     }
   };
 
+  const handlerCrearPedido = async () => {
+    const response = prompt("¿Para quién es este pedido?");
+    if (response) {
+      const result = await getNewPedido(selectedProducts, response)
+      console.log(result)
+    }
+  }
+
   const buttonStyle = {
       backgroundColor: '#0070f3',
       color: 'white',
@@ -97,6 +106,7 @@ export default function Home() {
                  onQuantityChange={handleQuantityChange}
                  onPriceChange={handlePriceChange}
                  onRemoveProduct={handleRemoveProduct}
+                 handlerCrearPedido={handlerCrearPedido}
                 />
              </>
            ) : (
