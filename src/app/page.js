@@ -5,12 +5,14 @@ import FormSearchProducts from "./components/formSearchProducts/"
 import ListSelectedProducts from "./components/listSelectedProducts"
 import {getNewPedido} from './utils/'
 import {SacoUi} from "./ui/SacoUi"
+import LoadingSpinner from "./components/loading"
 
 export default function Home() {
 
   const [products, setProducts] = useState(null);
   const [selectedProducts, setSelectedProducts] = useState([]);
   const [isListSelectedVisible, setIsListSelectedVisible] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleQuantityChange = (product, newQuantity) => {
     const quantity = Math.max(0, newQuantity);
@@ -117,17 +119,21 @@ export default function Home() {
                     Ver Seleccionados ({selectedProducts.reduce((acc, item) => acc + item.quantity, 0)})
                  </button>
                </div>
-               <ListProducts 
-                products={products} 
-                Card={SacoUi} 
-                onQuantityChange={handleQuantityChange} 
-                selectedProducts={selectedProducts}
-               />
+                {isLoading ? (
+                    <div style={{display:"flex", justifyContent:"center", alignItems:"center", height:"50vh"}}><LoadingSpinner /></div>
+                ) : (
+                    <ListProducts 
+                        products={products} 
+                        Card={SacoUi} 
+                        onQuantityChange={handleQuantityChange} 
+                        selectedProducts={selectedProducts}
+                    />
+                )}
              </>
            )}
       </div>
       <div style={{padding:"1rem"}}>
-       <FormSearchProducts onSearchResults={setProducts} />
+       <FormSearchProducts onSearchResults={setProducts} setIsLoading={setIsLoading} />
       </div>
     </div>
   );

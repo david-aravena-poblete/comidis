@@ -1,6 +1,6 @@
 import { getQueryUser } from './utils/';
 
-const FormSearchProducts = ({ onSearchResults }) => {
+const FormSearchProducts = ({ onSearchResults, setIsLoading }) => {
 
   const handleSubmitFormSearchProducts = async (e) => {
     e.preventDefault();
@@ -10,15 +10,19 @@ const FormSearchProducts = ({ onSearchResults }) => {
       return;
     }
 
+    setIsLoading(true);
     console.log(`Buscando en 'initialsNames' el valor: ${searchTerm}`);
     
-    // Corregido: Usamos el campo correcto 'initialsNames' que vi en la imagen.
-    const results = await getQueryUser(searchTerm);
-    
-    console.log('Resultados encontrados:', results);
-
-    // Pasamos los resultados al componente padre (page.js)
-    onSearchResults(results);
+    try {
+      const results = await getQueryUser(searchTerm);
+      console.log('Resultados encontrados:', results);
+      onSearchResults(results);
+    } catch (error) {
+      console.error('Error al buscar productos:', error);
+      onSearchResults([]); // Limpiar resultados en caso de error
+    } finally {
+      setIsLoading(false);
+    }
   }
 
   const handleReset = (e) => {
