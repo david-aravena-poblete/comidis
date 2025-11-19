@@ -431,3 +431,214 @@ Import traces:
 [01:36:58.938] Server  LOG      ✓ Compiled in 348ms
 [01:37:17.068] Server  LOG      ✓ Compiled in 127ms
 [01:37:42.324] Server  LOG      ○ Compiling /documentos ...
+[01:39:16.006] Server  LOG     Firebase App Initialized Successfully
+[01:39:22.329] Browser LOG     Firebase App Initialized Successfully
+[01:40:10.099] Server  LOG      ✓ Compiled in 205ms
+[01:40:10.719] Browser ERROR   ./src/app/documentos/page.jsx:22:108
+Parsing ecmascript source code failed
+  20 |
+  21 |     return (
+> 22 |         <div style={{ fontFamily: 'Arial, sans-serif', padding: '20px', backgroundColor: '#f0f2f5', width: }}>
+     |                                                                                                            ^
+  23 |             <h1 style={{ color: '#333', borderBottom: '2px solid #ccc', paddingBottom: '10px', marginBottom: '20px' }}>Lista de Pedidos</h1>
+  24 |             {pedidos.length === 0 ? (
+  25 |                 <p style={{ textAlign: 'center', color: '#666' }}>No hay pedidos para mostrar.</p>
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./src/app/documentos/page.jsx [Client Component Browser]
+    ./src/app/documentos/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/documentos/page.jsx [Client Component SSR]
+    ./src/app/documentos/page.jsx [Server Component]
+[01:40:18.222] Server  LOG      ✓ Compiled in 201ms
+[01:40:23.692] Server  LOG     Firebase App Initialized Successfully
+[01:40:28.374] Browser LOG     Firebase App Initialized Successfully
+[01:41:12.082] Server  LOG      ✓ Compiled in 106ms
+[01:41:12.700] Browser ERROR   ./src/app/documentos/page.jsx:27:37
+Parsing ecmascript source code failed
+  25 |                 <p style={{ textAlign: 'center', color: '#666' }}>No hay pedidos para mostrar.</p>
+  26 |             ) : (
+> 27 |                 <div style={{ width:"100%display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(400px, 1fr))', gap: '20px' }}>
+     |                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  28 |                     {pedidos.map((pedido) => {
+  29 |                         const totalPedido = (pedido.products || []).reduce((acc, item) => acc + (item.quantity * item.product.selectedPrice.price), 0);
+  30 |
+
+Unterminated string constant
+
+Import traces:
+  Client Component Browser:
+    ./src/app/documentos/page.jsx [Client Component Browser]
+    ./src/app/documentos/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/documentos/page.jsx [Client Component SSR]
+    ./src/app/documentos/page.jsx [Server Component]
+[01:41:19.576] Server  LOG      ✓ Compiled in 159ms
+[01:41:25.058] Server  LOG     Firebase App Initialized Successfully
+[01:41:28.679] Browser LOG     Firebase App Initialized Successfully
+[01:42:27.381] Server  LOG      ✓ Compiled in 136ms
+[01:42:28.734] Browser ERROR   ./src/app/documentos/page.jsx:32:65
+Parsing ecmascript source code failed
+  30 |
+  31 |                         return (
+> 32 |                             <div key={pedido.id} style={{ width:"background: '#fff', padding: '20px', borderRadius: '8px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)' }}>
+     |                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  33 |                                 <h2 style={{ color: '#0056b3', marginBottom: '15px', borderBottom: '1px solid #eee', paddingBottom: '10px' }}>Pedido: {pedido.client}</h2>
+  34 |
+  35 |                                 <table style={{ width: '100%', borderCollapse: 'collapse', marginBottom: '20px' }}>
+
+Unterminated string constant
+
+Import traces:
+  Client Component Browser:
+    ./src/app/documentos/page.jsx [Client Component Browser]
+    ./src/app/documentos/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/documentos/page.jsx [Client Component SSR]
+    ./src/app/documentos/page.jsx [Server Component]
+[01:42:28.966] Server  LOG      ✓ Compiled in 164ms
+[01:42:29.708] Browser ERROR   ./src/app/documentos/page.jsx:32:67
+Parsing ecmascript source code failed
+  30 |
+  31 |                         return (
+> 32 |                             <div key={pedido.id} style={{ width:""background: '#fff', padding: '20px', borderRadius: '8px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)' }}>
+     |                                                                   ^^^^^^^^^^
+  33 |                                 <h2 style={{ color: '#0056b3', marginBottom: '15px', borderBottom: '1px solid #eee', paddingBottom: '10px' }}>Pedido: {pedido.client}</h2>
+  34 |
+  35 |                                 <table style={{ width: '100%', borderCollapse: 'collapse', marginBottom: '20px' }}>
+
+Expected '</', got 'background'
+
+Import traces:
+  Client Component Browser:
+    ./src/app/documentos/page.jsx [Client Component Browser]
+    ./src/app/documentos/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/documentos/page.jsx [Client Component SSR]
+    ./src/app/documentos/page.jsx [Server Component]
+[01:42:34.433] Server  LOG      ✓ Compiled in 98ms
+[01:42:36.846] Server  LOG      ✓ Compiled in 130ms
+[01:42:45.762] Server  LOG     Firebase App Initialized Successfully
+[01:42:51.705] Browser LOG     Firebase App Initialized Successfully
+[01:43:40.941] Server  LOG      ✓ Compiled in 110ms
+[01:43:41.728] Browser ERROR   ./src/app/documentos/page.jsx:32:72
+Parsing ecmascript source code failed
+  30 |
+  31 |                         return (
+> 32 |                             <div key={pedido.id} style={{ width:"100%" border:"2px solid red",background: '#fff', padding: '20px', borderRadius: '8px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)' }}>
+     |                                                                        ^^^^^^
+  33 |                                 <h2 style={{ color: '#0056b3', marginBottom: '15px', borderBottom: '1px solid #eee', paddingBottom: '10px' }}>Pedido: {pedido.client}</h2>
+  34 |
+  35 |                                 <table style={{ width: '100%', borderCollapse: 'collapse', marginBottom: '20px' }}>
+
+Expected '</', got 'border'
+
+Import traces:
+  Client Component Browser:
+    ./src/app/documentos/page.jsx [Client Component Browser]
+    ./src/app/documentos/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/documentos/page.jsx [Client Component SSR]
+    ./src/app/documentos/page.jsx [Server Component]
+[01:43:46.935] Server  LOG      ✓ Compiled in 113ms
+[01:44:06.996] Server  LOG      ✓ Compiled in 76ms
+[01:44:11.618] Server  LOG      ✓ Compiled in 124ms
+[01:44:12.740] Browser ERROR   ./src/app/documentos/page.jsx:27:83
+Parsing ecmascript source code failed
+  25 |                 <p style={{ textAlign: 'center', color: '#666' }}>No hay pedidos para mostrar.</p>
+  26 |             ) : (
+> 27 |                 <div style={{ width:"100%", display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(400px, 1fr)) }}>
+     |                                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  28 |                     {pedidos.map((pedido) => {
+  29 |                         const totalPedido = (pedido.products || []).reduce((acc, item) => acc + (item.quantity * item.product.selectedPrice.price), 0);
+  30 |
+
+Unterminated string constant
+
+Import traces:
+  Client Component Browser:
+    ./src/app/documentos/page.jsx [Client Component Browser]
+    ./src/app/documentos/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/documentos/page.jsx [Client Component SSR]
+    ./src/app/documentos/page.jsx [Server Component]
+[01:44:13.335] Server  LOG      ✓ Compiled in 255ms
+[01:44:14.754] Browser ERROR   ./src/app/documentos/page.jsx:27:123
+Parsing ecmascript source code failed
+  25 |                 <p style={{ textAlign: 'center', color: '#666' }}>No hay pedidos para mostrar.</p>
+  26 |             ) : (
+> 27 |                 <div style={{ width:"100%", display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(400px, 1fr))',¿ }}>
+     |                                                                                                                           ^
+  28 |                     {pedidos.map((pedido) => {
+  29 |                         const totalPedido = (pedido.products || []).reduce((acc, item) => acc + (item.quantity * item.product.selectedPrice.price), 0);
+  30 |
+
+Unexpected character '¿'
+
+Import traces:
+  Client Component Browser:
+    ./src/app/documentos/page.jsx [Client Component Browser]
+    ./src/app/documentos/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/documentos/page.jsx [Client Component SSR]
+    ./src/app/documentos/page.jsx [Server Component]
+[01:44:21.361] Server  LOG      ✓ Compiled in 189ms
+[01:44:23.018] Server  LOG      ✓ Compiled in 109ms
+[01:44:26.122] Server  LOG      ✓ Compiled in 90ms
+[01:44:38.081] Server  LOG      ✓ Compiled in 78ms
+[01:45:58.609] Server  LOG      ✓ Compiled in 103ms
+[01:46:01.534] Server  LOG      ✓ Compiled in 138ms
+[01:46:04.202] Server  LOG      ✓ Compiled in 105ms
+[01:46:07.133] Server  LOG      ✓ Compiled in 181ms
+[01:46:09.090] Server  LOG      ✓ Compiled in 126ms
+[01:46:18.993] Server  LOG     Firebase App Initialized Successfully
+[01:46:22.337] Browser LOG     Firebase App Initialized Successfully
+[01:46:53.013] Server  LOG      ✓ Compiled in 108ms
+[01:46:58.756] Server  LOG     Firebase App Initialized Successfully
+[01:47:02.623] Browser LOG     Firebase App Initialized Successfully
+[01:47:14.432] Server  LOG      ✓ Compiled in 70ms
+[01:48:26.017] Browser LOG     Firebase App Initialized Successfully
+[01:48:36.681] Server  LOG     Firebase App Initialized Successfully
+[01:48:41.774] Browser LOG     Firebase App Initialized Successfully
+[01:52:13.585] Browser LOG     Firebase App Initialized Successfully
+[01:56:14.332] Browser LOG     Firebase App Initialized Successfully
+[01:57:00.881] Server  LOG      ✓ Compiled in 185ms
+[01:57:01.795] Browser ERROR   ./src/app/documentos/page.jsx:27:126
+Parsing ecmascript source code failed
+  25 |                 <p style={{ textAlign: 'center', color: '#666' }}>No hay pedidos para mostrar.</p>
+  26 |             ) : (
+> 27 |                 <div style={{ width:"100%", display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(400px, 1fr))',en l }}>
+     |                                                                                                                              ^
+  28 |                     {pedidos.map((pedido) => {
+  29 |                         const totalPedido = (pedido.products || []).reduce((acc, item) => acc + (item.quantity * item.product.selectedPrice.price), 0);
+  30 |
+
+Expected '</', got 'l'
+
+Import traces:
+  Client Component Browser:
+    ./src/app/documentos/page.jsx [Client Component Browser]
+    ./src/app/documentos/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/documentos/page.jsx [Client Component SSR]
+    ./src/app/documentos/page.jsx [Server Component]
+[01:58:50.174] Server  LOG      ✓ Compiled in 536ms
+[01:58:51.986] Browser ERROR   uncaughtError: ReferenceError: en is not defined
+[01:58:54.534] Server  LOG      ✓ Compiled in 320ms
+[01:59:00.821] Server  LOG     Firebase App Initialized Successfully
+[01:59:00.976] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:59:06.792] Browser LOG     Firebase App Initialized Successfully
+[01:59:16.373] Server  LOG      ✓ Compiled in 160ms
+[01:59:20.554] Server  LOG     Firebase App Initialized Successfully
+[01:59:24.721] Browser LOG     Firebase App Initialized Successfully

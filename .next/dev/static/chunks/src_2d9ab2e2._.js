@@ -102,7 +102,8 @@ function ListDocuments() {
         style: {
             fontFamily: 'Arial, sans-serif',
             padding: '20px',
-            backgroundColor: '#f0f2f5'
+            backgroundColor: '#f0f2f5',
+            width: "100vw"
         },
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -130,14 +131,16 @@ function ListDocuments() {
                 columnNumber: 17
             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 style: {
+                    width: "100%",
                     display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fill, minmax(400px, 1fr))',
+                    gridTemplateColumns: 'repeat(auto-fill)',
                     gap: '20px'
                 },
                 children: pedidos.map((pedido)=>{
                     const totalPedido = (pedido.products || []).reduce((acc, item)=>acc + item.quantity * item.product.selectedPrice.price, 0);
                     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         style: {
+                            width: "100%",
                             background: '#fff',
                             padding: '20px',
                             borderRadius: '8px',
@@ -175,7 +178,7 @@ function ListDocuments() {
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
                                                     style: {
-                                                        padding: '8px',
+                                                        padding: '4px',
                                                         border: '1px solid #ddd',
                                                         textAlign: 'left'
                                                     },
@@ -187,7 +190,7 @@ function ListDocuments() {
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
                                                     style: {
-                                                        padding: '8px',
+                                                        padding: '4px',
                                                         border: '1px solid #ddd',
                                                         textAlign: 'left'
                                                     },
@@ -199,7 +202,7 @@ function ListDocuments() {
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
                                                     style: {
-                                                        padding: '8px',
+                                                        padding: '4px',
                                                         border: '1px solid #ddd',
                                                         textAlign: 'right'
                                                     },
@@ -211,7 +214,7 @@ function ListDocuments() {
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
                                                     style: {
-                                                        padding: '8px',
+                                                        padding: '4px',
                                                         border: '1px solid #ddd',
                                                         textAlign: 'right'
                                                     },
@@ -237,7 +240,7 @@ function ListDocuments() {
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
                                                         style: {
-                                                            padding: '8px',
+                                                            padding: '4px',
                                                             border: '1px solid #ddd'
                                                         },
                                                         children: item.quantity
@@ -248,7 +251,7 @@ function ListDocuments() {
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
                                                         style: {
-                                                            padding: '8px',
+                                                            padding: '4px',
                                                             border: '1px solid #ddd'
                                                         },
                                                         children: `${item.product.nombre} ${item.product.peso}Kg`
@@ -259,7 +262,7 @@ function ListDocuments() {
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
                                                         style: {
-                                                            padding: '8px',
+                                                            padding: '4px',
                                                             border: '1px solid #ddd',
                                                             textAlign: 'right'
                                                         },
@@ -271,7 +274,7 @@ function ListDocuments() {
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
                                                         style: {
-                                                            padding: '8px',
+                                                            padding: '4px',
                                                             border: '1px solid #ddd',
                                                             textAlign: 'right'
                                                         },
