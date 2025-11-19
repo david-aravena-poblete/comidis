@@ -18,6 +18,28 @@ export default function ListDocuments() {
         return new Intl.NumberFormat('es-CL', { style: 'currency', currency: 'CLP' }).format(value);
     };
 
+    const handleSendWhatsApp = (pedido, totalPedido) => {
+        const phone = '56990059578';
+        let message = `*Nuevo Pedido:*`;
+        message += `*Cliente:* ${pedido.client}`;
+        message += '*Detalle del pedido:';
+        message += '``'
+'; // Using code block for better formatting'
+
+        pedido.products.forEach(item => {
+            const totalItem = formatCurrency(item.quantity * item.product.selectedPrice.price);
+            message += `${item.quantity}x ${item.product.nombre} ${item.product.peso}Kg - ${totalItem}
+`;
+        });
+
+        message += '``';
+        message += `*Total Pedido:* ${formatCurrency(totalPedido)}`;
+
+        const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+        window.open(whatsappUrl, '_blank');
+    };
+
+
     return (
         <div style={{ fontFamily: 'Arial, sans-serif', padding: '20px', backgroundColor: '#f0f2f5', width:"100vw" }}>
             <h1 style={{ color: '#333', borderBottom: '2px solid #ccc', paddingBottom: '10px', marginBottom: '20px' }}>Lista de Pedidos</h1>
@@ -56,6 +78,24 @@ export default function ListDocuments() {
                                 <div style={{ textAlign: 'right', fontWeight: 'bold', fontSize: '1.2em', color: '#333', marginTop: '15px' }}>
                                     Total Pedido: {formatCurrency(totalPedido)}
                                 </div>
+
+                                <div style={{display:"flex", justifyContent:"flex-end", padding:"1rem"}}>
+                                    <button 
+                                        onClick={() => handleSendWhatsApp(pedido, totalPedido)} 
+                                        style={{
+                                            padding:'10px 20px', 
+                                            backgroundColor: '#25D366', 
+                                            color: 'white', 
+                                            border: 'none', 
+                                            borderRadius: '5px',
+                                            cursor: 'pointer',
+                                            fontWeight: 'bold',
+                                            boxShadow: '0 2px 4px rgba(0,0,0,0.2)'
+                                        }}
+                                    >
+                                        Enviar por WhatsApp
+                                    </button>
+                                </div> 
                             </div>
                         )
                     })}
