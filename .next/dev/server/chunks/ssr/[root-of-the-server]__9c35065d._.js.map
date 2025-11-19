@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 17, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/app/page.module.css [app-rsc] (css module)"],"sourcesContent":["__turbopack_context__.v({\n});\n"],"names":[],"mappings":"AAAA;AACA"}},
+    {"offset": {"line": 23, "column": 0}, "map": {"version":3,"sources":["file:///home/user/comidinapp/src/app/page.js"],"sourcesContent":["\n\nimport styles from \"./page.module.css\";\nimport {useState} from \"react\"\n\nexport default function Home() {\n\n  const [products, setProducts] = useState(null);\n\n  return (\n    <div style={{\n      width:\"100vw\", \n      height:\"100vh\",\n      display:\"flex\",\n      flexDirection:\"column\"\n    }}>\n      <div style={{flexGrow:1, overflowY:\"auto\"}}>\n\n      </div>\n      <div>\n       <FormSearchProducts />\n      </div>\n    </div>\n  );\n}\n\nconst FormSearchProducts = () => {\n  return(\n    <form>\n      <button type=\"button\">\n        Limpiar\n      </button>\n      <input type=\"text\" />\n      <button type=\"submit\">Buscar</button>\n    </form>\n  )\n}"],"names":[],"mappings":";;;;;AAEA;AACA;;;;AAEe,SAAS;IAEtB,MAAM,CAAC,UAAU,YAAY,GAAG,IAAA,iNAAQ,EAAC;IAEzC,qBACE,8OAAC;QAAI,OAAO;YACV,OAAM;YACN,QAAO;YACP,SAAQ;YACR,eAAc;QAChB;;0BACE,8OAAC;gBAAI,OAAO;oBAAC,UAAS;oBAAG,WAAU;gBAAM;;;;;;0BAGzC,8OAAC;0BACA,cAAA,8OAAC;;;;;;;;;;;;;;;;AAIR;AAEA,MAAM,qBAAqB;IACzB,qBACE,8OAAC;;0BACC,8OAAC;gBAAO,MAAK;0BAAS;;;;;;0BAGtB,8OAAC;gBAAM,MAAK;;;;;;0BACZ,8OAAC;gBAAO,MAAK;0BAAS;;;;;;;;;;;;AAG5B","debugId":null}}]
+}

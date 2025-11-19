@@ -1,4 +1,6 @@
+
 import { Geist, Geist_Mono } from "next/font/google";
+import Navbar from './components/Navbar'; // Importamos el nuevo componente
 import "./globals.css";
 
 const geistSans = Geist({
@@ -20,7 +22,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+        <Navbar /> {/* Usamos el nuevo componente Navbar */}
+        <main style={{ padding: '20px' }}>
+          {children}
+        </main>
       </body>
     </html>
   );

@@ -1,0 +1,15 @@
+[00:00:19.695] Server  LOG      ✓ Ready in 13.9s
+[00:00:36.819] Server  LOG      ○ Compiling / ...
+[00:01:30.328] Server  LOG     Firebase App Initialized Successfully
+[00:01:34.306] Server  WARN     ⚠ Cross origin request detected from 9000-firebase-comidinapp-1762540520986.cluster-thle3dudhffpwss7zs5hxaeu2o.cloudworkstations.dev to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+[00:01:35.913] Browser LOG     Firebase App Initialized Successfully
+[00:30:39.666] Server  LOG      ✓ Compiled in 113ms
+[00:30:48.138] Server  LOG      ✓ Compiled in 19ms
+[00:31:26.919] Server  LOG     Firebase App Initialized Successfully
+[00:31:31.786] Browser LOG     Firebase App Initialized Successfully
+[00:42:30.062] Browser LOG     Firebase App Initialized Successfully
+[01:20:42.913] Server  LOG      ✓ Compiled in 974ms
+[01:20:46.091] Server  LOG     Firebase App Initialized Successfully
+[01:20:48.811] Browser LOG     Firebase App Initialized Successfully
+[01:20:49.191] Browser LOG     Firebase App Initialized Successfully
