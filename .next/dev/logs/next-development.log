@@ -1,15 +1,433 @@
-[00:00:19.695] Server  LOG      ✓ Ready in 13.9s
-[00:00:36.819] Server  LOG      ○ Compiling / ...
-[00:01:30.328] Server  LOG     Firebase App Initialized Successfully
-[00:01:34.306] Server  WARN     ⚠ Cross origin request detected from 9000-firebase-comidinapp-1762540520986.cluster-thle3dudhffpwss7zs5hxaeu2o.cloudworkstations.dev to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+[00:00:16.129] Server  LOG      ✓ Ready in 12.6s
+[00:00:31.499] Server  LOG      ○ Compiling / ...
+[00:01:14.604] Server  LOG     Firebase App Initialized Successfully
+[00:01:17.845] Server  WARN     ⚠ Cross origin request detected from 9000-firebase-comidinapp-1762540520986.cluster-thle3dudhffpwss7zs5hxaeu2o.cloudworkstations.dev to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
 Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
-[00:01:35.913] Browser LOG     Firebase App Initialized Successfully
-[00:30:39.666] Server  LOG      ✓ Compiled in 113ms
-[00:30:48.138] Server  LOG      ✓ Compiled in 19ms
-[00:31:26.919] Server  LOG     Firebase App Initialized Successfully
-[00:31:31.786] Browser LOG     Firebase App Initialized Successfully
-[00:42:30.062] Browser LOG     Firebase App Initialized Successfully
-[01:20:42.913] Server  LOG      ✓ Compiled in 974ms
-[01:20:46.091] Server  LOG     Firebase App Initialized Successfully
-[01:20:48.811] Browser LOG     Firebase App Initialized Successfully
-[01:20:49.191] Browser LOG     Firebase App Initialized Successfully
+[00:01:18.114] Browser LOG     Firebase App Initialized Successfully
+[00:06:24.493] Server  LOG      ✓ Compiled in 33ms
+[00:08:28.857] Server  LOG     Firebase App Initialized Successfully
+[00:08:32.704] Browser LOG     Firebase App Initialized Successfully
+[00:08:44.185] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:08:44.185] Browser LOG     Firebase App Initialized Successfully
+[00:10:39.678] Browser LOG     Firebase App Initialized Successfully
+[00:13:14.320] Server  LOG      ✓ Compiled in 313ms
+[00:13:17.003] Server  LOG      ✓ Compiled in 84ms
+[00:13:19.781] Server  LOG      ✓ Compiled in 164ms
+[00:13:22.231] Server  LOG      ✓ Compiled in 50ms
+[00:13:31.153] Server  LOG     Firebase App Initialized Successfully
+[00:13:34.510] Browser LOG     Firebase App Initialized Successfully
+[00:13:54.409] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:13:54.411] Browser LOG     Firebase App Initialized Successfully
+[00:17:21.727] Server  LOG      ✓ Compiled in 65ms
+[00:18:35.020] Server  LOG     Firebase App Initialized Successfully
+[00:18:38.228] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:18:38.348] Browser LOG     Firebase App Initialized Successfully
+[00:18:40.932] Browser LOG     Buscando en 'initialsNames' el valor: marp
+[00:18:40.932] Browser LOG     marp
+[00:18:42.612] Browser LOG     Resultados encontrados: [{"amount":-15,"id":"4PZrAX1PRcW1rQwxaWfX","initialsNames":["m","ma","mar","marp"],"nombre":"MASTERDOG ADULTO RAZA PEQUEÑA","peso":8,"precioComerciante":14300,"precioPublico":16600,"preciox10sacos":13800,"preciox15sacos":13800,"preciox5sacos":14100},{"amount":-8,"id":"6k8vkJFdbzuZadfm7WOe","initialsNames":["m","ma","mar","marp"],"nombre":"MASTERDOG ADULTO RAZA PEQUEÑA","peso":18,"precioComerciante":28500,"precioPublico":31900,"preciox10sacos":27500,"preciox15sacos":27000,"preciox5sacos":28000},{"amount":-6,"id":"bQIAEYQ8JugOiclV5CNV","initialsNames":["m","ma","mar","marp"],"nombre":"MASTIN ADULTO RAZA PEQUEÑA","peso":10,"precioComerciante":16300,"precioPublico":18600,"preciox10sacos":15700,"preciox15sacos":15400,"preciox5sacos":16000}]
+[00:20:59.200] Server  LOG      ✓ Compiled in 561ms
+[01:08:36.609] Server  ERROR    ⨯ ./src/app/page.js:99:7
+Parsing ecmascript source code failed
+   97 |       display:"flex",
+   98 |       flexDirection:"c"
+>  99 |       padding:"1rem"
+      |       ^^^^^^^
+  100 |     }}>
+  101 |       <div style={{flexGrow:1, overflowY:"auto", padding: "0 1rem"}}>
+  102 |            {isListSelectedVisible ? (
+
+Expected ',', got 'padding'
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.js [Client Component Browser]
+    ./src/app/page.js [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.js [Client Component SSR]
+    ./src/app/page.js [Server Component]
+
+
+[01:08:37.620] Server  ERROR    ⨯ ./src/app/page.js:99:7
+Parsing ecmascript source code failed
+   97 |       display:"flex",
+   98 |       flexDirection:"c"
+>  99 |       padding:"1rem"
+      |       ^^^^^^^
+  100 |     }}>
+  101 |       <div style={{flexGrow:1, overflowY:"auto", padding: "0 1rem"}}>
+  102 |            {isListSelectedVisible ? (
+
+Expected ',', got 'padding'
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.js [Client Component Browser]
+    ./src/app/page.js [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.js [Client Component SSR]
+    ./src/app/page.js [Server Component]
+
+
+[01:08:39.686] Server  LOG      ○ Compiling /_error ...
+[01:08:59.065] Browser ERROR   {"name":"Error"}
+[01:08:59.065] Browser ERROR   uncaughtError: Error: ./src/app/page.js:99:7
+Parsing ecmascript source code failed
+   97 |       display:"flex",
+   98 |       flexDirection:"c"
+>  99 |       padding:"1rem"
+      |       ^^^^^^^
+  100 |     }}>
+  101 |       <div style={{flexGrow:1, overflowY:"auto", padding: "0 1rem"}}>
+  102 |            {isListSelectedVisible ? (
+
+Expected ',', got 'padding'
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.js [Client Component Browser]
+    ./src/app/page.js [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.js [Client Component SSR]
+    ./src/app/page.js [Server Component]
+
+
+[01:09:28.839] Server  LOG      ✓ Compiled in 57ms
+[01:09:30.914] Server  LOG     Firebase App Initialized Successfully
+[01:09:34.324] Browser LOG     Firebase App Initialized Successfully
+[01:09:50.192] Server  LOG      ✓ Compiled in 46ms
+[01:12:28.083] Server  LOG      ✓ Compiled in 2.3s
+[01:12:30.934] Server  LOG      ✓ Compiled in 79ms
+[01:12:58.047] Server  LOG      ✓ Compiled in 354ms
+[01:13:21.439] Server  LOG     Firebase App Initialized Successfully
+[01:13:26.667] Browser LOG     Firebase App Initialized Successfully
+[01:13:33.816] Server  LOG      ✓ Compiled in 2.3s
+[01:13:34.430] Browser ERROR   uncaughtError: ReferenceError: b is not defined
+[01:13:34.488] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:13:34.523] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:13:34.607] Browser ERROR   uncaughtError: ReferenceError: b is not defined
+[01:13:34.643] Browser ERROR   uncaughtError: ReferenceError: b is not defined
+[01:13:34.719] Browser ERROR   uncaughtError: ReferenceError: b is not defined
+[01:13:38.377] Server  LOG     Firebase App Initialized Successfully
+[01:13:39.673] Server  LOG      ✓ Compiled in 0ms
+[01:13:44.481] Browser LOG     Firebase App Initialized Successfully
+[01:13:45.686] Browser LOG     Firebase App Initialized Successfully
+[01:13:45.686] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <RenderFromTemplateContext>
+      <ScrollAndFocusHandler segmentPath={[...]}>
+        <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
+          <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+            <LoadingBoundary name="/" loading={null}>
+              <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+                <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+                  <RedirectBoundary>
+                    <RedirectErrorBoundary router={{...}}>
+                      <InnerLayoutRouter url={"/?monosp..."} tree={[...]} params={{}} cacheNode={{lazyData:null, ...}} ...>
+                        <SegmentViewNode type="page" pagePath="page.js">
+                          <SegmentTrieNode>
+                          <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
+                            <Home params={Promise} searchParams={Promise}>
+                              <div
+                                style={{
++                                 width: "100%"
+-                                 width: "100%"
++                                 minHeight: "100%"
++                                 display: "flex"
+-                                 display: "flex"
++                                 flexDirection: "column"
++                                 justifyContent: "space-between"
++                                 padding: "1rem"
++                                 boder: "2px solid r"
+-                                 min-height: "100%"
+-                                 flex-direction: "column"
+-                                 justify-content: "space-between"
+-                                 padding-top: "1rem"
+-                                 padding-right: "1rem"
+-                                 padding-bottom: "1rem"
+-                                 padding-left: "1rem"
+                                }}
+                              >
+                        ...
+                      ...
+          ...
+
+[01:15:04.494] Server  LOG      ✓ Compiled in 91ms
+[01:15:08.724] Server  LOG     Firebase App Initialized Successfully
+[01:15:12.600] Browser LOG     Firebase App Initialized Successfully
+[01:15:22.118] Server  LOG      ✓ Compiled in 156ms
+[01:15:33.738] Server  LOG      ✓ Compiled in 423ms
+[01:15:39.531] Server  LOG     Firebase App Initialized Successfully
+[01:15:43.766] Browser LOG     Firebase App Initialized Successfully
+[01:16:06.746] Server  LOG      ✓ Compiled in 131ms
+[01:16:08.966] Server  LOG     Firebase App Initialized Successfully
+[01:16:12.249] Browser LOG     Firebase App Initialized Successfully
+[01:17:00.435] Server  LOG      ✓ Compiled in 112ms
+[01:17:02.193] Server  LOG      ✓ Compiled in 82ms
+[01:17:18.750] Browser LOG     Buscando en 'initialsNames' el valor: m
+[01:17:18.750] Browser LOG     m
+[01:17:20.407] Browser LOG     Resultados encontrados: [{"id":"2fgT2xXaoUF7vT7kiNtW","initialsNames":["m","ms"],"nombre":"MASTIN SENIOR","peso":22,"precioComerciante":35100,"precioPublico":40000,"preciox10sacos":33800,"preciox15sacos":33200,"preciox5sacos":34500},{"id":"2heXrMGyAz0wPIeR3hvm","initialsNames":["m"],"nombre":"MIJO","peso":25,"precioComerciante":33000,"precioPublico":37300,"preciox10sacos":33000,"preciox15sacos":33000,"preciox5sacos":33000},{"id":"3KvLEkVB4iFSTEUKy5j9","initialsNames":["m","mm"],"nombre":"MASTIN MADRE-CACHORRO","peso":15,"precioComerciante":23800,"precioPublico":27600,"preciox10sacos":22900,"preciox15sacos":26500,"preciox5sacos":23300},{"amount":-15,"id":"4PZrAX1PRcW1rQwxaWfX","initialsNames":["m","ma","mar","marp"],"nombre":"MASTERDOG ADULTO RAZA PEQUEÑA","peso":8,"precioComerciante":14300,"precioPublico":16600,"preciox10sacos":13800,"preciox15sacos":13800,"preciox5sacos":14100},{"id":"5on0wOhllyg8MaGbL372","initialsNames":["m","mc"],"nombre":"MASTERCAT CARNE","peso":20,"precioComerciante":39900,"precioPublico":43800,"preciox10sacos":38500,"preciox15sacos":37800,"preciox5sacos":39200},{"amount":-8,"id":"6k8vkJFdbzuZadfm7WOe","initialsNames":["m","ma","mar","marp"],"nombre":"MASTERDOG ADULTO RAZA PEQUEÑA","peso":18,"precioComerciante":28500,"precioPublico":31900,"preciox10sacos":27500,"preciox15sacos":27000,"preciox5sacos":28000},{"id":"CJNPRjOgx4AMEQ1H1dUj","initialsNames":["m","ma","mac"],"nombre":"MASTIN ADULTO CARNE","peso":22,"precioComerciante":32600,"precioPublico":37200,"preciox10sacos":31500,"preciox15sacos":30900,"preciox5sacos":32000},{"id":"DpwcADvQvATEFFueL5ah","initialsNames":["m","me","mes","mesa","mesa(","mesa(y","mesa(ya"],"nombre":"MERA EXKLUSIV SENSITIVE ADULTO (SALMON Y ARROZ)","peso":15,"precioComerciante":62700,"precioPublico":72700,"preciox10sacos":60400,"preciox15sacos":59300,"preciox5sacos":61500},{"id":"GuPBlz2OUzI4hB6EKh21","initialsNames":["m","me","mes","mess","mess(","mess(y","mess(ya"],"nombre":"MERA EXKLUSIV SENSITIVE SENIOR (PAVO Y ARROZ)","peso":15,"precioComerciante":62700,"precioPublico":72700,"preciox10sacos":60400,"preciox15sacos":59300,"preciox5sacos":61500},{"id":"MaPUp8inGZ8clkhPXZQz","initialsNames":["m","mc"],"nombre":"MASTERDOG CACHORRO","peso":18,"precioComerciante":28500,"precioPublico":31900,"preciox10sacos":27500,"preciox15sacos":27000,"preciox5sacos":28000},{"id":"NKXeKY5RyM6GIKEvdrcF","initialsNames":["m","md","mdc"],"nombre":"MEZCLA DE CANARIO","peso":1,"precioComerciante":1600,"precioPublico":2050,"preciox10sacos":1600,"preciox15sacos":1600,"preciox5sacos":1600},{"id":"OWMxFbU0UB7yd0mlr0DT","initialsNames":["m"],"nombre":"MARAVILLA","peso":25,"precioComerciante":45600,"precioPublico":52000,"preciox10sacos":45600,"preciox15sacos":43700,"preciox5sacos":45600},{"id":"ObnYA5vmMtHTQCPUCI1g","initialsNames":["m","ms"],"nombre":"MASTERDOG SENIOR","peso":18,"precioComerciante":28500,"precioPublico":31900,"preciox10sacos":27500,"preciox15sacos":27000,"preciox5sacos":28000},{"id":"WmARsWHBsle1UpLwRx5M","initialsNames":["m","md","mdc"],"nombre":"MEZCLA DE CATAS","peso":1,"precioComerciante":1500,"precioPublico":1750,"preciox10sacos":1500,"preciox15sacos":1500,"preciox5sacos":1500},{"id":"XmMG3lOoca0lgmN7wq6w","initialsNames":["m","mc","mco","mcop"],"nombre":"MASTERDOG CARNE o POLLO","peso":18,"precioComerciante":28500,"precioPublico":31900,"preciox10sacos":27500,"preciox15sacos":27000,"preciox5sacos":28000},{"id":"YmVMOO9Qo17SjCm3pQEt","initialsNames":["m"],"nombre":"MAIZ","peso":25,"precioComerciante":11300,"precioPublico":13300,"preciox10sacos":11300,"preciox15sacos":11300,"preciox5sacos":11300},{"id":"YypsO91yigUT0O46PbK7","initialsNames":["m","me","mes","mesp","mesp(","mesp(y","mesp(ya"],"nombre":"MERA EXKLUSIV SENSITIV PUPPY (PAVO Y ARROZ)","peso":15,"precioComerciante":62600,"precioPublico":74000,"preciox10sacos":60400,"preciox15sacos":71200,"preciox5sacos":61500},{"amount":-6,"id":"bQIAEYQ8JugOiclV5CNV","initialsNames":["m","ma","mar","marp"],"nombre":"MASTIN ADULTO RAZA PEQUEÑA","peso":10,"precioComerciante":16300,"precioPublico":18600,"preciox10sacos":15700,"preciox15sacos":15400,"preciox5sacos":16000},{"id":"ghWZUTK7sqPbFRciB2zQ","initialsNames":["m","me","mes","mesa","mesa(","mesa(y","mesa(ya"],"nombre":"MERA EXKLUSIV SENSITIVE ADULTO (PAVO Y ARROZ)","peso":15,"precioComerciante":66700,"precioPublico":72700,"preciox10sacos":60400,"preciox15sacos":59300,"preciox5sacos":61500},{"id":"iJDwd6iCVyafRxIdMMtc","initialsNames":["m","mc"],"nombre":"MP CONCHUELA","peso":25,"precioComerciante":4200,"precioPublico":5900,"preciox10sacos":4200,"preciox15sacos":4200,"preciox5sacos":4200},{"id":"lESzJqJY3bdWrltmOVo9","initialsNames":["m","mc"],"nombre":"MASKO CAN","peso":25,"precioComerciante":25700,"precioPublico":29400,"preciox10sacos":24800,"preciox15sacos":24300,"preciox5sacos":25300},{"id":"qvOD3IOUM46V48FW1EO1","initialsNames":["m","mc","mc2","mc2k"],"nombre":"MAIZ CURAGUA 25 KG","peso":25,"precioComerciante":28000,"precioPublico":30200,"preciox10sacos":28000,"preciox15sacos":28000,"preciox5sacos":28000},{"id":"rv0KCvIGkiSJDYR3pm0u","initialsNames":["m","ms"],"nombre":"MASTERCAT SALMON ","peso":20,"precioComerciante":39900,"precioPublico":43800,"preciox10sacos":38500,"preciox15sacos":37800,"preciox5sacos":39200},{"id":"yAr7qMlVUFJVtUhV5wuv","initialsNames":["m","mp"],"nombre":"MASTERCAT POLLO","peso":20,"precioComerciante":39900,"precioPublico":43800,"preciox10sacos":38500,"preciox15sacos":37800,"preciox5sacos":39200},{"id":"zDUXYvH2IsT68jimv92E","initialsNames":["m","ms"],"nombre":"MASTERDOG SENIOR","peso":8,"precioComerciante":14300,"precioPublico":16600,"preciox10sacos":13800,"preciox15sacos":13800,"preciox5sacos":14100},{"id":"zLACcsK4XW0g4LWDoxLw","initialsNames":["m","mr"],"nombre":"MASTERCAT RELLENO","peso":20,"precioComerciante":39900,"precioPublico":43800,"preciox10sacos":38500,"preciox15sacos":37800,"preciox5sacos":39200},{"id":"zYgxFBlstEwsxLFiFBdN","initialsNames":["m","me","mew","mewa","mewag","mewag(","mewag(s","mewag(st"],"nombre":"MERA EXKLUSIV WEIZENFREI ADULTO GEFLÛGEL (AVES SIN TRIGO)","peso":15,"precioComerciante":52600,"precioPublico":61000,"preciox10sacos":50700,"preciox15sacos":49800,"preciox5sacos":51600}]
+[01:18:33.296] Server  LOG     Firebase App Initialized Successfully
+[01:18:37.867] Browser LOG     Firebase App Initialized Successfully
+[01:18:56.578] Server  LOG      ✓ Compiled in 193ms
+[01:20:39.882] Server  LOG      ✓ Compiled in 142ms
+[01:20:40.795] Browser ERROR   uncaughtError: ReferenceError: overflow is not defined
+[01:20:40.796] Browser ERROR   uncaughtError: ReferenceError: overflow is not defined
+[01:20:41.645] Browser ERROR   uncaughtError: ReferenceError: overflow is not defined
+[01:20:43.038] Server  LOG      ✓ Compiled in 357ms
+[01:20:43.611] Browser ERROR   ./src/app/page.js:103:5
+Parsing ecmascript source code failed
+  101 |       border:"1px solid red",
+  102 |       overflow:
+> 103 |     }}>
+      |     ^
+  104 |       <div style={{flexGrow:1, overflowY:"auto", padding: "0 1rem"}}>
+  105 |            {isListSelectedVisible ? (
+  106 |              <>
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.js [Client Component Browser]
+    ./src/app/page.js [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.js [Client Component SSR]
+    ./src/app/page.js [Server Component]
+[01:20:53.614] Browser ERROR   ./src/app/page.js:103:5
+Parsing ecmascript source code failed
+  101 |       border:"1px solid red",
+  102 |       overflowY:
+> 103 |     }}>
+      |     ^
+  104 |       <div style={{flexGrow:1, overflowY:"auto", padding: "0 1rem"}}>
+  105 |            {isListSelectedVisible ? (
+  106 |              <>
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.js [Client Component Browser]
+    ./src/app/page.js [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.js [Client Component SSR]
+    ./src/app/page.js [Server Component]
+[01:20:55.484] Server  LOG      ✓ Compiled in 167ms
+[01:20:57.361] Server  LOG     Firebase App Initialized Successfully
+[01:20:57.489] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:20:57.490] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:20:57.490] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:21:04.172] Browser LOG     Firebase App Initialized Successfully
+[01:21:04.617] Browser LOG     Firebase App Initialized Successfully
+[01:21:05.616] Browser LOG     Firebase App Initialized Successfully
+[01:21:11.103] Browser LOG     Buscando en 'initialsNames' el valor: m
+[01:21:11.105] Browser LOG     m
+[01:21:11.905] Browser LOG     Resultados encontrados: [{"id":"2fgT2xXaoUF7vT7kiNtW","initialsNames":["m","ms"],"nombre":"MASTIN SENIOR","peso":22,"precioComerciante":35100,"precioPublico":40000,"preciox10sacos":33800,"preciox15sacos":33200,"preciox5sacos":34500},{"id":"2heXrMGyAz0wPIeR3hvm","initialsNames":["m"],"nombre":"MIJO","peso":25,"precioComerciante":33000,"precioPublico":37300,"preciox10sacos":33000,"preciox15sacos":33000,"preciox5sacos":33000},{"id":"3KvLEkVB4iFSTEUKy5j9","initialsNames":["m","mm"],"nombre":"MASTIN MADRE-CACHORRO","peso":15,"precioComerciante":23800,"precioPublico":27600,"preciox10sacos":22900,"preciox15sacos":26500,"preciox5sacos":23300},{"amount":-15,"id":"4PZrAX1PRcW1rQwxaWfX","initialsNames":["m","ma","mar","marp"],"nombre":"MASTERDOG ADULTO RAZA PEQUEÑA","peso":8,"precioComerciante":14300,"precioPublico":16600,"preciox10sacos":13800,"preciox15sacos":13800,"preciox5sacos":14100},{"id":"5on0wOhllyg8MaGbL372","initialsNames":["m","mc"],"nombre":"MASTERCAT CARNE","peso":20,"precioComerciante":39900,"precioPublico":43800,"preciox10sacos":38500,"preciox15sacos":37800,"preciox5sacos":39200},{"amount":-8,"id":"6k8vkJFdbzuZadfm7WOe","initialsNames":["m","ma","mar","marp"],"nombre":"MASTERDOG ADULTO RAZA PEQUEÑA","peso":18,"precioComerciante":28500,"precioPublico":31900,"preciox10sacos":27500,"preciox15sacos":27000,"preciox5sacos":28000},{"id":"CJNPRjOgx4AMEQ1H1dUj","initialsNames":["m","ma","mac"],"nombre":"MASTIN ADULTO CARNE","peso":22,"precioComerciante":32600,"precioPublico":37200,"preciox10sacos":31500,"preciox15sacos":30900,"preciox5sacos":32000},{"id":"DpwcADvQvATEFFueL5ah","initialsNames":["m","me","mes","mesa","mesa(","mesa(y","mesa(ya"],"nombre":"MERA EXKLUSIV SENSITIVE ADULTO (SALMON Y ARROZ)","peso":15,"precioComerciante":62700,"precioPublico":72700,"preciox10sacos":60400,"preciox15sacos":59300,"preciox5sacos":61500},{"id":"GuPBlz2OUzI4hB6EKh21","initialsNames":["m","me","mes","mess","mess(","mess(y","mess(ya"],"nombre":"MERA EXKLUSIV SENSITIVE SENIOR (PAVO Y ARROZ)","peso":15,"precioComerciante":62700,"precioPublico":72700,"preciox10sacos":60400,"preciox15sacos":59300,"preciox5sacos":61500},{"id":"MaPUp8inGZ8clkhPXZQz","initialsNames":["m","mc"],"nombre":"MASTERDOG CACHORRO","peso":18,"precioComerciante":28500,"precioPublico":31900,"preciox10sacos":27500,"preciox15sacos":27000,"preciox5sacos":28000},{"id":"NKXeKY5RyM6GIKEvdrcF","initialsNames":["m","md","mdc"],"nombre":"MEZCLA DE CANARIO","peso":1,"precioComerciante":1600,"precioPublico":2050,"preciox10sacos":1600,"preciox15sacos":1600,"preciox5sacos":1600},{"id":"OWMxFbU0UB7yd0mlr0DT","initialsNames":["m"],"nombre":"MARAVILLA","peso":25,"precioComerciante":45600,"precioPublico":52000,"preciox10sacos":45600,"preciox15sacos":43700,"preciox5sacos":45600},{"id":"ObnYA5vmMtHTQCPUCI1g","initialsNames":["m","ms"],"nombre":"MASTERDOG SENIOR","peso":18,"precioComerciante":28500,"precioPublico":31900,"preciox10sacos":27500,"preciox15sacos":27000,"preciox5sacos":28000},{"id":"WmARsWHBsle1UpLwRx5M","initialsNames":["m","md","mdc"],"nombre":"MEZCLA DE CATAS","peso":1,"precioComerciante":1500,"precioPublico":1750,"preciox10sacos":1500,"preciox15sacos":1500,"preciox5sacos":1500},{"id":"XmMG3lOoca0lgmN7wq6w","initialsNames":["m","mc","mco","mcop"],"nombre":"MASTERDOG CARNE o POLLO","peso":18,"precioComerciante":28500,"precioPublico":31900,"preciox10sacos":27500,"preciox15sacos":27000,"preciox5sacos":28000},{"id":"YmVMOO9Qo17SjCm3pQEt","initialsNames":["m"],"nombre":"MAIZ","peso":25,"precioComerciante":11300,"precioPublico":13300,"preciox10sacos":11300,"preciox15sacos":11300,"preciox5sacos":11300},{"id":"YypsO91yigUT0O46PbK7","initialsNames":["m","me","mes","mesp","mesp(","mesp(y","mesp(ya"],"nombre":"MERA EXKLUSIV SENSITIV PUPPY (PAVO Y ARROZ)","peso":15,"precioComerciante":62600,"precioPublico":74000,"preciox10sacos":60400,"preciox15sacos":71200,"preciox5sacos":61500},{"amount":-6,"id":"bQIAEYQ8JugOiclV5CNV","initialsNames":["m","ma","mar","marp"],"nombre":"MASTIN ADULTO RAZA PEQUEÑA","peso":10,"precioComerciante":16300,"precioPublico":18600,"preciox10sacos":15700,"preciox15sacos":15400,"preciox5sacos":16000},{"id":"ghWZUTK7sqPbFRciB2zQ","initialsNames":["m","me","mes","mesa","mesa(","mesa(y","mesa(ya"],"nombre":"MERA EXKLUSIV SENSITIVE ADULTO (PAVO Y ARROZ)","peso":15,"precioComerciante":66700,"precioPublico":72700,"preciox10sacos":60400,"preciox15sacos":59300,"preciox5sacos":61500},{"id":"iJDwd6iCVyafRxIdMMtc","initialsNames":["m","mc"],"nombre":"MP CONCHUELA","peso":25,"precioComerciante":4200,"precioPublico":5900,"preciox10sacos":4200,"preciox15sacos":4200,"preciox5sacos":4200},{"id":"lESzJqJY3bdWrltmOVo9","initialsNames":["m","mc"],"nombre":"MASKO CAN","peso":25,"precioComerciante":25700,"precioPublico":29400,"preciox10sacos":24800,"preciox15sacos":24300,"preciox5sacos":25300},{"id":"qvOD3IOUM46V48FW1EO1","initialsNames":["m","mc","mc2","mc2k"],"nombre":"MAIZ CURAGUA 25 KG","peso":25,"precioComerciante":28000,"precioPublico":30200,"preciox10sacos":28000,"preciox15sacos":28000,"preciox5sacos":28000},{"id":"rv0KCvIGkiSJDYR3pm0u","initialsNames":["m","ms"],"nombre":"MASTERCAT SALMON ","peso":20,"precioComerciante":39900,"precioPublico":43800,"preciox10sacos":38500,"preciox15sacos":37800,"preciox5sacos":39200},{"id":"yAr7qMlVUFJVtUhV5wuv","initialsNames":["m","mp"],"nombre":"MASTERCAT POLLO","peso":20,"precioComerciante":39900,"precioPublico":43800,"preciox10sacos":38500,"preciox15sacos":37800,"preciox5sacos":39200},{"id":"zDUXYvH2IsT68jimv92E","initialsNames":["m","ms"],"nombre":"MASTERDOG SENIOR","peso":8,"precioComerciante":14300,"precioPublico":16600,"preciox10sacos":13800,"preciox15sacos":13800,"preciox5sacos":14100},{"id":"zLACcsK4XW0g4LWDoxLw","initialsNames":["m","mr"],"nombre":"MASTERCAT RELLENO","peso":20,"precioComerciante":39900,"precioPublico":43800,"preciox10sacos":38500,"preciox15sacos":37800,"preciox5sacos":39200},{"id":"zYgxFBlstEwsxLFiFBdN","initialsNames":["m","me","mew","mewa","mewag","mewag(","mewag(s","mewag(st"],"nombre":"MERA EXKLUSIV WEIZENFREI ADULTO GEFLÛGEL (AVES SIN TRIGO)","peso":15,"precioComerciante":52600,"precioPublico":61000,"preciox10sacos":50700,"preciox15sacos":49800,"preciox5sacos":51600}]
+[01:24:33.218] Server  LOG      ✓ Compiled in 168ms
+[01:24:36.613] Server  LOG      ✓ Compiled in 129ms
+[01:24:40.532] Server  LOG      ✓ Compiled in 338ms
+[01:24:41.579] Browser ERROR   ./src/app/page.js:138:64
+Parsing ecmascript source code failed
+  136 |            )}
+  137 |       </div>
+> 138 |       <div style={{padding:"1rem", position:"absolute", bottom:}}>
+      |                                                                ^
+  139 |        <FormSearchProducts onSearchResults={setProducts} setIsLoading={setIsLoading} />
+  140 |       </div>
+  141 |     </div>
+
+Expected '</', got '}'
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.js [Client Component Browser]
+    ./src/app/page.js [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.js [Client Component SSR]
+    ./src/app/page.js [Server Component]
+[01:24:46.819] Server  LOG      ✓ Compiled in 235ms
+[01:24:54.864] Server  LOG      ✓ Compiled in 109ms
+[01:24:57.408] Server  LOG      ✓ Compiled in 137ms
+[01:25:09.135] Server  LOG     Firebase App Initialized Successfully
+[01:25:13.002] Browser LOG     Firebase App Initialized Successfully
+[01:25:14.584] Browser LOG     Buscando en 'initialsNames' el valor: m
+[01:25:14.585] Browser LOG     m
+[01:25:16.535] Browser LOG     Resultados encontrados: [{"id":"2fgT2xXaoUF7vT7kiNtW","initialsNames":["m","ms"],"nombre":"MASTIN SENIOR","peso":22,"precioComerciante":35100,"precioPublico":40000,"preciox10sacos":33800,"preciox15sacos":33200,"preciox5sacos":34500},{"id":"2heXrMGyAz0wPIeR3hvm","initialsNames":["m"],"nombre":"MIJO","peso":25,"precioComerciante":33000,"precioPublico":37300,"preciox10sacos":33000,"preciox15sacos":33000,"preciox5sacos":33000},{"id":"3KvLEkVB4iFSTEUKy5j9","initialsNames":["m","mm"],"nombre":"MASTIN MADRE-CACHORRO","peso":15,"precioComerciante":23800,"precioPublico":27600,"preciox10sacos":22900,"preciox15sacos":26500,"preciox5sacos":23300},{"amount":-15,"id":"4PZrAX1PRcW1rQwxaWfX","initialsNames":["m","ma","mar","marp"],"nombre":"MASTERDOG ADULTO RAZA PEQUEÑA","peso":8,"precioComerciante":14300,"precioPublico":16600,"preciox10sacos":13800,"preciox15sacos":13800,"preciox5sacos":14100},{"id":"5on0wOhllyg8MaGbL372","initialsNames":["m","mc"],"nombre":"MASTERCAT CARNE","peso":20,"precioComerciante":39900,"precioPublico":43800,"preciox10sacos":38500,"preciox15sacos":37800,"preciox5sacos":39200},{"amount":-8,"id":"6k8vkJFdbzuZadfm7WOe","initialsNames":["m","ma","mar","marp"],"nombre":"MASTERDOG ADULTO RAZA PEQUEÑA","peso":18,"precioComerciante":28500,"precioPublico":31900,"preciox10sacos":27500,"preciox15sacos":27000,"preciox5sacos":28000},{"id":"CJNPRjOgx4AMEQ1H1dUj","initialsNames":["m","ma","mac"],"nombre":"MASTIN ADULTO CARNE","peso":22,"precioComerciante":32600,"precioPublico":37200,"preciox10sacos":31500,"preciox15sacos":30900,"preciox5sacos":32000},{"id":"DpwcADvQvATEFFueL5ah","initialsNames":["m","me","mes","mesa","mesa(","mesa(y","mesa(ya"],"nombre":"MERA EXKLUSIV SENSITIVE ADULTO (SALMON Y ARROZ)","peso":15,"precioComerciante":62700,"precioPublico":72700,"preciox10sacos":60400,"preciox15sacos":59300,"preciox5sacos":61500},{"id":"GuPBlz2OUzI4hB6EKh21","initialsNames":["m","me","mes","mess","mess(","mess(y","mess(ya"],"nombre":"MERA EXKLUSIV SENSITIVE SENIOR (PAVO Y ARROZ)","peso":15,"precioComerciante":62700,"precioPublico":72700,"preciox10sacos":60400,"preciox15sacos":59300,"preciox5sacos":61500},{"id":"MaPUp8inGZ8clkhPXZQz","initialsNames":["m","mc"],"nombre":"MASTERDOG CACHORRO","peso":18,"precioComerciante":28500,"precioPublico":31900,"preciox10sacos":27500,"preciox15sacos":27000,"preciox5sacos":28000},{"id":"NKXeKY5RyM6GIKEvdrcF","initialsNames":["m","md","mdc"],"nombre":"MEZCLA DE CANARIO","peso":1,"precioComerciante":1600,"precioPublico":2050,"preciox10sacos":1600,"preciox15sacos":1600,"preciox5sacos":1600},{"id":"OWMxFbU0UB7yd0mlr0DT","initialsNames":["m"],"nombre":"MARAVILLA","peso":25,"precioComerciante":45600,"precioPublico":52000,"preciox10sacos":45600,"preciox15sacos":43700,"preciox5sacos":45600},{"id":"ObnYA5vmMtHTQCPUCI1g","initialsNames":["m","ms"],"nombre":"MASTERDOG SENIOR","peso":18,"precioComerciante":28500,"precioPublico":31900,"preciox10sacos":27500,"preciox15sacos":27000,"preciox5sacos":28000},{"id":"WmARsWHBsle1UpLwRx5M","initialsNames":["m","md","mdc"],"nombre":"MEZCLA DE CATAS","peso":1,"precioComerciante":1500,"precioPublico":1750,"preciox10sacos":1500,"preciox15sacos":1500,"preciox5sacos":1500},{"id":"XmMG3lOoca0lgmN7wq6w","initialsNames":["m","mc","mco","mcop"],"nombre":"MASTERDOG CARNE o POLLO","peso":18,"precioComerciante":28500,"precioPublico":31900,"preciox10sacos":27500,"preciox15sacos":27000,"preciox5sacos":28000},{"id":"YmVMOO9Qo17SjCm3pQEt","initialsNames":["m"],"nombre":"MAIZ","peso":25,"precioComerciante":11300,"precioPublico":13300,"preciox10sacos":11300,"preciox15sacos":11300,"preciox5sacos":11300},{"id":"YypsO91yigUT0O46PbK7","initialsNames":["m","me","mes","mesp","mesp(","mesp(y","mesp(ya"],"nombre":"MERA EXKLUSIV SENSITIV PUPPY (PAVO Y ARROZ)","peso":15,"precioComerciante":62600,"precioPublico":74000,"preciox10sacos":60400,"preciox15sacos":71200,"preciox5sacos":61500},{"amount":-6,"id":"bQIAEYQ8JugOiclV5CNV","initialsNames":["m","ma","mar","marp"],"nombre":"MASTIN ADULTO RAZA PEQUEÑA","peso":10,"precioComerciante":16300,"precioPublico":18600,"preciox10sacos":15700,"preciox15sacos":15400,"preciox5sacos":16000},{"id":"ghWZUTK7sqPbFRciB2zQ","initialsNames":["m","me","mes","mesa","mesa(","mesa(y","mesa(ya"],"nombre":"MERA EXKLUSIV SENSITIVE ADULTO (PAVO Y ARROZ)","peso":15,"precioComerciante":66700,"precioPublico":72700,"preciox10sacos":60400,"preciox15sacos":59300,"preciox5sacos":61500},{"id":"iJDwd6iCVyafRxIdMMtc","initialsNames":["m","mc"],"nombre":"MP CONCHUELA","peso":25,"precioComerciante":4200,"precioPublico":5900,"preciox10sacos":4200,"preciox15sacos":4200,"preciox5sacos":4200},{"id":"lESzJqJY3bdWrltmOVo9","initialsNames":["m","mc"],"nombre":"MASKO CAN","peso":25,"precioComerciante":25700,"precioPublico":29400,"preciox10sacos":24800,"preciox15sacos":24300,"preciox5sacos":25300},{"id":"qvOD3IOUM46V48FW1EO1","initialsNames":["m","mc","mc2","mc2k"],"nombre":"MAIZ CURAGUA 25 KG","peso":25,"precioComerciante":28000,"precioPublico":30200,"preciox10sacos":28000,"preciox15sacos":28000,"preciox5sacos":28000},{"id":"rv0KCvIGkiSJDYR3pm0u","initialsNames":["m","ms"],"nombre":"MASTERCAT SALMON ","peso":20,"precioComerciante":39900,"precioPublico":43800,"preciox10sacos":38500,"preciox15sacos":37800,"preciox5sacos":39200},{"id":"yAr7qMlVUFJVtUhV5wuv","initialsNames":["m","mp"],"nombre":"MASTERCAT POLLO","peso":20,"precioComerciante":39900,"precioPublico":43800,"preciox10sacos":38500,"preciox15sacos":37800,"preciox5sacos":39200},{"id":"zDUXYvH2IsT68jimv92E","initialsNames":["m","ms"],"nombre":"MASTERDOG SENIOR","peso":8,"precioComerciante":14300,"precioPublico":16600,"preciox10sacos":13800,"preciox15sacos":13800,"preciox5sacos":14100},{"id":"zLACcsK4XW0g4LWDoxLw","initialsNames":["m","mr"],"nombre":"MASTERCAT RELLENO","peso":20,"precioComerciante":39900,"precioPublico":43800,"preciox10sacos":38500,"preciox15sacos":37800,"preciox5sacos":39200},{"id":"zYgxFBlstEwsxLFiFBdN","initialsNames":["m","me","mew","mewa","mewag","mewag(","mewag(s","mewag(st"],"nombre":"MERA EXKLUSIV WEIZENFREI ADULTO GEFLÛGEL (AVES SIN TRIGO)","peso":15,"precioComerciante":52600,"precioPublico":61000,"preciox10sacos":50700,"preciox15sacos":49800,"preciox5sacos":51600}]
+[01:26:19.909] Server  LOG      ✓ Compiled in 237ms
+[01:26:20.622] Browser ERROR   ./src/app/page.js:138:45
+Parsing ecmascript source code failed
+  136 |            )}
+  137 |       </div>
+> 138 |       <div style={{padding:"1rem", width:"" position:"fixed", bottom:0}}>
+      |                                             ^^^^^^^^
+  139 |        <FormSearchProducts onSearchResults={setProducts} setIsLoading={setIsLoading} />
+  140 |       </div>
+  141 |     </div>
+
+Expected '</', got 'position'
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.js [Client Component Browser]
+    ./src/app/page.js [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.js [Client Component SSR]
+    ./src/app/page.js [Server Component]
+[01:26:22.614] Browser ERROR   ./src/app/page.js:138:46
+Parsing ecmascript source code failed
+  136 |            )}
+  137 |       </div>
+> 138 |       <div style={{padding:"1rem", width:"1" position:"fixed", bottom:0}}>
+      |                                              ^^^^^^^^
+  139 |        <FormSearchProducts onSearchResults={setProducts} setIsLoading={setIsLoading} />
+  140 |       </div>
+  141 |     </div>
+
+Expected '</', got 'position'
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.js [Client Component Browser]
+    ./src/app/page.js [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.js [Client Component SSR]
+    ./src/app/page.js [Server Component]
+[01:26:27.618] Browser ERROR   ./src/app/page.js:138:49
+Parsing ecmascript source code failed
+  136 |            )}
+  137 |       </div>
+> 138 |       <div style={{padding:"1rem", width:"100%" position:"fixed", bottom:0}}>
+      |                                                 ^^^^^^^^
+  139 |        <FormSearchProducts onSearchResults={setProducts} setIsLoading={setIsLoading} />
+  140 |       </div>
+  141 |     </div>
+
+Expected '</', got 'position'
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.js [Client Component Browser]
+    ./src/app/page.js [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.js [Client Component SSR]
+    ./src/app/page.js [Server Component]
+[01:26:30.266] Server  LOG      ✓ Compiled in 541ms
+[01:26:40.650] Server  LOG     Firebase App Initialized Successfully
+[01:26:44.626] Browser LOG     Firebase App Initialized Successfully
+[01:27:05.980] Server  LOG      ✓ Compiled in 149ms
+[01:27:26.982] Server  LOG      ✓ Compiled in 47ms
+[01:27:53.415] Server  LOG      ✓ Compiled in 17ms
+[01:28:08.955] Server  LOG     Firebase App Initialized Successfully
+[01:28:14.669] Browser LOG     Firebase App Initialized Successfully
+[01:28:28.401] Server  LOG      ✓ Compiled in 169ms
+[01:28:34.620] Server  LOG     Firebase App Initialized Successfully
+[01:28:39.184] Browser LOG     Firebase App Initialized Successfully
+[01:29:14.018] Server  LOG      ✓ Compiled in 744ms
+[01:29:23.562] Server  LOG      ✓ Compiled in 448ms
+[01:29:41.847] Server  LOG      ✓ Compiled in 99ms
+[01:29:52.526] Server  LOG     Firebase App Initialized Successfully
+[01:29:58.214] Browser LOG     Firebase App Initialized Successfully
+[01:29:58.644] Browser LOG     Firebase App Initialized Successfully
+[01:30:20.586] Server  LOG      ✓ Compiled in 205ms
+[01:30:29.060] Server  LOG     Firebase App Initialized Successfully
+[01:31:37.798] Server  LOG      ✓ Compiled in 113ms
+[01:32:01.530] Server  LOG      ✓ Compiled in 179ms
+[01:32:08.037] Server  LOG     Firebase App Initialized Successfully
+[01:32:12.050] Browser LOG     Firebase App Initialized Successfully
+[01:32:17.709] Browser LOG     Buscando en 'initialsNames' el valor: m
+[01:32:17.709] Browser LOG     m
+[01:32:19.767] Browser LOG     Resultados encontrados: [{"id":"2fgT2xXaoUF7vT7kiNtW","initialsNames":["m","ms"],"nombre":"MASTIN SENIOR","peso":22,"precioComerciante":35100,"precioPublico":40000,"preciox10sacos":33800,"preciox15sacos":33200,"preciox5sacos":34500},{"id":"2heXrMGyAz0wPIeR3hvm","initialsNames":["m"],"nombre":"MIJO","peso":25,"precioComerciante":33000,"precioPublico":37300,"preciox10sacos":33000,"preciox15sacos":33000,"preciox5sacos":33000},{"id":"3KvLEkVB4iFSTEUKy5j9","initialsNames":["m","mm"],"nombre":"MASTIN MADRE-CACHORRO","peso":15,"precioComerciante":23800,"precioPublico":27600,"preciox10sacos":22900,"preciox15sacos":26500,"preciox5sacos":23300},{"amount":-15,"id":"4PZrAX1PRcW1rQwxaWfX","initialsNames":["m","ma","mar","marp"],"nombre":"MASTERDOG ADULTO RAZA PEQUEÑA","peso":8,"precioComerciante":14300,"precioPublico":16600,"preciox10sacos":13800,"preciox15sacos":13800,"preciox5sacos":14100},{"id":"5on0wOhllyg8MaGbL372","initialsNames":["m","mc"],"nombre":"MASTERCAT CARNE","peso":20,"precioComerciante":39900,"precioPublico":43800,"preciox10sacos":38500,"preciox15sacos":37800,"preciox5sacos":39200},{"amount":-8,"id":"6k8vkJFdbzuZadfm7WOe","initialsNames":["m","ma","mar","marp"],"nombre":"MASTERDOG ADULTO RAZA PEQUEÑA","peso":18,"precioComerciante":28500,"precioPublico":31900,"preciox10sacos":27500,"preciox15sacos":27000,"preciox5sacos":28000},{"id":"CJNPRjOgx4AMEQ1H1dUj","initialsNames":["m","ma","mac"],"nombre":"MASTIN ADULTO CARNE","peso":22,"precioComerciante":32600,"precioPublico":37200,"preciox10sacos":31500,"preciox15sacos":30900,"preciox5sacos":32000},{"id":"DpwcADvQvATEFFueL5ah","initialsNames":["m","me","mes","mesa","mesa(","mesa(y","mesa(ya"],"nombre":"MERA EXKLUSIV SENSITIVE ADULTO (SALMON Y ARROZ)","peso":15,"precioComerciante":62700,"precioPublico":72700,"preciox10sacos":60400,"preciox15sacos":59300,"preciox5sacos":61500},{"id":"GuPBlz2OUzI4hB6EKh21","initialsNames":["m","me","mes","mess","mess(","mess(y","mess(ya"],"nombre":"MERA EXKLUSIV SENSITIVE SENIOR (PAVO Y ARROZ)","peso":15,"precioComerciante":62700,"precioPublico":72700,"preciox10sacos":60400,"preciox15sacos":59300,"preciox5sacos":61500},{"id":"MaPUp8inGZ8clkhPXZQz","initialsNames":["m","mc"],"nombre":"MASTERDOG CACHORRO","peso":18,"precioComerciante":28500,"precioPublico":31900,"preciox10sacos":27500,"preciox15sacos":27000,"preciox5sacos":28000},{"id":"NKXeKY5RyM6GIKEvdrcF","initialsNames":["m","md","mdc"],"nombre":"MEZCLA DE CANARIO","peso":1,"precioComerciante":1600,"precioPublico":2050,"preciox10sacos":1600,"preciox15sacos":1600,"preciox5sacos":1600},{"id":"OWMxFbU0UB7yd0mlr0DT","initialsNames":["m"],"nombre":"MARAVILLA","peso":25,"precioComerciante":45600,"precioPublico":52000,"preciox10sacos":45600,"preciox15sacos":43700,"preciox5sacos":45600},{"id":"ObnYA5vmMtHTQCPUCI1g","initialsNames":["m","ms"],"nombre":"MASTERDOG SENIOR","peso":18,"precioComerciante":28500,"precioPublico":31900,"preciox10sacos":27500,"preciox15sacos":27000,"preciox5sacos":28000},{"id":"WmARsWHBsle1UpLwRx5M","initialsNames":["m","md","mdc"],"nombre":"MEZCLA DE CATAS","peso":1,"precioComerciante":1500,"precioPublico":1750,"preciox10sacos":1500,"preciox15sacos":1500,"preciox5sacos":1500},{"id":"XmMG3lOoca0lgmN7wq6w","initialsNames":["m","mc","mco","mcop"],"nombre":"MASTERDOG CARNE o POLLO","peso":18,"precioComerciante":28500,"precioPublico":31900,"preciox10sacos":27500,"preciox15sacos":27000,"preciox5sacos":28000},{"id":"YmVMOO9Qo17SjCm3pQEt","initialsNames":["m"],"nombre":"MAIZ","peso":25,"precioComerciante":11300,"precioPublico":13300,"preciox10sacos":11300,"preciox15sacos":11300,"preciox5sacos":11300},{"id":"YypsO91yigUT0O46PbK7","initialsNames":["m","me","mes","mesp","mesp(","mesp(y","mesp(ya"],"nombre":"MERA EXKLUSIV SENSITIV PUPPY (PAVO Y ARROZ)","peso":15,"precioComerciante":62600,"precioPublico":74000,"preciox10sacos":60400,"preciox15sacos":71200,"preciox5sacos":61500},{"amount":-6,"id":"bQIAEYQ8JugOiclV5CNV","initialsNames":["m","ma","mar","marp"],"nombre":"MASTIN ADULTO RAZA PEQUEÑA","peso":10,"precioComerciante":16300,"precioPublico":18600,"preciox10sacos":15700,"preciox15sacos":15400,"preciox5sacos":16000},{"id":"ghWZUTK7sqPbFRciB2zQ","initialsNames":["m","me","mes","mesa","mesa(","mesa(y","mesa(ya"],"nombre":"MERA EXKLUSIV SENSITIVE ADULTO (PAVO Y ARROZ)","peso":15,"precioComerciante":66700,"precioPublico":72700,"preciox10sacos":60400,"preciox15sacos":59300,"preciox5sacos":61500},{"id":"iJDwd6iCVyafRxIdMMtc","initialsNames":["m","mc"],"nombre":"MP CONCHUELA","peso":25,"precioComerciante":4200,"precioPublico":5900,"preciox10sacos":4200,"preciox15sacos":4200,"preciox5sacos":4200},{"id":"lESzJqJY3bdWrltmOVo9","initialsNames":["m","mc"],"nombre":"MASKO CAN","peso":25,"precioComerciante":25700,"precioPublico":29400,"preciox10sacos":24800,"preciox15sacos":24300,"preciox5sacos":25300},{"id":"qvOD3IOUM46V48FW1EO1","initialsNames":["m","mc","mc2","mc2k"],"nombre":"MAIZ CURAGUA 25 KG","peso":25,"precioComerciante":28000,"precioPublico":30200,"preciox10sacos":28000,"preciox15sacos":28000,"preciox5sacos":28000},{"id":"rv0KCvIGkiSJDYR3pm0u","initialsNames":["m","ms"],"nombre":"MASTERCAT SALMON ","peso":20,"precioComerciante":39900,"precioPublico":43800,"preciox10sacos":38500,"preciox15sacos":37800,"preciox5sacos":39200},{"id":"yAr7qMlVUFJVtUhV5wuv","initialsNames":["m","mp"],"nombre":"MASTERCAT POLLO","peso":20,"precioComerciante":39900,"precioPublico":43800,"preciox10sacos":38500,"preciox15sacos":37800,"preciox5sacos":39200},{"id":"zDUXYvH2IsT68jimv92E","initialsNames":["m","ms"],"nombre":"MASTERDOG SENIOR","peso":8,"precioComerciante":14300,"precioPublico":16600,"preciox10sacos":13800,"preciox15sacos":13800,"preciox5sacos":14100},{"id":"zLACcsK4XW0g4LWDoxLw","initialsNames":["m","mr"],"nombre":"MASTERCAT RELLENO","peso":20,"precioComerciante":39900,"precioPublico":43800,"preciox10sacos":38500,"preciox15sacos":37800,"preciox5sacos":39200},{"id":"zYgxFBlstEwsxLFiFBdN","initialsNames":["m","me","mew","mewa","mewag","mewag(","mewag(s","mewag(st"],"nombre":"MERA EXKLUSIV WEIZENFREI ADULTO GEFLÛGEL (AVES SIN TRIGO)","peso":15,"precioComerciante":52600,"precioPublico":61000,"preciox10sacos":50700,"preciox15sacos":49800,"preciox5sacos":51600}]
+[01:33:56.970] Server  LOG      ✓ Compiled in 116ms
+[01:34:03.814] Server  LOG      ✓ Compiled in 114ms
+[01:34:29.048] Server  LOG      ✓ Compiled in 76ms
+[01:34:33.063] Server  LOG     Firebase App Initialized Successfully
+[01:34:37.413] Browser LOG     Firebase App Initialized Successfully
+[01:34:40.153] Browser LOG     Buscando en 'initialsNames' el valor: m
+[01:34:40.153] Browser LOG     m
+[01:34:41.814] Browser LOG     Resultados encontrados: [{"id":"2fgT2xXaoUF7vT7kiNtW","initialsNames":["m","ms"],"nombre":"MASTIN SENIOR","peso":22,"precioComerciante":35100,"precioPublico":40000,"preciox10sacos":33800,"preciox15sacos":33200,"preciox5sacos":34500},{"id":"2heXrMGyAz0wPIeR3hvm","initialsNames":["m"],"nombre":"MIJO","peso":25,"precioComerciante":33000,"precioPublico":37300,"preciox10sacos":33000,"preciox15sacos":33000,"preciox5sacos":33000},{"id":"3KvLEkVB4iFSTEUKy5j9","initialsNames":["m","mm"],"nombre":"MASTIN MADRE-CACHORRO","peso":15,"precioComerciante":23800,"precioPublico":27600,"preciox10sacos":22900,"preciox15sacos":26500,"preciox5sacos":23300},{"amount":-15,"id":"4PZrAX1PRcW1rQwxaWfX","initialsNames":["m","ma","mar","marp"],"nombre":"MASTERDOG ADULTO RAZA PEQUEÑA","peso":8,"precioComerciante":14300,"precioPublico":16600,"preciox10sacos":13800,"preciox15sacos":13800,"preciox5sacos":14100},{"id":"5on0wOhllyg8MaGbL372","initialsNames":["m","mc"],"nombre":"MASTERCAT CARNE","peso":20,"precioComerciante":39900,"precioPublico":43800,"preciox10sacos":38500,"preciox15sacos":37800,"preciox5sacos":39200},{"amount":-8,"id":"6k8vkJFdbzuZadfm7WOe","initialsNames":["m","ma","mar","marp"],"nombre":"MASTERDOG ADULTO RAZA PEQUEÑA","peso":18,"precioComerciante":28500,"precioPublico":31900,"preciox10sacos":27500,"preciox15sacos":27000,"preciox5sacos":28000},{"id":"CJNPRjOgx4AMEQ1H1dUj","initialsNames":["m","ma","mac"],"nombre":"MASTIN ADULTO CARNE","peso":22,"precioComerciante":32600,"precioPublico":37200,"preciox10sacos":31500,"preciox15sacos":30900,"preciox5sacos":32000},{"id":"DpwcADvQvATEFFueL5ah","initialsNames":["m","me","mes","mesa","mesa(","mesa(y","mesa(ya"],"nombre":"MERA EXKLUSIV SENSITIVE ADULTO (SALMON Y ARROZ)","peso":15,"precioComerciante":62700,"precioPublico":72700,"preciox10sacos":60400,"preciox15sacos":59300,"preciox5sacos":61500},{"id":"GuPBlz2OUzI4hB6EKh21","initialsNames":["m","me","mes","mess","mess(","mess(y","mess(ya"],"nombre":"MERA EXKLUSIV SENSITIVE SENIOR (PAVO Y ARROZ)","peso":15,"precioComerciante":62700,"precioPublico":72700,"preciox10sacos":60400,"preciox15sacos":59300,"preciox5sacos":61500},{"id":"MaPUp8inGZ8clkhPXZQz","initialsNames":["m","mc"],"nombre":"MASTERDOG CACHORRO","peso":18,"precioComerciante":28500,"precioPublico":31900,"preciox10sacos":27500,"preciox15sacos":27000,"preciox5sacos":28000},{"id":"NKXeKY5RyM6GIKEvdrcF","initialsNames":["m","md","mdc"],"nombre":"MEZCLA DE CANARIO","peso":1,"precioComerciante":1600,"precioPublico":2050,"preciox10sacos":1600,"preciox15sacos":1600,"preciox5sacos":1600},{"id":"OWMxFbU0UB7yd0mlr0DT","initialsNames":["m"],"nombre":"MARAVILLA","peso":25,"precioComerciante":45600,"precioPublico":52000,"preciox10sacos":45600,"preciox15sacos":43700,"preciox5sacos":45600},{"id":"ObnYA5vmMtHTQCPUCI1g","initialsNames":["m","ms"],"nombre":"MASTERDOG SENIOR","peso":18,"precioComerciante":28500,"precioPublico":31900,"preciox10sacos":27500,"preciox15sacos":27000,"preciox5sacos":28000},{"id":"WmARsWHBsle1UpLwRx5M","initialsNames":["m","md","mdc"],"nombre":"MEZCLA DE CATAS","peso":1,"precioComerciante":1500,"precioPublico":1750,"preciox10sacos":1500,"preciox15sacos":1500,"preciox5sacos":1500},{"id":"XmMG3lOoca0lgmN7wq6w","initialsNames":["m","mc","mco","mcop"],"nombre":"MASTERDOG CARNE o POLLO","peso":18,"precioComerciante":28500,"precioPublico":31900,"preciox10sacos":27500,"preciox15sacos":27000,"preciox5sacos":28000},{"id":"YmVMOO9Qo17SjCm3pQEt","initialsNames":["m"],"nombre":"MAIZ","peso":25,"precioComerciante":11300,"precioPublico":13300,"preciox10sacos":11300,"preciox15sacos":11300,"preciox5sacos":11300},{"id":"YypsO91yigUT0O46PbK7","initialsNames":["m","me","mes","mesp","mesp(","mesp(y","mesp(ya"],"nombre":"MERA EXKLUSIV SENSITIV PUPPY (PAVO Y ARROZ)","peso":15,"precioComerciante":62600,"precioPublico":74000,"preciox10sacos":60400,"preciox15sacos":71200,"preciox5sacos":61500},{"amount":-6,"id":"bQIAEYQ8JugOiclV5CNV","initialsNames":["m","ma","mar","marp"],"nombre":"MASTIN ADULTO RAZA PEQUEÑA","peso":10,"precioComerciante":16300,"precioPublico":18600,"preciox10sacos":15700,"preciox15sacos":15400,"preciox5sacos":16000},{"id":"ghWZUTK7sqPbFRciB2zQ","initialsNames":["m","me","mes","mesa","mesa(","mesa(y","mesa(ya"],"nombre":"MERA EXKLUSIV SENSITIVE ADULTO (PAVO Y ARROZ)","peso":15,"precioComerciante":66700,"precioPublico":72700,"preciox10sacos":60400,"preciox15sacos":59300,"preciox5sacos":61500},{"id":"iJDwd6iCVyafRxIdMMtc","initialsNames":["m","mc"],"nombre":"MP CONCHUELA","peso":25,"precioComerciante":4200,"precioPublico":5900,"preciox10sacos":4200,"preciox15sacos":4200,"preciox5sacos":4200},{"id":"lESzJqJY3bdWrltmOVo9","initialsNames":["m","mc"],"nombre":"MASKO CAN","peso":25,"precioComerciante":25700,"precioPublico":29400,"preciox10sacos":24800,"preciox15sacos":24300,"preciox5sacos":25300},{"id":"qvOD3IOUM46V48FW1EO1","initialsNames":["m","mc","mc2","mc2k"],"nombre":"MAIZ CURAGUA 25 KG","peso":25,"precioComerciante":28000,"precioPublico":30200,"preciox10sacos":28000,"preciox15sacos":28000,"preciox5sacos":28000},{"id":"rv0KCvIGkiSJDYR3pm0u","initialsNames":["m","ms"],"nombre":"MASTERCAT SALMON ","peso":20,"precioComerciante":39900,"precioPublico":43800,"preciox10sacos":38500,"preciox15sacos":37800,"preciox5sacos":39200},{"id":"yAr7qMlVUFJVtUhV5wuv","initialsNames":["m","mp"],"nombre":"MASTERCAT POLLO","peso":20,"precioComerciante":39900,"precioPublico":43800,"preciox10sacos":38500,"preciox15sacos":37800,"preciox5sacos":39200},{"id":"zDUXYvH2IsT68jimv92E","initialsNames":["m","ms"],"nombre":"MASTERDOG SENIOR","peso":8,"precioComerciante":14300,"precioPublico":16600,"preciox10sacos":13800,"preciox15sacos":13800,"preciox5sacos":14100},{"id":"zLACcsK4XW0g4LWDoxLw","initialsNames":["m","mr"],"nombre":"MASTERCAT RELLENO","peso":20,"precioComerciante":39900,"precioPublico":43800,"preciox10sacos":38500,"preciox15sacos":37800,"preciox5sacos":39200},{"id":"zYgxFBlstEwsxLFiFBdN","initialsNames":["m","me","mew","mewa","mewag","mewag(","mewag(s","mewag(st"],"nombre":"MERA EXKLUSIV WEIZENFREI ADULTO GEFLÛGEL (AVES SIN TRIGO)","peso":15,"precioComerciante":52600,"precioPublico":61000,"preciox10sacos":50700,"preciox15sacos":49800,"preciox5sacos":51600}]
+[01:35:34.644] Server  LOG      ✓ Compiled in 105ms
+[01:36:51.989] Server  LOG      ✓ Compiled in 376ms
+[01:36:52.694] Browser ERROR   ./src/app/page.js:103:64
+Parsing ecmascript source code failed
+  101 |       overflowY:"auto",
+  102 |     }}>
+> 103 |       <div style={{flexGrow:1, overflowY:"auto", marginBottom:1rem}}>
+      |                                                                ^^^
+  104 |            {isListSelectedVisible ? (
+  105 |              <>
+  106 |                 <button style={buttonStyle} onClick={() => setIsListSelectedVisible(false)}>Volver a Productos</button>
+
+Expected '</', got 'rem'
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.js [Client Component Browser]
+    ./src/app/page.js [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.js [Client Component SSR]
+    ./src/app/page.js [Server Component]
+[01:36:57.325] Server  LOG      ✓ Compiled in 159ms
+[01:36:57.687] Browser ERROR   ./src/app/page.js:103:64
+Parsing ecmascript source code failed
+  101 |       overflowY:"auto",
+  102 |     }}>
+> 103 |       <div style={{flexGrow:1, overflowY:"auto", marginBottom:1rem}}>
+      |                                                                ^^^
+  104 |            {isListSelectedVisible ? (
+  105 |              <>
+  106 |                 <button style={buttonStyle} onClick={() => setIsListSelectedVisible(false)}>Volver a Productos</button>
+
+Expected '</', got 'rem'
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.js [Client Component Browser]
+    ./src/app/page.js [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.js [Client Component SSR]
+    ./src/app/page.js [Server Component]
+[01:36:57.687] Browser ERROR   ./src/app/page.js:103:63
+Parsing ecmascript source code failed
+  101 |       overflowY:"auto",
+  102 |     }}>
+> 103 |       <div style={{flexGrow:1, overflowY:"auto", marginBottom:"1rem}}>
+      |                                                               ^^^^^^^^
+  104 |            {isListSelectedVisible ? (
+  105 |              <>
+  106 |                 <button style={buttonStyle} onClick={() => setIsListSelectedVisible(false)}>Volver a Productos</button>
+
+Unterminated string constant
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.js [Client Component Browser]
+    ./src/app/page.js [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.js [Client Component SSR]
+    ./src/app/page.js [Server Component]
+[01:36:58.938] Server  LOG      ✓ Compiled in 348ms
+[01:37:17.068] Server  LOG      ✓ Compiled in 127ms
+[01:37:42.324] Server  LOG      ○ Compiling /documentos ...

@@ -31,6 +31,7 @@ const FormSearchProducts = ({ onSearchResults, setIsLoading }) => {
   }
 
   const formStyle = {
+    width:"100%",
     display: 'flex',
     gap: '0.5rem',
   };

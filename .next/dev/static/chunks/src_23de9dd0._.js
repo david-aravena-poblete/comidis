@@ -305,6 +305,7 @@ const FormSearchProducts = ({ onSearchResults, setIsLoading })=>{
         onSearchResults([]);
     };
     const formStyle = {
+        width: "100%",
         display: 'flex',
         gap: '0.5rem'
     };
@@ -336,7 +337,7 @@ const FormSearchProducts = ({ onSearchResults, setIsLoading })=>{
                 children: "Limpiar"
             }, void 0, false, {
                 fileName: "[project]/src/app/components/formSearchProducts/index.jsx",
-                lineNumber: 54,
+                lineNumber: 55,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -346,7 +347,7 @@ const FormSearchProducts = ({ onSearchResults, setIsLoading })=>{
                 placeholder: "Buscar..."
             }, void 0, false, {
                 fileName: "[project]/src/app/components/formSearchProducts/index.jsx",
-                lineNumber: 57,
+                lineNumber: 58,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -355,13 +356,13 @@ const FormSearchProducts = ({ onSearchResults, setIsLoading })=>{
                 children: "Buscar"
             }, void 0, false, {
                 fileName: "[project]/src/app/components/formSearchProducts/index.jsx",
-                lineNumber: 63,
+                lineNumber: 64,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/components/formSearchProducts/index.jsx",
-        lineNumber: 53,
+        lineNumber: 54,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
@@ -1126,18 +1127,20 @@ function Home() {
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         style: {
-            width: "100vw",
-            minHeight: "100vh",
+            width: "100%",
+            height: "100%",
             display: "flex",
             flexDirection: "column",
-            padding: "1rem"
+            justifyContent: "space-between",
+            padding: "1rem 0",
+            overflowY: "auto"
         },
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 style: {
                     flexGrow: 1,
                     overflowY: "auto",
-                    padding: "0 1rem"
+                    marginBottom: "3rem"
                 },
                 children: isListSelectedVisible ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
                     children: [
@@ -1147,7 +1150,7 @@ function Home() {
                             children: "Volver a Productos"
                         }, void 0, false, {
                             fileName: "[project]/src/app/page.js",
-                            lineNumber: 104,
+                            lineNumber: 106,
                             columnNumber: 17
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$listSelectedProducts$2f$index$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -1159,7 +1162,7 @@ function Home() {
                             handlerCrearPedido: handlerCrearPedido
                         }, void 0, false, {
                             fileName: "[project]/src/app/page.js",
-                            lineNumber: 105,
+                            lineNumber: 107,
                             columnNumber: 17
                         }, this)
                     ]
@@ -1176,7 +1179,7 @@ function Home() {
                                     children: "Productos Disponibles"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/page.js",
-                                    lineNumber: 117,
+                                    lineNumber: 119,
                                     columnNumber: 18
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1189,13 +1192,13 @@ function Home() {
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/page.js",
-                                    lineNumber: 118,
+                                    lineNumber: 120,
                                     columnNumber: 18
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/page.js",
-                            lineNumber: 116,
+                            lineNumber: 118,
                             columnNumber: 16
                         }, this),
                         isLoading ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1207,12 +1210,12 @@ function Home() {
                             },
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$loading$2f$index$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                                 fileName: "[project]/src/app/page.js",
-                                lineNumber: 123,
+                                lineNumber: 125,
                                 columnNumber: 112
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/page.js",
-                            lineNumber: 123,
+                            lineNumber: 125,
                             columnNumber: 21
                         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$listProducts$2f$index$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                             products: products,
@@ -1221,31 +1224,34 @@ function Home() {
                             selectedProducts: selectedProducts
                         }, void 0, false, {
                             fileName: "[project]/src/app/page.js",
-                            lineNumber: 125,
+                            lineNumber: 127,
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true)
             }, void 0, false, {
                 fileName: "[project]/src/app/page.js",
-                lineNumber: 101,
+                lineNumber: 103,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 style: {
-                    padding: "1rem"
+                    padding: "1rem 0",
+                    width: "100%",
+                    position: "fixed",
+                    bottom: 0
                 },
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$formSearchProducts$2f$index$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                     onSearchResults: setProducts,
                     setIsLoading: setIsLoading
                 }, void 0, false, {
                     fileName: "[project]/src/app/page.js",
-                    lineNumber: 136,
+                    lineNumber: 138,
                     columnNumber: 8
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/page.js",
-                lineNumber: 135,
+                lineNumber: 137,
                 columnNumber: 7
             }, this)
         ]

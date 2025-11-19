@@ -23,7 +23,7 @@ export default function Navbar() {
       display: 'flex',
       justifyContent: 'center',
       gap: '20px',
-      padding: '20px 0',
+      padding: '8px 0',
       backgroundColor: '#ffffff',
       borderBottom: '1px solid #dee2e6',
       boxShadow: '0 2px 4px rgba(0,0,0,0.05)'

@@ -92,13 +92,15 @@ export default function Home() {
 
   return (
     <div style={{
-      width:"100vw",
-      minHeight:"100vh",
+      width:"100%",
+      height:"100%",
       display:"flex",
       flexDirection:"column",
-      padding:"1rem"
+      justifyContent:"space-between",
+      padding:"1rem 0",
+      overflowY:"auto",
     }}>
-      <div style={{flexGrow:1, overflowY:"auto", padding: "0 1rem"}}>
+      <div style={{flexGrow:1, overflowY:"auto", marginBottom:"3rem"}}>
            {isListSelectedVisible ? (
              <>
                 <button style={buttonStyle} onClick={() => setIsListSelectedVisible(false)}>Volver a Productos</button>
@@ -132,7 +134,7 @@ export default function Home() {
              </>
            )}
       </div>
-      <div style={{padding:"1rem"}}>
+      <div style={{padding:"1rem 0", width:"100%", position:"fixed", bottom:0}}>
        <FormSearchProducts onSearchResults={setProducts} setIsLoading={setIsLoading} />
       </div>
     </div>
