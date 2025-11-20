@@ -29,10 +29,10 @@ export default function Navbar() {
       boxShadow: '0 2px 4px rgba(0,0,0,0.05)'
     }}>
       <Link href="/" style={getLinkStyle('/')}>
-        Home
+        Buscador
       </Link>
       <Link href="/documentos" style={getLinkStyle('/documentos')}>
-        Documentos
+        Pedidos
       </Link>
     </nav>
   );

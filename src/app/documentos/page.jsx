@@ -35,7 +35,8 @@ export default function ListDocuments() {
         message += '``';
         message += `*Total Pedido:* ${formatCurrency(totalPedido)}`;
 
-        const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+        const whatsappUrl = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message)}`; 
+
         window.open(whatsappUrl, '_blank');
     };
 

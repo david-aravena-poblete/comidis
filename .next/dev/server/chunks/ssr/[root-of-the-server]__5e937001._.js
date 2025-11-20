@@ -187,7 +187,7 @@ function ListDocuments() {
         });
         message += '``';
         message += `*Total Pedido:* ${formatCurrency(totalPedido)}`;
-        const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+        const whatsappUrl = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message)}`;
         window.open(whatsappUrl, '_blank');
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -208,7 +208,7 @@ function ListDocuments() {
                 children: "Lista de Pedidos"
             }, void 0, false, {
                 fileName: "[project]/src/app/documentos/page.jsx",
-                lineNumber: 45,
+                lineNumber: 46,
                 columnNumber: 13
             }, this),
             pedidos.length === 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -219,7 +219,7 @@ function ListDocuments() {
                 children: "No hay pedidos para mostrar."
             }, void 0, false, {
                 fileName: "[project]/src/app/documentos/page.jsx",
-                lineNumber: 47,
+                lineNumber: 48,
                 columnNumber: 17
             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 style: {
@@ -252,7 +252,7 @@ function ListDocuments() {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/documentos/page.jsx",
-                                lineNumber: 55,
+                                lineNumber: 56,
                                 columnNumber: 33
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("table", {
@@ -277,7 +277,7 @@ function ListDocuments() {
                                                     children: "Cant."
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/documentos/page.jsx",
-                                                    lineNumber: 60,
+                                                    lineNumber: 61,
                                                     columnNumber: 45
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -289,7 +289,7 @@ function ListDocuments() {
                                                     children: "Detalle"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/documentos/page.jsx",
-                                                    lineNumber: 61,
+                                                    lineNumber: 62,
                                                     columnNumber: 45
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -301,7 +301,7 @@ function ListDocuments() {
                                                     children: "Unitario"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/documentos/page.jsx",
-                                                    lineNumber: 62,
+                                                    lineNumber: 63,
                                                     columnNumber: 45
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -313,18 +313,18 @@ function ListDocuments() {
                                                     children: "Total"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/documentos/page.jsx",
-                                                    lineNumber: 63,
+                                                    lineNumber: 64,
                                                     columnNumber: 45
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/documentos/page.jsx",
-                                            lineNumber: 59,
+                                            lineNumber: 60,
                                             columnNumber: 41
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/documentos/page.jsx",
-                                        lineNumber: 58,
+                                        lineNumber: 59,
                                         columnNumber: 37
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
@@ -338,7 +338,7 @@ function ListDocuments() {
                                                         children: item.quantity
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/documentos/page.jsx",
-                                                        lineNumber: 69,
+                                                        lineNumber: 70,
                                                         columnNumber: 49
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -347,18 +347,6 @@ function ListDocuments() {
                                                             border: '1px solid #ddd'
                                                         },
                                                         children: `${item.product.nombre} ${item.product.peso}Kg`
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/src/app/documentos/page.jsx",
-                                                        lineNumber: 70,
-                                                        columnNumber: 49
-                                                    }, this),
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
-                                                        style: {
-                                                            padding: '4px',
-                                                            border: '1px solid #ddd',
-                                                            textAlign: 'right'
-                                                        },
-                                                        children: formatCurrency(item.product.selectedPrice.price)
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/documentos/page.jsx",
                                                         lineNumber: 71,
@@ -370,27 +358,39 @@ function ListDocuments() {
                                                             border: '1px solid #ddd',
                                                             textAlign: 'right'
                                                         },
-                                                        children: formatCurrency(item.product.selectedPrice.price * item.quantity)
+                                                        children: formatCurrency(item.product.selectedPrice.price)
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/documentos/page.jsx",
                                                         lineNumber: 72,
+                                                        columnNumber: 49
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                                                        style: {
+                                                            padding: '4px',
+                                                            border: '1px solid #ddd',
+                                                            textAlign: 'right'
+                                                        },
+                                                        children: formatCurrency(item.product.selectedPrice.price * item.quantity)
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/app/documentos/page.jsx",
+                                                        lineNumber: 73,
                                                         columnNumber: 49
                                                     }, this)
                                                 ]
                                             }, index, true, {
                                                 fileName: "[project]/src/app/documentos/page.jsx",
-                                                lineNumber: 68,
+                                                lineNumber: 69,
                                                 columnNumber: 45
                                             }, this))
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/documentos/page.jsx",
-                                        lineNumber: 66,
+                                        lineNumber: 67,
                                         columnNumber: 37
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/documentos/page.jsx",
-                                lineNumber: 57,
+                                lineNumber: 58,
                                 columnNumber: 33
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -407,7 +407,7 @@ function ListDocuments() {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/documentos/page.jsx",
-                                lineNumber: 78,
+                                lineNumber: 79,
                                 columnNumber: 33
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -431,30 +431,30 @@ function ListDocuments() {
                                     children: "Enviar por WhatsApp"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/documentos/page.jsx",
-                                    lineNumber: 83,
+                                    lineNumber: 84,
                                     columnNumber: 37
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/documentos/page.jsx",
-                                lineNumber: 82,
+                                lineNumber: 83,
                                 columnNumber: 33
                             }, this)
                         ]
                     }, pedido.id, true, {
                         fileName: "[project]/src/app/documentos/page.jsx",
-                        lineNumber: 54,
+                        lineNumber: 55,
                         columnNumber: 29
                     }, this);
                 })
             }, void 0, false, {
                 fileName: "[project]/src/app/documentos/page.jsx",
-                lineNumber: 49,
+                lineNumber: 50,
                 columnNumber: 17
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/documentos/page.jsx",
-        lineNumber: 44,
+        lineNumber: 45,
         columnNumber: 9
     }, this);
 }
