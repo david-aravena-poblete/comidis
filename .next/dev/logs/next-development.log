@@ -180,3 +180,381 @@ Import traces:
 [00:16:55.928] Server  LOG      ✓ Compiled in 15ms
 [00:17:16.610] Server  LOG     Firebase App Initialized Successfully
 [00:17:19.103] Browser LOG     Firebase App Initialized Successfully
+[00:33:27.846] Server  LOG      ✓ Compiled in 148ms
+[00:33:46.894] Server  LOG     Firebase App Initialized Successfully
+[00:33:49.475] Browser LOG     Firebase App Initialized Successfully
+[00:33:56.238] Browser LOG     Buscando en 'initialsNames' el valor: fs
+[00:33:56.238] Browser LOG     fs
+[00:33:57.550] Browser LOG     Resultados encontrados: [{"amount":-8,"id":"JQpNheO5NzokCGvHYRow","initialsNames":["f","fs","fsr","fsrp"],"nombre":"FIT SENIOR RAZAS PEQUEÑAS","peso":10,"precioComerciante":21400,"precioPublico":23900,"preciox10sacos":20600,"preciox15sacos":20200,"preciox5sacos":21000},{"amount":-14,"id":"acqGb00n7LziTQa3PYjD","initialsNames":["f","fs"],"nombre":"FIT SENIOR","peso":20,"precioComerciante":39600,"precioPublico":44100,"preciox10sacos":38200,"preciox15sacos":37400,"preciox5sacos":38900}]
+[00:34:43.470] Browser LOG     Firebase App Initialized Successfully
+[00:35:44.921] Browser LOG     Firebase App Initialized Successfully
+[00:35:49.379] Browser LOG     Buscando en 'initialsNames' el valor: fs
+[00:35:49.379] Browser LOG     fs
+[00:35:50.965] Browser LOG     Resultados encontrados: [{"amount":-8,"id":"JQpNheO5NzokCGvHYRow","initialsNames":["f","fs","fsr","fsrp"],"nombre":"FIT SENIOR RAZAS PEQUEÑAS","peso":10,"precioComerciante":21400,"precioPublico":23900,"preciox10sacos":20600,"preciox15sacos":20200,"preciox5sacos":21000},{"amount":-14,"id":"acqGb00n7LziTQa3PYjD","initialsNames":["f","fs"],"nombre":"FIT SENIOR","peso":20,"precioComerciante":39600,"precioPublico":44100,"preciox10sacos":38200,"preciox15sacos":37400,"preciox5sacos":38900}]
+[00:41:30.053] Server  LOG      ✓ Compiled in 1448ms
+[00:41:46.384] Server  LOG     Firebase App Initialized Successfully
+[00:41:49.191] Browser LOG     Firebase App Initialized Successfully
+[00:41:56.128] Browser LOG     Buscando en 'initialsNames' el valor: fs
+[00:41:56.128] Browser LOG     fs
+[00:41:57.581] Browser LOG     Resultados encontrados: [{"amount":-8,"id":"JQpNheO5NzokCGvHYRow","initialsNames":["f","fs","fsr","fsrp"],"nombre":"FIT SENIOR RAZAS PEQUEÑAS","peso":10,"precioComerciante":21400,"precioPublico":23900,"preciox10sacos":20600,"preciox15sacos":20200,"preciox5sacos":21000},{"amount":-14,"id":"acqGb00n7LziTQa3PYjD","initialsNames":["f","fs"],"nombre":"FIT SENIOR","peso":20,"precioComerciante":39600,"precioPublico":44100,"preciox10sacos":38200,"preciox15sacos":37400,"preciox5sacos":38900}]
+[00:42:43.496] Server  LOG      ✓ Compiled in 90ms
+[00:42:50.903] Server  LOG      ✓ Compiled in 154ms
+[00:43:21.864] Browser LOG     Buscando en 'initialsNames' el valor: fs
+[00:43:21.864] Browser LOG     fs
+[00:43:23.776] Browser LOG     Resultados encontrados: [{"amount":-8,"id":"JQpNheO5NzokCGvHYRow","initialsNames":["f","fs","fsr","fsrp"],"nombre":"FIT SENIOR RAZAS PEQUEÑAS","peso":10,"precioComerciante":21400,"precioPublico":23900,"preciox10sacos":20600,"preciox15sacos":20200,"preciox5sacos":21000},{"amount":-14,"id":"acqGb00n7LziTQa3PYjD","initialsNames":["f","fs"],"nombre":"FIT SENIOR","peso":20,"precioComerciante":39600,"precioPublico":44100,"preciox10sacos":38200,"preciox15sacos":37400,"preciox5sacos":38900}]
+[00:44:49.527] Server  LOG      ✓ Compiled in 155ms
+[00:44:57.061] Server  LOG      ✓ Compiled in 118ms
+[00:45:21.226] Server  LOG      ✓ Compiled in 108ms
+[00:45:52.444] Server  LOG      ✓ Compiled in 109ms
+[00:45:53.662] Browser ERROR   uncaughtError: ReferenceError: m is not defined
+[00:45:54.507] Server  LOG      ✓ Compiled in 66ms
+[00:45:54.854] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:45:57.153] Server  LOG     Firebase App Initialized Successfully
+[00:45:59.927] Server  LOG      ✓ Compiled in 131ms
+[00:46:02.154] Browser LOG     Firebase App Initialized Successfully
+[00:46:06.994] Browser LOG     Buscando en 'initialsNames' el valor: fs
+[00:46:06.994] Browser LOG     fs
+[00:46:08.483] Browser LOG     Resultados encontrados: [{"amount":-8,"id":"JQpNheO5NzokCGvHYRow","initialsNames":["f","fs","fsr","fsrp"],"nombre":"FIT SENIOR RAZAS PEQUEÑAS","peso":10,"precioComerciante":21400,"precioPublico":23900,"preciox10sacos":20600,"preciox15sacos":20200,"preciox5sacos":21000},{"amount":-14,"id":"acqGb00n7LziTQa3PYjD","initialsNames":["f","fs"],"nombre":"FIT SENIOR","peso":20,"precioComerciante":39600,"precioPublico":44100,"preciox10sacos":38200,"preciox15sacos":37400,"preciox5sacos":38900}]
+[00:47:34.246] Server  LOG      ✓ Compiled in 415ms
+[00:47:41.504] Server  LOG      ✓ Compiled in 161ms
+[00:47:42.667] Browser ERROR   ./src/app/page.js:138:32
+Parsing ecmascript source code failed
+  136 |       </div>
+  137 |
+> 138 |       {isListSelectedVisible &&}
+      |                                ^
+  139 |       <div style={{padding:"1rem 0", width:"100%", position:"fixed", bottom:0}}>
+  140 |        <FormSearchProducts onSearchResults={setProducts} setIsLoading={setIsLoading} />
+  141 |       </div>
+
+Expected '</', got '}'
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.js [Client Component Browser]
+    ./src/app/page.js [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.js [Client Component SSR]
+    ./src/app/page.js [Server Component]
+[00:47:48.672] Browser ERROR   ./src/app/page.js:138:33
+Parsing ecmascript source code failed
+  136 |       </div>
+  137 |
+> 138 |       {!isListSelectedVisible &&}
+      |                                 ^
+  139 |       <div style={{padding:"1rem 0", width:"100%", position:"fixed", bottom:0}}>
+  140 |        <FormSearchProducts onSearchResults={setProducts} setIsLoading={setIsLoading} />
+  141 |       </div>
+
+Expected '</', got '}'
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.js [Client Component Browser]
+    ./src/app/page.js [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.js [Client Component SSR]
+    ./src/app/page.js [Server Component]
+[00:47:52.664] Browser ERROR   ./src/app/page.js:138:34
+Parsing ecmascript source code failed
+  136 |       </div>
+  137 |
+> 138 |       {!isListSelectedVisible && }
+      |                                  ^
+  139 |       <div style={{padding:"1rem 0", width:"100%", position:"fixed", bottom:0}}>
+  140 |        <FormSearchProducts onSearchResults={setProducts} setIsLoading={setIsLoading} />
+  141 |       </div>
+
+Expected '</', got '}'
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.js [Client Component Browser]
+    ./src/app/page.js [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.js [Client Component SSR]
+    ./src/app/page.js [Server Component]
+[00:48:00.667] Browser ERROR   ./src/app/page.js:138:36
+Parsing ecmascript source code failed
+  136 |       </div>
+  137 |
+> 138 |       {!isListSelectedVisible && ()}
+      |                                    ^
+  139 |       <div style={{padding:"1rem 0", width:"100%", position:"fixed", bottom:0}}>
+  140 |        <FormSearchProducts onSearchResults={setProducts} setIsLoading={setIsLoading} />
+  141 |       </div>
+
+Expected '</', got '}'
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.js [Client Component Browser]
+    ./src/app/page.js [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.js [Client Component SSR]
+    ./src/app/page.js [Server Component]
+[00:48:02.679] Browser ERROR   ./src/app/page.js:140:8
+Parsing ecmascript source code failed
+  138 |       {!isListSelectedVisible && (
+  139 |         
+> 140 |       )}
+      |        ^
+  141 |       <div style={{padding:"1rem 0", width:"100%", position:"fixed", bottom:0}}>
+  142 |        <FormSearchProducts onSearchResults={setProducts} setIsLoading={setIsLoading} />
+  143 |       </div>
+
+Expected '</', got '}'
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.js [Client Component Browser]
+    ./src/app/page.js [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.js [Client Component SSR]
+    ./src/app/page.js [Server Component]
+[00:48:05.673] Browser ERROR   ./src/app/page.js:140:8
+Parsing ecmascript source code failed
+  138 |       {!isListSelectedVisible && (
+  139 |         
+> 140 |       )}
+      |        ^
+  141 |       <div style={{padding:"1rem 0", width:"100%", position:"fixed", bottom:0}}>
+  142 |        <FormSearchProducts onSearchResults={setProducts} setIsLoading={setIsLoading} />
+  143 |       </div>
+
+Expected '</', got '}'
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.js [Client Component Browser]
+    ./src/app/page.js [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.js [Client Component SSR]
+    ./src/app/page.js [Server Component]
+[00:48:05.673] Browser ERROR   ./src/app/page.js:144:6
+Parsing ecmascript source code failed
+  142 |        <FormSearchProducts onSearchResults={setProducts} setIsLoading={setIsLoading} />
+  143 |       </div>
+> 144 |     </div>
+      |      ^^^^^
+  145 |   );
+  146 | }
+  147 |
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.js [Client Component Browser]
+    ./src/app/page.js [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.js [Client Component SSR]
+    ./src/app/page.js [Server Component]
+[00:48:07.673] Browser ERROR   ./src/app/page.js:144:6
+Parsing ecmascript source code failed
+  142 |        <FormSearchProducts onSearchResults={setProducts} setIsLoading={setIsLoading} />
+  143 |       </div>
+> 144 |     </div>
+      |      ^^^^^
+  145 |
+  146 |     
+  147 |   );
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.js [Client Component Browser]
+    ./src/app/page.js [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.js [Client Component SSR]
+    ./src/app/page.js [Server Component]
+[00:48:09.672] Browser ERROR   ./src/app/page.js:144:6
+Parsing ecmascript source code failed
+  142 |        <FormSearchProducts onSearchResults={setProducts} setIsLoading={setIsLoading} />
+  143 |       </div>
+> 144 |     </div>
+      |      ^^^^^
+  145 |
+  146 |   )}
+  147 |   );
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.js [Client Component Browser]
+    ./src/app/page.js [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.js [Client Component SSR]
+    ./src/app/page.js [Server Component]
+[00:48:14.663] Browser ERROR   ./src/app/page.js:144:8
+Parsing ecmascript source code failed
+  142 |        <FormSearchProducts onSearchResults={setProducts} setIsLoading={setIsLoading} />
+  143 |       </div>
+> 144 |       </div>
+      |        ^^^^^
+  145 |
+  146 |   )}
+  147 |   );
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.js [Client Component Browser]
+    ./src/app/page.js [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.js [Client Component SSR]
+    ./src/app/page.js [Server Component]
+[00:48:23.665] Browser ERROR   ./src/app/page.js:147:1
+Parsing ecmascript source code failed
+  145 |   )}
+  146 |   );
+> 147 | }
+      | ^
+  148 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.js [Client Component Browser]
+    ./src/app/page.js [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.js [Client Component SSR]
+    ./src/app/page.js [Server Component]
+[00:48:27.671] Browser ERROR   ./src/app/page.js:147:1
+Parsing ecmascript source code failed
+  145 |   )}
+  146 |   );
+> 147 | }
+      | ^
+  148 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.js [Client Component Browser]
+    ./src/app/page.js [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.js [Client Component SSR]
+    ./src/app/page.js [Server Component]
+[00:48:31.665] Browser ERROR   ./src/app/page.js:147:1
+Parsing ecmascript source code failed
+  145 |       )}
+  146 |   );
+> 147 | }
+      | ^
+  148 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.js [Client Component Browser]
+    ./src/app/page.js [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.js [Client Component SSR]
+    ./src/app/page.js [Server Component]
+[00:48:33.679] Browser ERROR   ./src/app/page.js:147:1
+Parsing ecmascript source code failed
+  145 |       )}
+  146 |   );
+> 147 | }
+      | ^
+  148 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.js [Client Component Browser]
+    ./src/app/page.js [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.js [Client Component SSR]
+    ./src/app/page.js [Server Component]
+[00:48:37.673] Browser ERROR   ./src/app/page.js:144:1
+Parsing ecmascript source code failed
+  142 |       )}
+  143 |   );
+> 144 | }
+      | ^
+  145 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.js [Client Component Browser]
+    ./src/app/page.js [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.js [Client Component SSR]
+    ./src/app/page.js [Server Component]
+[00:49:03.512] Server  LOG      ✓ Compiled in 603ms
+[00:49:18.767] Server  LOG      ✓ Compiled in 155ms
+[00:49:19.674] Browser ERROR   ./src/app/page.js:137:8
+Parsing ecmascript source code failed
+  135 |            )}
+  136 |       </div>
+> 137 |       {)}}
+      |        ^
+  138 |       <div style={{padding:"1rem 0", width:"100%", position:"fixed", bottom:0}}>
+  139 |        <FormSearchProducts onSearchResults={setProducts} setIsLoading={setIsLoading} />
+  140 |       </div>
+
+Expected '</', got ')'
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.js [Client Component Browser]
+    ./src/app/page.js [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.js [Client Component SSR]
+    ./src/app/page.js [Server Component]
+[00:49:40.734] Server  LOG      ✓ Compiled in 139ms
+[00:49:45.554] Server  LOG      ✓ Compiled in 282ms
+[00:49:46.669] Browser ERROR   ./src/app/page.js:139:8
+Parsing ecmascript source code failed
+  137 |       {!isListSelectedVisible && (
+  138 |         
+> 139 |       )}
+      |        ^
+  140 |       <div style={{padding:"1rem 0", width:"100%", position:"fixed", bottom:0}}>
+  141 |        <FormSearchProducts onSearchResults={setProducts} setIsLoading={setIsLoading} />
+  142 |       </div>
+
+Expected '</', got '}'
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.js [Client Component Browser]
+    ./src/app/page.js [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.js [Client Component SSR]
+    ./src/app/page.js [Server Component]
+[00:49:52.597] Server  LOG      ✓ Compiled in 171ms
+[00:49:54.376] Server  LOG      ✓ Compiled in 294ms
+[00:50:03.479] Server  LOG     Firebase App Initialized Successfully
+[00:50:06.655] Browser LOG     Firebase App Initialized Successfully
+[00:50:09.450] Browser LOG     Buscando en 'initialsNames' el valor: marp
+[00:50:09.450] Browser LOG     marp
+[00:50:10.631] Browser LOG     Resultados encontrados: [{"amount":-15,"id":"4PZrAX1PRcW1rQwxaWfX","initialsNames":["m","ma","mar","marp"],"nombre":"MASTERDOG ADULTO RAZA PEQUEÑA","peso":8,"precioComerciante":14300,"precioPublico":16600,"preciox10sacos":13800,"preciox15sacos":13800,"preciox5sacos":14100},{"amount":-8,"id":"6k8vkJFdbzuZadfm7WOe","initialsNames":["m","ma","mar","marp"],"nombre":"MASTERDOG ADULTO RAZA PEQUEÑA","peso":18,"precioComerciante":28500,"precioPublico":31900,"preciox10sacos":27500,"preciox15sacos":27000,"preciox5sacos":28000},{"amount":-6,"id":"bQIAEYQ8JugOiclV5CNV","initialsNames":["m","ma","mar","marp"],"nombre":"MASTIN ADULTO RAZA PEQUEÑA","peso":10,"precioComerciante":16300,"precioPublico":18600,"preciox10sacos":15700,"preciox15sacos":15400,"preciox5sacos":16000}]

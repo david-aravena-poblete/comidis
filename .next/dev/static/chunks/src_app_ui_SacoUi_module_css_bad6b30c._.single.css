@@ -1,0 +1,24 @@
+/* [project]/src/app/ui/SacoUi.module.css [app-client] (css) */
+.SacoUi-module__5iaeka__card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  padding: 16px;
+  display: flex;
+  box-shadow: 0 4px 8px #0000001a;
+}
+
+.SacoUi-module__5iaeka__info {
+  font-family: sans-serif;
+}
+
+@media (max-width: 600px) {
+  .SacoUi-module__5iaeka__card {
+    flex-direction: column;
+  }
+}
+
+/*# sourceMappingURL=src_app_ui_SacoUi_module_css_bad6b30c._.single.css.map*/

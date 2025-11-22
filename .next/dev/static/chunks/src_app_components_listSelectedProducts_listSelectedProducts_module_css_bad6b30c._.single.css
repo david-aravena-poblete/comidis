@@ -1,0 +1,71 @@
+/* [project]/src/app/components/listSelectedProducts/listSelectedProducts.module.css [app-client] (css) */
+.listSelectedProducts-module__q4pPKW__listContainer {
+  border-top: 1px solid #eee;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  display: flex;
+}
+
+.listSelectedProducts-module__q4pPKW__total {
+  text-align: right;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.listSelectedProducts-module__q4pPKW__header {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.listSelectedProducts-module__q4pPKW__createOrderButton {
+  color: #fff;
+  cursor: pointer;
+  background-color: #0070f3;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 1rem;
+}
+
+.listSelectedProducts-module__q4pPKW__totalProduct {
+  color: #0070f3;
+  margin-top: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.listSelectedProducts-module__q4pPKW__removeButton {
+  color: #fff;
+  cursor: pointer;
+  background-color: #ff4d4f;
+  border: none;
+  border-radius: 5px;
+  margin-top: .5rem;
+  padding: 5px 10px;
+  font-size: .8rem;
+}
+
+@media (max-width: 600px) {
+  .listSelectedProducts-module__q4pPKW__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .listSelectedProducts-module__q4pPKW__createOrderButton {
+    text-align: center;
+    width: 100%;
+  }
+
+  .listSelectedProducts-module__q4pPKW__total {
+    text-align: right;
+    width: 100%;
+    font-size: 1.2rem;
+  }
+}
+
+/*# sourceMappingURL=src_app_components_listSelectedProducts_listSelectedProducts_module_css_bad6b30c._.single.css.map*/

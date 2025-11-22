@@ -134,9 +134,12 @@ export default function Home() {
              </>
            )}
       </div>
-      <div style={{padding:"1rem 0", width:"100%", position:"fixed", bottom:0}}>
-       <FormSearchProducts onSearchResults={setProducts} setIsLoading={setIsLoading} />
-      </div>
+      {!isListSelectedVisible && (
+        <div style={{padding:"1rem 0", width:"100%", position:"fixed", bottom:0}}>
+        <FormSearchProducts onSearchResults={setProducts} setIsLoading={setIsLoading} />
+        </div>
+
+      )}
     </div>
   );
 }
