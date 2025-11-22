@@ -21,7 +21,7 @@ const PriceSelector = ({ product, selectedPrice, onPriceChange }) => {
   const handleChange = (e) => {
     const priceType = e.target.value;
     const priceValue = product[priceType];
-    onPriceChange(product.nombre, { type: priceType, price: priceValue });
+    onPriceChange(product.id, { type: priceType, price: priceValue });
   };
 
   return (

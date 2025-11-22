@@ -1,13 +1,16 @@
 'use client'
 import { useState, useEffect } from 'react';
 import { listenPedidos } from '../../serverless/db/listenPedidos';
+import LoadingSpinner from '../components/loading';
 
 export default function ListDocuments() {
     const [pedidos, setPedidos] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         const unsubscribe = listenPedidos((newPedidos) => {
             setPedidos(newPedidos);
+            setIsLoading(false);
         });
 
         // Cleanup subscription on component unmount
@@ -23,8 +26,7 @@ export default function ListDocuments() {
         let message = `*Nuevo Pedido:*`;
         message += `*Cliente:* ${pedido.client}`;
         message += '*Detalle del pedido:';
-        message += '``'
-'; // Using code block for better formatting'
+        message += '\`\`\`';// Using code block for better formatting
 
         pedido.products.forEach(item => {
             const totalItem = formatCurrency(item.quantity * item.product.selectedPrice.price);
@@ -32,7 +34,7 @@ export default function ListDocuments() {
 `;
         });
 
-        message += '``';
+        message += '\`\`\`';
         message += `*Total Pedido:* ${formatCurrency(totalPedido)}`;
 
         const whatsappUrl = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message)}`; 
@@ -43,11 +45,12 @@ export default function ListDocuments() {
 
     return (
         <div style={{ fontFamily: 'Arial, sans-serif', padding: '20px', backgroundColor: '#f0f2f5', width:"100vw" }}>
+           {isLoading && <LoadingSpinner />}
             <h1 style={{ color: '#333', borderBottom: '2px solid #ccc', paddingBottom: '10px', marginBottom: '20px' }}>Lista de Pedidos</h1>
             {pedidos.length === 0 ? (
                 <p style={{ textAlign: 'center', color: '#666' }}>No hay pedidos para mostrar.</p>
             ) : (
-                <div style={{ width:"100%", display: 'grid', gridTemplateColumns: 'repeat(auto-fill)', gap: '20px' }}>
+                <div style={{ width:"100%", display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(400px, 1fr))', gap: '20px' }}>
                     {pedidos.map((pedido) => {
                         const totalPedido = (pedido.products || []).reduce((acc, item) => acc + (item.quantity * item.product.selectedPrice.price), 0);
 

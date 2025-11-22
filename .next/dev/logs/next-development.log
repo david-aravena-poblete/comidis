@@ -558,3 +558,48 @@ Import traces:
 [00:50:09.450] Browser LOG     Buscando en 'initialsNames' el valor: marp
 [00:50:09.450] Browser LOG     marp
 [00:50:10.631] Browser LOG     Resultados encontrados: [{"amount":-15,"id":"4PZrAX1PRcW1rQwxaWfX","initialsNames":["m","ma","mar","marp"],"nombre":"MASTERDOG ADULTO RAZA PEQUEÑA","peso":8,"precioComerciante":14300,"precioPublico":16600,"preciox10sacos":13800,"preciox15sacos":13800,"preciox5sacos":14100},{"amount":-8,"id":"6k8vkJFdbzuZadfm7WOe","initialsNames":["m","ma","mar","marp"],"nombre":"MASTERDOG ADULTO RAZA PEQUEÑA","peso":18,"precioComerciante":28500,"precioPublico":31900,"preciox10sacos":27500,"preciox15sacos":27000,"preciox5sacos":28000},{"amount":-6,"id":"bQIAEYQ8JugOiclV5CNV","initialsNames":["m","ma","mar","marp"],"nombre":"MASTIN ADULTO RAZA PEQUEÑA","peso":10,"precioComerciante":16300,"precioPublico":18600,"preciox10sacos":15700,"preciox15sacos":15400,"preciox5sacos":16000}]
+[00:52:16.894] Browser LOG     Firebase App Initialized Successfully
+[00:59:26.584] Server  LOG      ✓ Compiled in 23ms
+[00:59:51.998] Server  LOG      ✓ Compiled in 15ms
+[01:00:30.243] Server  LOG      ✓ Compiled in 16ms
+[01:00:48.344] Server  LOG     Firebase App Initialized Successfully
+[01:00:50.830] Browser LOG     Firebase App Initialized Successfully
+[01:00:55.276] Browser LOG     Buscando en 'initialsNames' el valor: marp
+[01:00:55.276] Browser LOG     marp
+[01:00:56.571] Browser LOG     Resultados encontrados: [{"amount":-15,"id":"4PZrAX1PRcW1rQwxaWfX","initialsNames":["m","ma","mar","marp"],"nombre":"MASTERDOG ADULTO RAZA PEQUEÑA","peso":8,"precioComerciante":14300,"precioPublico":16600,"preciox10sacos":13800,"preciox15sacos":13800,"preciox5sacos":14100},{"amount":-8,"id":"6k8vkJFdbzuZadfm7WOe","initialsNames":["m","ma","mar","marp"],"nombre":"MASTERDOG ADULTO RAZA PEQUEÑA","peso":18,"precioComerciante":28500,"precioPublico":31900,"preciox10sacos":27500,"preciox15sacos":27000,"preciox5sacos":28000},{"amount":-6,"id":"bQIAEYQ8JugOiclV5CNV","initialsNames":["m","ma","mar","marp"],"nombre":"MASTIN ADULTO RAZA PEQUEÑA","peso":10,"precioComerciante":16300,"precioPublico":18600,"preciox10sacos":15700,"preciox15sacos":15400,"preciox5sacos":16000}]
+[01:29:43.043] Browser LOG     Firebase App Initialized Successfully
+[01:37:13.483] Server  LOG      ✓ Compiled in 1150ms
+[01:37:14.492] Server  LOG      ✓ Compiled in 61ms
+[01:37:34.231] Server  LOG     Firebase App Initialized Successfully
+[01:37:37.402] Browser LOG     Firebase App Initialized Successfully
+[01:37:43.352] Browser LOG     Buscando en 'initialsNames' el valor: fs
+[01:37:43.352] Browser LOG     fs
+[01:37:43.352] Browser ERROR   Received `%s` for a non-boolean attribute `%s`.
+
+If you want to write it to the DOM, pass a string instead: %s="%s" or %s={value.toString()}. true priority priority true priority
+[01:37:44.824] Browser LOG     Resultados encontrados: [{"amount":-9,"id":"JQpNheO5NzokCGvHYRow","initialsNames":["f","fs","fsr","fsrp"],"nombre":"FIT SENIOR RAZAS PEQUEÑAS","peso":10,"precioComerciante":21400,"precioPublico":23900,"preciox10sacos":20600,"preciox15sacos":20200,"preciox5sacos":21000},{"amount":-15,"id":"acqGb00n7LziTQa3PYjD","initialsNames":["f","fs"],"nombre":"FIT SENIOR","peso":20,"precioComerciante":39600,"precioPublico":44100,"preciox10sacos":38200,"preciox15sacos":37400,"preciox5sacos":38900}]
+[02:04:56.917] Browser LOG     Firebase App Initialized Successfully
+[02:05:59.578] Browser LOG     Firebase App Initialized Successfully
+[02:12:59.777] Server  LOG      ✓ Compiled in 300ms
+[02:13:30.784] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:13:30.784] Browser LOG     Firebase App Initialized Successfully
+[02:13:56.285] Browser ERROR   Received `%s` for a non-boolean attribute `%s`.
+
+If you want to write it to the DOM, pass a string instead: %s="%s" or %s={value.toString()}. true priority priority true priority
+[02:14:20.135] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:14:20.135] Browser LOG     Firebase App Initialized Successfully
+[02:14:20.609] Browser ERROR   Received `%s` for a non-boolean attribute `%s`.
+
+If you want to write it to the DOM, pass a string instead: %s="%s" or %s={value.toString()}. true priority priority true priority
+[02:18:28.236] Server  LOG      ✓ Compiled in 85ms
+[02:20:28.954] Server  LOG     Firebase App Initialized Successfully
+[02:20:30.940] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:20:30.940] Browser LOG     Firebase App Initialized Successfully
+[02:20:39.320] Browser LOG     Buscando en 'initialsNames' el valor: bl
+[02:20:39.320] Browser LOG     bl
+[02:20:39.320] Browser ERROR   Received `%s` for a non-boolean attribute `%s`.
+
+If you want to write it to the DOM, pass a string instead: %s="%s" or %s={value.toString()}. true priority priority true priority
+[02:20:40.510] Browser LOG     Resultados encontrados: [{"amount":-2,"id":"1u9hjmF3UkCwvrXkxQKr","initialsNames":["b","bl"],"nombre":"BOKATO LADY","peso":5,"precioComerciante":17400,"precioPublico":20100,"preciox10sacos":16700,"preciox15sacos":16600,"preciox5sacos":17000},{"id":"xnf2wtGgLQenn753aK93","initialsNames":["b","bl"],"nombre":"BOKATO LADY","peso":10,"precioComerciante":29400,"precioPublico":34200,"preciox10sacos":28400,"preciox15sacos":28100,"preciox5sacos":28900}]
+[02:21:01.280] Browser LOG     [{"product":{"amount":-2,"id":"1u9hjmF3UkCwvrXkxQKr","initialsNames":["b","bl"],"nombre":"BOKATO LADY","peso":5,"precioComerciante":17400,"precioPublico":20100,"preciox10sacos":16700,"preciox15sacos":16600,"preciox5sacos":17000,"selectedPrice":{"price":20100,"type":"precioPublico"}},"quantity":1},{"product":{"id":"xnf2wtGgLQenn753aK93","initialsNames":["b","bl"],"nombre":"BOKATO LADY","peso":10,"precioComerciante":29400,"precioPublico":34200,"preciox10sacos":28400,"preciox15sacos":28100,"preciox5sacos":28900,"selectedPrice":{"price":34200,"type":"precioPublico"}},"quantity":1}]
+[02:21:05.779] Browser LOG     {"message":"All pedidos processed successfully","success":true}

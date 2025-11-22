@@ -41,7 +41,7 @@ const ListProducts = ({products, Card, onQuantityChange, selectedProducts}) => {
                   <ButtonSum
                     product={product}
                     onQuantityChange={onQuantityChange}
-                    quantity={selectedProducts.find(p => p.product.nombre === product.nombre)?.quantity || 0}
+                    quantity={selectedProducts.find(p => p.product.id === product.id)?.quantity || 0}
                   />
                 </div>
               </Card>

@@ -13,13 +13,14 @@ export default function Home() {
   const [selectedProducts, setSelectedProducts] = useState([]);
   const [isListSelectedVisible, setIsListSelectedVisible] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [isCreatingOrder, setIsCreatingOrder] = useState(false);
 
   const handleQuantityChange = (product, newQuantity) => {
     const quantity = Math.max(0, newQuantity);
 
     setSelectedProducts(prevSelected => {
         const existingProductIndex = prevSelected.findIndex(
-            item => item.product.nombre === product.nombre
+            item => item.product.id === product.id
         );
 
         const newSelected = [...prevSelected];
@@ -49,10 +50,10 @@ export default function Home() {
     });
   };
 
-  const handlePriceChange = (productName, newPriceObject) => {
+  const handlePriceChange = (productId, newPriceObject) => {
     setSelectedProducts(prevSelected =>
       prevSelected.map(item =>
-        item.product.nombre === productName
+        item.product.id === productId
           ? {
               ...item,
               product: {
@@ -74,8 +75,19 @@ export default function Home() {
   const handlerCrearPedido = async () => {
     const response = prompt("¿Para quién es este pedido?");
     if (response) {
-      const result = await getNewPedido(selectedProducts, response)
-      console.log(result)
+      setIsCreatingOrder(true);
+      try {
+        const result = await getNewPedido(selectedProducts, response)
+        console.log(result)
+        alert('Pedido creado con éxito!');
+        setSelectedProducts([]); // Clear the cart
+        setIsListSelectedVisible(false); // Go back to product list
+      } catch (error) {
+        console.error("Error al crear el pedido:", error);
+        alert("Hubo un error al crear el pedido. Por favor, inténtalo de nuevo.");
+      } finally {
+        setIsCreatingOrder(false);
+      }
     }
   }
 
@@ -100,6 +112,7 @@ export default function Home() {
       padding:"1rem 0",
       overflowY:"auto",
     }}>
+      {isCreatingOrder && <LoadingSpinner />}
       <div style={{flexGrow:1, overflowY:"auto", marginBottom:"3rem"}}>
            {isListSelectedVisible ? (
              <>

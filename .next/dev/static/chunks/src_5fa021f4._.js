@@ -144,7 +144,7 @@ const ListProducts = ({ products, Card, onQuantityChange, selectedProducts })=>{
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$listProducts$2f$components$2f$buttonSum$2f$index$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                     product: product,
                                     onQuantityChange: onQuantityChange,
-                                    quantity: selectedProducts.find((p)=>p.product.nombre === product.nombre)?.quantity || 0
+                                    quantity: selectedProducts.find((p)=>p.product.id === product.id)?.quantity || 0
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/listProducts/index.jsx",
                                     lineNumber: 41,
@@ -504,7 +504,7 @@ const PriceSelector = ({ product, selectedPrice, onPriceChange })=>{
     const handleChange = (e)=>{
         const priceType = e.target.value;
         const priceValue = product[priceType];
-        onPriceChange(product.nombre, {
+        onPriceChange(product.id, {
             type: priceType,
             price: priceValue
         });
@@ -967,7 +967,7 @@ const LoadingSpinner = ()=>{
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         style: overlayStyle,
-        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
             src: "/spinner.svg",
             alt: "Cargando...",
             width: 100,
@@ -1023,10 +1023,11 @@ function Home() {
     const [selectedProducts, setSelectedProducts] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([]);
     const [isListSelectedVisible, setIsListSelectedVisible] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [isLoading, setIsLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [isCreatingOrder, setIsCreatingOrder] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const handleQuantityChange = (product, newQuantity)=>{
         const quantity = Math.max(0, newQuantity);
         setSelectedProducts((prevSelected)=>{
-            const existingProductIndex = prevSelected.findIndex((item)=>item.product.nombre === product.nombre);
+            const existingProductIndex = prevSelected.findIndex((item)=>item.product.id === product.id);
             const newSelected = [
                 ...prevSelected
             ];
@@ -1053,8 +1054,8 @@ function Home() {
             return newSelected;
         });
     };
-    const handlePriceChange = (productName, newPriceObject)=>{
-        setSelectedProducts((prevSelected)=>prevSelected.map((item)=>item.product.nombre === productName ? {
+    const handlePriceChange = (productId, newPriceObject)=>{
+        setSelectedProducts((prevSelected)=>prevSelected.map((item)=>item.product.id === productId ? {
                     ...item,
                     product: {
                         ...item.product,
@@ -1070,8 +1071,19 @@ function Home() {
     const handlerCrearPedido = async ()=>{
         const response = prompt("¿Para quién es este pedido?");
         if (response) {
-            const result = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$utils$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["getNewPedido"])(selectedProducts, response);
-            console.log(result);
+            setIsCreatingOrder(true);
+            try {
+                const result = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$utils$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["getNewPedido"])(selectedProducts, response);
+                console.log(result);
+                alert('Pedido creado con éxito!');
+                setSelectedProducts([]); // Clear the cart
+                setIsListSelectedVisible(false); // Go back to product list
+            } catch (error) {
+                console.error("Error al crear el pedido:", error);
+                alert("Hubo un error al crear el pedido. Por favor, inténtalo de nuevo.");
+            } finally{
+                setIsCreatingOrder(false);
+            }
         }
     };
     const buttonStyle = {
@@ -1095,6 +1107,11 @@ function Home() {
             overflowY: "auto"
         },
         children: [
+            isCreatingOrder && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$loading$2f$index$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
+                fileName: "[project]/src/app/page.js",
+                lineNumber: 115,
+                columnNumber: 27
+            }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 style: {
                     flexGrow: 1,
@@ -1109,7 +1126,7 @@ function Home() {
                             children: "Volver a Productos"
                         }, void 0, false, {
                             fileName: "[project]/src/app/page.js",
-                            lineNumber: 106,
+                            lineNumber: 119,
                             columnNumber: 17
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$listSelectedProducts$2f$index$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -1121,7 +1138,7 @@ function Home() {
                             handlerCrearPedido: handlerCrearPedido
                         }, void 0, false, {
                             fileName: "[project]/src/app/page.js",
-                            lineNumber: 107,
+                            lineNumber: 120,
                             columnNumber: 17
                         }, this)
                     ]
@@ -1138,7 +1155,7 @@ function Home() {
                                     children: "Productos Disponibles"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/page.js",
-                                    lineNumber: 119,
+                                    lineNumber: 132,
                                     columnNumber: 18
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1151,13 +1168,13 @@ function Home() {
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/page.js",
-                                    lineNumber: 120,
+                                    lineNumber: 133,
                                     columnNumber: 18
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/page.js",
-                            lineNumber: 118,
+                            lineNumber: 131,
                             columnNumber: 16
                         }, this),
                         isLoading ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1169,12 +1186,12 @@ function Home() {
                             },
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$loading$2f$index$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                                 fileName: "[project]/src/app/page.js",
-                                lineNumber: 125,
+                                lineNumber: 138,
                                 columnNumber: 112
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/page.js",
-                            lineNumber: 125,
+                            lineNumber: 138,
                             columnNumber: 21
                         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$listProducts$2f$index$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                             products: products,
@@ -1183,14 +1200,14 @@ function Home() {
                             selectedProducts: selectedProducts
                         }, void 0, false, {
                             fileName: "[project]/src/app/page.js",
-                            lineNumber: 127,
+                            lineNumber: 140,
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true)
             }, void 0, false, {
                 fileName: "[project]/src/app/page.js",
-                lineNumber: 103,
+                lineNumber: 116,
                 columnNumber: 7
             }, this),
             !isListSelectedVisible && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1205,22 +1222,22 @@ function Home() {
                     setIsLoading: setIsLoading
                 }, void 0, false, {
                     fileName: "[project]/src/app/page.js",
-                    lineNumber: 139,
+                    lineNumber: 152,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/page.js",
-                lineNumber: 138,
+                lineNumber: 151,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/page.js",
-        lineNumber: 94,
+        lineNumber: 106,
         columnNumber: 5
     }, this);
 }
-_s(Home, "lyPd4YPbVNN7ZBJ78sPCMo+GRLA=");
+_s(Home, "4GLNKcHAJfGJQMXXAauoEG35toU=");
 _c = Home;
 var _c;
 __turbopack_context__.k.register(_c, "Home");
