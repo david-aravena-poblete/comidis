@@ -16,3 +16,17 @@ If you want to write it to the DOM, pass a string instead: %s="%s" or %s={value.
 [00:03:35.158] Server  LOG      ✓ Compiled in 442ms
 [00:03:44.256] Server  LOG     Firebase App Initialized Successfully
 [00:03:47.433] Browser LOG     Firebase App Initialized Successfully
+[00:09:41.099] Browser LOG     Buscando en 'initialsNames' el valor: ma
+[00:09:41.099] Browser LOG     ma
+[00:09:41.604] Browser LOG     Resultados encontrados: [{"amount":-15,"id":"4PZrAX1PRcW1rQwxaWfX","initialsNames":["m","ma","mar","marp"],"nombre":"MASTERDOG ADULTO RAZA PEQUEÑA","peso":8,"precioComerciante":14300,"precioPublico":16600,"preciox10sacos":13800,"preciox15sacos":13800,"preciox5sacos":14100},{"amount":-8,"id":"6k8vkJFdbzuZadfm7WOe","initialsNames":["m","ma","mar","marp"],"nombre":"MASTERDOG ADULTO RAZA PEQUEÑA","peso":18,"precioComerciante":28500,"precioPublico":31900,"preciox10sacos":27500,"preciox15sacos":27000,"preciox5sacos":28000},{"id":"CJNPRjOgx4AMEQ1H1dUj","initialsNames":["m","ma","mac"],"nombre":"MASTIN ADULTO CARNE","peso":22,"precioComerciante":32600,"precioPublico":37200,"preciox10sacos":31500,"preciox15sacos":30900,"preciox5sacos":32000},{"amount":-6,"id":"bQIAEYQ8JugOiclV5CNV","initialsNames":["m","ma","mar","marp"],"nombre":"MASTIN ADULTO RAZA PEQUEÑA","peso":10,"precioComerciante":16300,"precioPublico":18600,"preciox10sacos":15700,"preciox15sacos":15400,"preciox5sacos":16000}]
+[00:10:05.843] Browser LOG     Buscando en 'initialsNames' el valor: x
+[00:10:05.844] Browser LOG     x
+[00:10:06.335] Browser LOG     Resultados encontrados: [{"id":"QtXOdfLizulPDyK59RJ4","initialsNames":["x"],"nombre":"XT","peso":25,"precioComerciante":27800,"precioPublico":31600,"preciox10sacos":26800,"preciox15sacos":26300,"preciox5sacos":27300}]
+[00:10:21.279] Browser LOG     [{"product":{"id":"CJNPRjOgx4AMEQ1H1dUj","initialsNames":["m","ma","mac"],"nombre":"MASTIN ADULTO CARNE","peso":22,"precioComerciante":32600,"precioPublico":37200,"preciox10sacos":31500,"preciox15sacos":30900,"preciox5sacos":32000,"selectedPrice":{"price":37200,"type":"precioPublico"}},"quantity":1},{"product":{"id":"QtXOdfLizulPDyK59RJ4","initialsNames":["x"],"nombre":"XT","peso":25,"precioComerciante":27800,"precioPublico":31600,"preciox10sacos":26800,"preciox15sacos":26300,"preciox5sacos":27300,"selectedPrice":{"price":31600,"type":"precioPublico"}},"quantity":1}]
+[00:10:25.292] Browser LOG     {"message":"All pedidos processed successfully","success":true}
+[00:13:58.195] Server  LOG     Firebase App Initialized Successfully
+[00:14:04.755] Browser LOG     Firebase App Initialized Successfully
+[00:25:26.254] Server  LOG      ✓ Compiled in 481ms
+[00:26:54.618] Server  LOG      ✓ Compiled in 184ms
+[00:27:04.779] Server  LOG      ✓ Compiled in 22ms
+[00:28:50.994] Server  LOG      ✓ Compiled in 28ms

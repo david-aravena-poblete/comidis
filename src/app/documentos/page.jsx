@@ -23,18 +23,17 @@ export default function ListDocuments() {
 
     const handleSendWhatsApp = (pedido, totalPedido) => {
         const phone = '56990059578';
-        let message = `*Nuevo Pedido:*`;
-        message += `*Cliente:* ${pedido.client}`;
-        message += '*Detalle del pedido:';
-        message += '\`\`\`';// Using code block for better formatting
+        let message = `*Nuevo Pedido:*\n`;
+        message += `*Cliente:* ${pedido.client}\n`;
+        message += '*Detalle del pedido:*\n';
+        message += '```\n'; // Using code block for better formatting
 
         pedido.products.forEach(item => {
             const totalItem = formatCurrency(item.quantity * item.product.selectedPrice.price);
-            message += `${item.quantity}x ${item.product.nombre} ${item.product.peso}Kg - ${totalItem}
-`;
+            message += `${item.quantity}x ${item.product.nombre} ${item.product.peso}Kg - ${totalItem}\n`;
         });
 
-        message += '\`\`\`';
+        message += '```\n';
         message += `*Total Pedido:* ${formatCurrency(totalPedido)}`;
 
         const whatsappUrl = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message)}`; 
