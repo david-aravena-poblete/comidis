@@ -16,12 +16,12 @@ const LoadingSpinner = () => {
 
   return (
     <div style={overlayStyle}>
-      <img
+      <Image
         src="/spinner.svg"
         alt="Cargando..."
         width={100}
         height={100}
-        priority
+        priority={true}
       />
     </div>
   );
