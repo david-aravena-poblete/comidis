@@ -332,8 +332,7 @@ __turbopack_context__.s([
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$serverless$2f$db$2f$searchProductsInInventary$2f$index$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/serverless/db/searchProductsInInventary/index.js [app-ssr] (ecmascript)");
 ;
 const getQueryUser = async (query)=>{
-    console.log(query);
-    const documents = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$serverless$2f$db$2f$searchProductsInInventary$2f$index$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["searchDocuments"])(query);
+    const documents = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$serverless$2f$db$2f$searchProductsInInventary$2f$index$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["searchDocuments"])(query.toLowerCase());
     return documents;
 };
 }),
@@ -374,8 +373,14 @@ const FormSearchProducts = ({ onSearchResults, setIsLoading })=>{
     };
     const formStyle = {
         width: "100%",
-        display: 'flex',
-        gap: '0.5rem'
+        minHeight: "5vh",
+        display: "flex",
+        gap: "0.5rem",
+        padding: "1rem",
+        backgroundColor: "#ffffff",
+        borderRadius: "12px",
+        boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+        border: "1px solid #e5e5e5"
     };
     const inputStyle = {
         flexGrow: 1,
@@ -405,7 +410,7 @@ const FormSearchProducts = ({ onSearchResults, setIsLoading })=>{
                 children: "Limpiar"
             }, void 0, false, {
                 fileName: "[project]/src/app/components/formSearchProducts/index.jsx",
-                lineNumber: 55,
+                lineNumber: 62,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -415,7 +420,7 @@ const FormSearchProducts = ({ onSearchResults, setIsLoading })=>{
                 placeholder: "Buscar..."
             }, void 0, false, {
                 fileName: "[project]/src/app/components/formSearchProducts/index.jsx",
-                lineNumber: 58,
+                lineNumber: 65,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -424,13 +429,13 @@ const FormSearchProducts = ({ onSearchResults, setIsLoading })=>{
                 children: "Buscar"
             }, void 0, false, {
                 fileName: "[project]/src/app/components/formSearchProducts/index.jsx",
-                lineNumber: 64,
+                lineNumber: 71,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/components/formSearchProducts/index.jsx",
-        lineNumber: 54,
+        lineNumber: 61,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
@@ -1244,7 +1249,7 @@ function Home() {
                 }, void 0, false, {
                     fileName: "[project]/src/app/page.js",
                     lineNumber: 152,
-                    columnNumber: 9
+                    columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/page.js",

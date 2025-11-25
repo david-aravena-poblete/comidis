@@ -31,10 +31,17 @@ const FormSearchProducts = ({ onSearchResults, setIsLoading }) => {
   }
 
   const formStyle = {
-    width:"100%",
-    display: 'flex',
-    gap: '0.5rem',
+    width: "100%",
+    minHeight: "5vh",
+    display: "flex",
+    gap: "0.5rem",
+    padding: "1rem",
+    backgroundColor: "#ffffff",       // Fondo blanco para separar del BG
+    borderRadius: "12px",             // Esquinas redondeadas
+    boxShadow: "0 4px 12px rgba(0,0,0,0.15)", // Sombra para profundidad
+    border: "1px solid #e5e5e5",      // Línea sutil de contorno
   };
+  
   const inputStyle = {
     flexGrow: 1,
     padding: '0.5rem',

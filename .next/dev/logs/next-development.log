@@ -1,32 +1,48 @@
-[00:00:13.396] Server  LOG      ✓ Ready in 10.7s
-[00:00:46.265] Server  LOG      ○ Compiling / ...
-[00:01:22.972] Server  LOG     Firebase App Initialized Successfully
-[00:01:25.570] Server  WARN     ⚠ Cross origin request detected from 9000-firebase-comidinapp-1762540520986.cluster-thle3dudhffpwss7zs5hxaeu2o.cloudworkstations.dev to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+[00:00:34.228] Server  LOG      ✓ Ready in 20.6s
+[00:00:37.635] Server  LOG      ○ Compiling / ...
+[00:01:32.563] Server  LOG     Firebase App Initialized Successfully
+[00:01:35.847] Server  WARN     ⚠ Cross origin request detected from 9000-firebase-comidinapp-1762540520986.cluster-thle3dudhffpwss7zs5hxaeu2o.cloudworkstations.dev to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
 Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
-[00:01:26.316] Browser LOG     Firebase App Initialized Successfully
-[00:02:14.763] Browser LOG     Firebase App Initialized Successfully
-[00:02:52.011] Browser LOG     Firebase App Initialized Successfully
-[00:02:53.195] Server  ERROR   Received `true` for a non-boolean attribute `priority`.
-
-If you want to write it to the DOM, pass a string instead: priority="true" or priority={value.toString()}.
-[00:02:55.523] Browser LOG     Firebase App Initialized Successfully
-[00:02:55.523] Browser ERROR   Received `%s` for a non-boolean attribute `%s`.
-
-If you want to write it to the DOM, pass a string instead: %s="%s" or %s={value.toString()}. true priority priority true priority
-[00:03:35.158] Server  LOG      ✓ Compiled in 442ms
-[00:03:44.256] Server  LOG     Firebase App Initialized Successfully
-[00:03:47.433] Browser LOG     Firebase App Initialized Successfully
-[00:09:41.099] Browser LOG     Buscando en 'initialsNames' el valor: ma
-[00:09:41.099] Browser LOG     ma
-[00:09:41.604] Browser LOG     Resultados encontrados: [{"amount":-15,"id":"4PZrAX1PRcW1rQwxaWfX","initialsNames":["m","ma","mar","marp"],"nombre":"MASTERDOG ADULTO RAZA PEQUEÑA","peso":8,"precioComerciante":14300,"precioPublico":16600,"preciox10sacos":13800,"preciox15sacos":13800,"preciox5sacos":14100},{"amount":-8,"id":"6k8vkJFdbzuZadfm7WOe","initialsNames":["m","ma","mar","marp"],"nombre":"MASTERDOG ADULTO RAZA PEQUEÑA","peso":18,"precioComerciante":28500,"precioPublico":31900,"preciox10sacos":27500,"preciox15sacos":27000,"preciox5sacos":28000},{"id":"CJNPRjOgx4AMEQ1H1dUj","initialsNames":["m","ma","mac"],"nombre":"MASTIN ADULTO CARNE","peso":22,"precioComerciante":32600,"precioPublico":37200,"preciox10sacos":31500,"preciox15sacos":30900,"preciox5sacos":32000},{"amount":-6,"id":"bQIAEYQ8JugOiclV5CNV","initialsNames":["m","ma","mar","marp"],"nombre":"MASTIN ADULTO RAZA PEQUEÑA","peso":10,"precioComerciante":16300,"precioPublico":18600,"preciox10sacos":15700,"preciox15sacos":15400,"preciox5sacos":16000}]
-[00:10:05.843] Browser LOG     Buscando en 'initialsNames' el valor: x
-[00:10:05.844] Browser LOG     x
-[00:10:06.335] Browser LOG     Resultados encontrados: [{"id":"QtXOdfLizulPDyK59RJ4","initialsNames":["x"],"nombre":"XT","peso":25,"precioComerciante":27800,"precioPublico":31600,"preciox10sacos":26800,"preciox15sacos":26300,"preciox5sacos":27300}]
-[00:10:21.279] Browser LOG     [{"product":{"id":"CJNPRjOgx4AMEQ1H1dUj","initialsNames":["m","ma","mac"],"nombre":"MASTIN ADULTO CARNE","peso":22,"precioComerciante":32600,"precioPublico":37200,"preciox10sacos":31500,"preciox15sacos":30900,"preciox5sacos":32000,"selectedPrice":{"price":37200,"type":"precioPublico"}},"quantity":1},{"product":{"id":"QtXOdfLizulPDyK59RJ4","initialsNames":["x"],"nombre":"XT","peso":25,"precioComerciante":27800,"precioPublico":31600,"preciox10sacos":26800,"preciox15sacos":26300,"preciox5sacos":27300,"selectedPrice":{"price":31600,"type":"precioPublico"}},"quantity":1}]
-[00:10:25.292] Browser LOG     {"message":"All pedidos processed successfully","success":true}
-[00:13:58.195] Server  LOG     Firebase App Initialized Successfully
-[00:14:04.755] Browser LOG     Firebase App Initialized Successfully
-[00:25:26.254] Server  LOG      ✓ Compiled in 481ms
-[00:26:54.618] Server  LOG      ✓ Compiled in 184ms
-[00:27:04.779] Server  LOG      ✓ Compiled in 22ms
-[00:28:50.994] Server  LOG      ✓ Compiled in 28ms
+[00:01:37.176] Browser LOG     Firebase App Initialized Successfully
+[00:04:47.552] Server  LOG      ✓ Compiled in 328ms
+[00:08:08.110] Server  LOG      ✓ Compiled in 142ms
+[00:08:15.893] Server  LOG      ✓ Compiled in 151ms
+[00:08:17.328] Server  LOG      ✓ Compiled in 204ms
+[00:08:32.854] Server  LOG     Firebase App Initialized Successfully
+[00:08:36.168] Browser LOG     Firebase App Initialized Successfully
+[00:08:49.146] Server  LOG      ✓ Compiled in 51ms
+[00:09:09.995] Server  LOG      ✓ Compiled in 73ms
+[00:09:14.637] Server  LOG      ✓ Compiled in 93ms
+[00:11:52.670] Server  LOG     Firebase App Initialized Successfully
+[00:11:57.178] Browser LOG     Firebase App Initialized Successfully
+[00:18:09.962] Server  LOG      ✓ Compiled in 141ms
+[00:18:17.621] Server  LOG     Firebase App Initialized Successfully
+[00:18:21.665] Browser LOG     Firebase App Initialized Successfully
+[00:19:13.582] Server  LOG      ✓ Compiled in 225ms
+[00:19:14.124] Browser ERROR   uncaughtError: ReferenceError: font is not defined
+[00:19:14.887] Browser ERROR   uncaughtError: ReferenceError: font is not defined
+[00:19:16.386] Server  LOG      ✓ Compiled in 95ms
+[00:19:16.718] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:19:16.799] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:19:20.675] Server  LOG     Firebase App Initialized Successfully
+[00:19:20.952] Server  ERROR    ⨯ ReferenceError: fontSize is not defined
+[00:19:21.164] Browser ERROR   uncaughtError: ReferenceError: fontSize is not defined
+[00:19:21.188] Browser ERROR   uncaughtError: ReferenceError: fontSize is not defined
+[00:19:21.358] Server  LOG      ✓ Compiled in 9ms
+[00:19:23.281] Server  LOG     Firebase App Initialized Successfully
+[00:19:23.476] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:19:23.481] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:19:23.873] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:19:23.919] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:19:27.424] Server  LOG      ✓ Compiled in 7ms
+[00:19:27.875] Browser LOG     Firebase App Initialized Successfully
+[00:19:31.517] Browser LOG     Firebase App Initialized Successfully
+[00:19:40.936] Server  LOG     Firebase App Initialized Successfully
+[00:19:41.095] Server  LOG      ✓ Compiled in 2ms
+[00:19:46.624] Browser LOG     Firebase App Initialized Successfully
+[00:19:54.717] Server  LOG      ✓ Compiled in 100ms
+[00:20:02.590] Browser LOG     Buscando en 'initialsNames' el valor: m
+[00:20:02.590] Browser LOG     m
+[00:20:04.084] Browser LOG     Resultados encontrados: [{"id":"2fgT2xXaoUF7vT7kiNtW","initialsNames":["m","ms"],"nombre":"MASTIN SENIOR","peso":22,"precioComerciante":35100,"precioPublico":40000,"preciox10sacos":33800,"preciox15sacos":33200,"preciox5sacos":34500},{"id":"2heXrMGyAz0wPIeR3hvm","initialsNames":["m"],"nombre":"MIJO","peso":25,"precioComerciante":33000,"precioPublico":37300,"preciox10sacos":33000,"preciox15sacos":33000,"preciox5sacos":33000},{"id":"3KvLEkVB4iFSTEUKy5j9","initialsNames":["m","mm"],"nombre":"MASTIN MADRE-CACHORRO","peso":15,"precioComerciante":23800,"precioPublico":27600,"preciox10sacos":22900,"preciox15sacos":26500,"preciox5sacos":23300},{"amount":-15,"id":"4PZrAX1PRcW1rQwxaWfX","initialsNames":["m","ma","mar","marp"],"nombre":"MASTERDOG ADULTO RAZA PEQUEÑA","peso":8,"precioComerciante":14300,"precioPublico":16600,"preciox10sacos":13800,"preciox15sacos":13800,"preciox5sacos":14100},{"id":"5on0wOhllyg8MaGbL372","initialsNames":["m","mc"],"nombre":"MASTERCAT CARNE","peso":20,"precioComerciante":39900,"precioPublico":43800,"preciox10sacos":38500,"preciox15sacos":37800,"preciox5sacos":39200},{"amount":-8,"id":"6k8vkJFdbzuZadfm7WOe","initialsNames":["m","ma","mar","marp"],"nombre":"MASTERDOG ADULTO RAZA PEQUEÑA","peso":18,"precioComerciante":28500,"precioPublico":31900,"preciox10sacos":27500,"preciox15sacos":27000,"preciox5sacos":28000},{"amount":-1,"id":"CJNPRjOgx4AMEQ1H1dUj","initialsNames":["m","ma","mac"],"nombre":"MASTIN ADULTO CARNE","peso":22,"precioComerciante":32600,"precioPublico":37200,"preciox10sacos":31500,"preciox15sacos":30900,"preciox5sacos":32000},{"id":"DpwcADvQvATEFFueL5ah","initialsNames":["m","me","mes","mesa","mesa(","mesa(y","mesa(ya"],"nombre":"MERA EXKLUSIV SENSITIVE ADULTO (SALMON Y ARROZ)","peso":15,"precioComerciante":62700,"precioPublico":72700,"preciox10sacos":60400,"preciox15sacos":59300,"preciox5sacos":61500},{"id":"GuPBlz2OUzI4hB6EKh21","initialsNames":["m","me","mes","mess","mess(","mess(y","mess(ya"],"nombre":"MERA EXKLUSIV SENSITIVE SENIOR (PAVO Y ARROZ)","peso":15,"precioComerciante":62700,"precioPublico":72700,"preciox10sacos":60400,"preciox15sacos":59300,"preciox5sacos":61500},{"id":"MaPUp8inGZ8clkhPXZQz","initialsNames":["m","mc"],"nombre":"MASTERDOG CACHORRO","peso":18,"precioComerciante":28500,"precioPublico":31900,"preciox10sacos":27500,"preciox15sacos":27000,"preciox5sacos":28000},{"id":"NKXeKY5RyM6GIKEvdrcF","initialsNames":["m","md","mdc"],"nombre":"MEZCLA DE CANARIO","peso":1,"precioComerciante":1600,"precioPublico":2050,"preciox10sacos":1600,"preciox15sacos":1600,"preciox5sacos":1600},{"id":"OWMxFbU0UB7yd0mlr0DT","initialsNames":["m"],"nombre":"MARAVILLA","peso":25,"precioComerciante":45600,"precioPublico":52000,"preciox10sacos":45600,"preciox15sacos":43700,"preciox5sacos":45600},{"id":"ObnYA5vmMtHTQCPUCI1g","initialsNames":["m","ms"],"nombre":"MASTERDOG SENIOR","peso":18,"precioComerciante":28500,"precioPublico":31900,"preciox10sacos":27500,"preciox15sacos":27000,"preciox5sacos":28000},{"id":"WmARsWHBsle1UpLwRx5M","initialsNames":["m","md","mdc"],"nombre":"MEZCLA DE CATAS","peso":1,"precioComerciante":1500,"precioPublico":1750,"preciox10sacos":1500,"preciox15sacos":1500,"preciox5sacos":1500},{"id":"XmMG3lOoca0lgmN7wq6w","initialsNames":["m","mc","mco","mcop"],"nombre":"MASTERDOG CARNE o POLLO","peso":18,"precioComerciante":28500,"precioPublico":31900,"preciox10sacos":27500,"preciox15sacos":27000,"preciox5sacos":28000},{"id":"YmVMOO9Qo17SjCm3pQEt","initialsNames":["m"],"nombre":"MAIZ","peso":25,"precioComerciante":11300,"precioPublico":13300,"preciox10sacos":11300,"preciox15sacos":11300,"preciox5sacos":11300},{"id":"YypsO91yigUT0O46PbK7","initialsNames":["m","me","mes","mesp","mesp(","mesp(y","mesp(ya"],"nombre":"MERA EXKLUSIV SENSITIV PUPPY (PAVO Y ARROZ)","peso":15,"precioComerciante":62600,"precioPublico":74000,"preciox10sacos":60400,"preciox15sacos":71200,"preciox5sacos":61500},{"amount":-6,"id":"bQIAEYQ8JugOiclV5CNV","initialsNames":["m","ma","mar","marp"],"nombre":"MASTIN ADULTO RAZA PEQUEÑA","peso":10,"precioComerciante":16300,"precioPublico":18600,"preciox10sacos":15700,"preciox15sacos":15400,"preciox5sacos":16000},{"id":"ghWZUTK7sqPbFRciB2zQ","initialsNames":["m","me","mes","mesa","mesa(","mesa(y","mesa(ya"],"nombre":"MERA EXKLUSIV SENSITIVE ADULTO (PAVO Y ARROZ)","peso":15,"precioComerciante":66700,"precioPublico":72700,"preciox10sacos":60400,"preciox15sacos":59300,"preciox5sacos":61500},{"id":"iJDwd6iCVyafRxIdMMtc","initialsNames":["m","mc"],"nombre":"MP CONCHUELA","peso":25,"precioComerciante":4200,"precioPublico":5900,"preciox10sacos":4200,"preciox15sacos":4200,"preciox5sacos":4200},{"id":"lESzJqJY3bdWrltmOVo9","initialsNames":["m","mc"],"nombre":"MASKO CAN","peso":25,"precioComerciante":25700,"precioPublico":29400,"preciox10sacos":24800,"preciox15sacos":24300,"preciox5sacos":25300},{"id":"qvOD3IOUM46V48FW1EO1","initialsNames":["m","mc","mc2","mc2k"],"nombre":"MAIZ CURAGUA 25 KG","peso":25,"precioComerciante":28000,"precioPublico":30200,"preciox10sacos":28000,"preciox15sacos":28000,"preciox5sacos":28000},{"id":"rv0KCvIGkiSJDYR3pm0u","initialsNames":["m","ms"],"nombre":"MASTERCAT SALMON ","peso":20,"precioComerciante":39900,"precioPublico":43800,"preciox10sacos":38500,"preciox15sacos":37800,"preciox5sacos":39200},{"id":"yAr7qMlVUFJVtUhV5wuv","initialsNames":["m","mp"],"nombre":"MASTERCAT POLLO","peso":20,"precioComerciante":39900,"precioPublico":43800,"preciox10sacos":38500,"preciox15sacos":37800,"preciox5sacos":39200},{"id":"zDUXYvH2IsT68jimv92E","initialsNames":["m","ms"],"nombre":"MASTERDOG SENIOR","peso":8,"precioComerciante":14300,"precioPublico":16600,"preciox10sacos":13800,"preciox15sacos":13800,"preciox5sacos":14100},{"id":"zLACcsK4XW0g4LWDoxLw","initialsNames":["m","mr"],"nombre":"MASTERCAT RELLENO","peso":20,"precioComerciante":39900,"precioPublico":43800,"preciox10sacos":38500,"preciox15sacos":37800,"preciox5sacos":39200},{"id":"zYgxFBlstEwsxLFiFBdN","initialsNames":["m","me","mew","mewa","mewag","mewag(","mewag(s","mewag(st"],"nombre":"MERA EXKLUSIV WEIZENFREI ADULTO GEFLÛGEL (AVES SIN TRIGO)","peso":15,"precioComerciante":52600,"precioPublico":61000,"preciox10sacos":50700,"preciox15sacos":49800,"preciox5sacos":51600}]
+[00:22:05.320] Server  LOG      ✓ Compiled in 535ms
+[00:24:24.066] Server  LOG      ✓ Compiled in 75ms
