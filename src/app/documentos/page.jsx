@@ -3,9 +3,53 @@ import { useState, useEffect } from 'react';
 import { listenPedidos } from '../../serverless/db/listenPedidos';
 import LoadingSpinner from '../components/loading';
 
+const PhoneNumberSelection = ({ pedido, totalPedido, onSelect, onCancel }) => {
+    const phoneNumbers = ['56990059578', '56990059578', '56990059578'];
+
+    const formatCurrency = (value) => {
+        return new Intl.NumberFormat('es-CL', { style: 'currency', currency: 'CLP' }).format(value);
+    };
+
+    const handleSelectPhone = (phone) => {
+        let message = `*Nuevo Pedido:*\\n`;
+        message += `*Cliente:* ${pedido.client}\\n`;
+        message += `*Detalle del pedido:*\\n`;
+    
+        pedido.products.forEach(item => {
+            const totalItem = formatCurrency(item.quantity * item.product.selectedPrice.price);
+            message += `${item.quantity}x ${item.product.nombre} ${item.product.peso}Kg - ${totalItem}\\n`;
+        });
+    
+        message += `\\n\`\`\`\\n`;
+        message += `*Total Pedido:* ${formatCurrency(totalPedido)}`;
+    
+        const whatsappUrl = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message)}`;
+        window.open(whatsappUrl, '_blank');
+        onSelect();
+    };
+
+    return (
+        <div style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: 'rgba(0,0,0,0.5)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <div style={{ background: 'white', padding: '20px', borderRadius: '8px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)' }}>
+                <h3 style={{ color: '#333' }}>Seleccionar número de teléfono</h3>
+                <ul style={{ listStyle: 'none', padding: 0, margin: '20px 0' }}>
+                    {phoneNumbers.map((phone, index) => (
+                        <li key={index} onClick={() => handleSelectPhone(phone)} style={{ padding: '10px', border: '1px solid #ddd', borderRadius: '4px', marginBottom: '10px', cursor: 'pointer' }}>
+                            {phone}
+                        </li>
+                    ))}
+                </ul>
+                <button onClick={onCancel} style={{ padding: '10px 20px', border: 'none', borderRadius: '5px', cursor: 'pointer' }}>Cancelar</button>
+            </div>
+        </div>
+    );
+};
+
 export default function ListDocuments() {
     const [pedidos, setPedidos] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
+    const [showPhoneSelection, setShowPhoneSelection] = useState(false);
+    const [selectedPedido, setSelectedPedido] = useState(null);
 
     useEffect(() => {
         const unsubscribe = listenPedidos((newPedidos) => {
@@ -21,26 +65,15 @@ export default function ListDocuments() {
         return new Intl.NumberFormat('es-CL', { style: 'currency', currency: 'CLP' }).format(value);
     };
 
-    const handleSendWhatsApp = (pedido, totalPedido) => {
-        const phone = '56990059578';
-        let message = `*Nuevo Pedido:*\n`;
-        message += `*Cliente:* ${pedido.client}\n`;
-        message += '*Detalle del pedido:*\n';
-        message += '```\n'; // Using code block for better formatting
-
-        pedido.products.forEach(item => {
-            const totalItem = formatCurrency(item.quantity * item.product.selectedPrice.price);
-            message += `${item.quantity}x ${item.product.nombre} ${item.product.peso}Kg - ${totalItem}\n`;
-        });
-
-        message += '```\n';
-        message += `*Total Pedido:* ${formatCurrency(totalPedido)}`;
-
-        const whatsappUrl = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message)}`; 
-
-        window.open(whatsappUrl, '_blank');
+    const handleOpenWhatsApp = (pedido) => {
+        setSelectedPedido(pedido);
+        setShowPhoneSelection(true);
     };
 
+    const handleClosePhoneSelection = () => {
+        setShowPhoneSelection(false);
+        setSelectedPedido(null);
+    };
 
     return (
         <div style={{ fontFamily: 'Arial, sans-serif', padding: '20px', backgroundColor: '#f0f2f5', width:"100vw" }}>
@@ -74,7 +107,7 @@ export default function ListDocuments() {
                                                 <td style={{ padding: '4px', border: '1px solid #ddd', textAlign: 'right' }}>{formatCurrency(item.product.selectedPrice.price)}</td>
                                                 <td style={{ padding: '4px', border: '1px solid #ddd', textAlign: 'right' }}>{formatCurrency(item.product.selectedPrice.price * item.quantity)}</td>
                                             </tr>
-                                        ))}
+                                        ))}\
                                     </tbody>
                                 </table>
                                 
@@ -84,7 +117,7 @@ export default function ListDocuments() {
 
                                 <div style={{display:"flex", justifyContent:"flex-end", padding:"1rem"}}>
                                     <button 
-                                        onClick={() => handleSendWhatsApp(pedido, totalPedido)} 
+                                        onClick={() => handleOpenWhatsApp(pedido)} 
                                         style={{
                                             padding:'10px 20px', 
                                             backgroundColor: '#25D366', 
@@ -103,6 +136,14 @@ export default function ListDocuments() {
                         )
                     })}
                 </div>
+            )}
+            {showPhoneSelection && selectedPedido && (
+                <PhoneNumberSelection
+                    pedido={selectedPedido}
+                    totalPedido={(selectedPedido.products || []).reduce((acc, item) => acc + (item.quantity * item.product.selectedPrice.price), 0)}
+                    onSelect={handleClosePhoneSelection}
+                    onCancel={handleClosePhoneSelection}
+                />
             )}
         </div>
     );
