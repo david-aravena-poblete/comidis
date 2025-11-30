@@ -207,9 +207,18 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$
 ;
 const PhoneNumberSelection = ({ pedido, totalPedido, onSelect, onCancel })=>{
     const phoneNumbers = [
-        '56990059578',
-        '56990059578',
-        '56990059578'
+        {
+            user: 'david',
+            phone: '56990059578'
+        },
+        {
+            user: 'israel',
+            phone: '56981249214'
+        },
+        {
+            user: 'jc',
+            phone: '56973894350'
+        }
     ];
     const formatCurrency = (value)=>{
         return new Intl.NumberFormat('es-CL', {
@@ -218,16 +227,15 @@ const PhoneNumberSelection = ({ pedido, totalPedido, onSelect, onCancel })=>{
         }).format(value);
     };
     const handleSelectPhone = (phone)=>{
-        let message = `*Nuevo Pedido:*\\n`;
-        message += `*Cliente:* ${pedido.client}\\n`;
-        message += `*Detalle del pedido:*\\n`;
+        let message = `*Nuevo Pedido*\n\n`;
+        message += `*Cliente:* \n ${pedido.client}\n\n`;
+        message += `*Detalle del pedido:*\n`;
         pedido.products.forEach((item)=>{
             const totalItem = formatCurrency(item.quantity * item.product.selectedPrice.price);
-            message += `${item.quantity}x ${item.product.nombre} ${item.product.peso}Kg - ${totalItem}\\n`;
+            message += `${item.quantity}x ${item.product.nombre} ${item.product.peso}Kg - ${totalItem}\n\n`;
         });
-        message += `\\n\`\`\`\\n`;
-        message += `*Total Pedido:* ${formatCurrency(totalPedido)}`;
-        const whatsappUrl = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message)}`;
+        message += `*Total Pedido:* \n ${formatCurrency(totalPedido)}`;
+        const whatsappUrl = `https://api.whatsapp.com/send?phone=${phone.phone}&text=${encodeURIComponent(message)}`;
         window.open(whatsappUrl, '_blank');
         onSelect();
     };
@@ -276,8 +284,35 @@ const PhoneNumberSelection = ({ pedido, totalPedido, onSelect, onCancel })=>{
                                 marginBottom: '10px',
                                 cursor: 'pointer'
                             },
-                            children: phone
-                        }, index, false, {
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                        children: phone.user
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/app/documentos/page.jsx",
+                                        lineNumber: 39,
+                                        columnNumber: 33
+                                    }, ("TURBOPACK compile-time value", void 0))
+                                }, void 0, false, {
+                                    fileName: "[project]/src/app/documentos/page.jsx",
+                                    lineNumber: 38,
+                                    columnNumber: 29
+                                }, ("TURBOPACK compile-time value", void 0)),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                        children: phone.phone
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/app/documentos/page.jsx",
+                                        lineNumber: 42,
+                                        columnNumber: 33
+                                    }, ("TURBOPACK compile-time value", void 0))
+                                }, void 0, false, {
+                                    fileName: "[project]/src/app/documentos/page.jsx",
+                                    lineNumber: 41,
+                                    columnNumber: 29
+                                }, ("TURBOPACK compile-time value", void 0))
+                            ]
+                        }, index, true, {
                             fileName: "[project]/src/app/documentos/page.jsx",
                             lineNumber: 37,
                             columnNumber: 25
@@ -298,7 +333,7 @@ const PhoneNumberSelection = ({ pedido, totalPedido, onSelect, onCancel })=>{
                     children: "Cancelar"
                 }, void 0, false, {
                     fileName: "[project]/src/app/documentos/page.jsx",
-                    lineNumber: 42,
+                    lineNumber: 47,
                     columnNumber: 17
                 }, ("TURBOPACK compile-time value", void 0))
             ]
@@ -350,7 +385,7 @@ function ListDocuments() {
         children: [
             isLoading && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$loading$2f$index$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/src/app/documentos/page.jsx",
-                lineNumber: 80,
+                lineNumber: 85,
                 columnNumber: 26
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -363,7 +398,7 @@ function ListDocuments() {
                 children: "Lista de Pedidos"
             }, void 0, false, {
                 fileName: "[project]/src/app/documentos/page.jsx",
-                lineNumber: 81,
+                lineNumber: 86,
                 columnNumber: 13
             }, this),
             pedidos.length === 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -374,7 +409,7 @@ function ListDocuments() {
                 children: "No hay pedidos para mostrar."
             }, void 0, false, {
                 fileName: "[project]/src/app/documentos/page.jsx",
-                lineNumber: 83,
+                lineNumber: 88,
                 columnNumber: 17
             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 style: {
@@ -407,7 +442,7 @@ function ListDocuments() {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/documentos/page.jsx",
-                                lineNumber: 91,
+                                lineNumber: 96,
                                 columnNumber: 33
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("table", {
@@ -432,7 +467,7 @@ function ListDocuments() {
                                                     children: "Cant."
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/documentos/page.jsx",
-                                                    lineNumber: 96,
+                                                    lineNumber: 101,
                                                     columnNumber: 45
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -444,7 +479,7 @@ function ListDocuments() {
                                                     children: "Detalle"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/documentos/page.jsx",
-                                                    lineNumber: 97,
+                                                    lineNumber: 102,
                                                     columnNumber: 45
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -456,7 +491,7 @@ function ListDocuments() {
                                                     children: "Unitario"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/documentos/page.jsx",
-                                                    lineNumber: 98,
+                                                    lineNumber: 103,
                                                     columnNumber: 45
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -468,87 +503,84 @@ function ListDocuments() {
                                                     children: "Total"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/documentos/page.jsx",
-                                                    lineNumber: 99,
+                                                    lineNumber: 104,
                                                     columnNumber: 45
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/documentos/page.jsx",
-                                            lineNumber: 95,
+                                            lineNumber: 100,
                                             columnNumber: 41
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/documentos/page.jsx",
-                                        lineNumber: 94,
+                                        lineNumber: 99,
                                         columnNumber: 37
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
-                                        children: [
-                                            (pedido.products || []).map((item, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
-                                                    children: [
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
-                                                            style: {
-                                                                padding: '4px',
-                                                                border: '1px solid #ddd'
-                                                            },
-                                                            children: item.quantity
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/src/app/documentos/page.jsx",
-                                                            lineNumber: 105,
-                                                            columnNumber: 49
-                                                        }, this),
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
-                                                            style: {
-                                                                padding: '4px',
-                                                                border: '1px solid #ddd'
-                                                            },
-                                                            children: `${item.product.nombre} ${item.product.peso}Kg`
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/src/app/documentos/page.jsx",
-                                                            lineNumber: 106,
-                                                            columnNumber: 49
-                                                        }, this),
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
-                                                            style: {
-                                                                padding: '4px',
-                                                                border: '1px solid #ddd',
-                                                                textAlign: 'right'
-                                                            },
-                                                            children: formatCurrency(item.product.selectedPrice.price)
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/src/app/documentos/page.jsx",
-                                                            lineNumber: 107,
-                                                            columnNumber: 49
-                                                        }, this),
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
-                                                            style: {
-                                                                padding: '4px',
-                                                                border: '1px solid #ddd',
-                                                                textAlign: 'right'
-                                                            },
-                                                            children: formatCurrency(item.product.selectedPrice.price * item.quantity)
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/src/app/documentos/page.jsx",
-                                                            lineNumber: 108,
-                                                            columnNumber: 49
-                                                        }, this)
-                                                    ]
-                                                }, index, true, {
-                                                    fileName: "[project]/src/app/documentos/page.jsx",
-                                                    lineNumber: 104,
-                                                    columnNumber: 45
-                                                }, this)),
-                                            "\\"
-                                        ]
-                                    }, void 0, true, {
+                                        children: (pedido.products || []).map((item, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                                                        style: {
+                                                            padding: '4px',
+                                                            border: '1px solid #ddd'
+                                                        },
+                                                        children: item.quantity
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/app/documentos/page.jsx",
+                                                        lineNumber: 110,
+                                                        columnNumber: 49
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                                                        style: {
+                                                            padding: '4px',
+                                                            border: '1px solid #ddd'
+                                                        },
+                                                        children: `${item.product.nombre} ${item.product.peso}Kg`
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/app/documentos/page.jsx",
+                                                        lineNumber: 111,
+                                                        columnNumber: 49
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                                                        style: {
+                                                            padding: '4px',
+                                                            border: '1px solid #ddd',
+                                                            textAlign: 'right'
+                                                        },
+                                                        children: formatCurrency(item.product.selectedPrice.price)
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/app/documentos/page.jsx",
+                                                        lineNumber: 112,
+                                                        columnNumber: 49
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                                                        style: {
+                                                            padding: '4px',
+                                                            border: '1px solid #ddd',
+                                                            textAlign: 'right'
+                                                        },
+                                                        children: formatCurrency(item.product.selectedPrice.price * item.quantity)
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/app/documentos/page.jsx",
+                                                        lineNumber: 113,
+                                                        columnNumber: 49
+                                                    }, this)
+                                                ]
+                                            }, index, true, {
+                                                fileName: "[project]/src/app/documentos/page.jsx",
+                                                lineNumber: 109,
+                                                columnNumber: 45
+                                            }, this))
+                                    }, void 0, false, {
                                         fileName: "[project]/src/app/documentos/page.jsx",
-                                        lineNumber: 102,
+                                        lineNumber: 107,
                                         columnNumber: 37
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/documentos/page.jsx",
-                                lineNumber: 93,
+                                lineNumber: 98,
                                 columnNumber: 33
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -565,7 +597,7 @@ function ListDocuments() {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/documentos/page.jsx",
-                                lineNumber: 114,
+                                lineNumber: 119,
                                 columnNumber: 33
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -589,24 +621,24 @@ function ListDocuments() {
                                     children: "Enviar por WhatsApp"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/documentos/page.jsx",
-                                    lineNumber: 119,
+                                    lineNumber: 124,
                                     columnNumber: 37
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/documentos/page.jsx",
-                                lineNumber: 118,
+                                lineNumber: 123,
                                 columnNumber: 33
                             }, this)
                         ]
                     }, pedido.id, true, {
                         fileName: "[project]/src/app/documentos/page.jsx",
-                        lineNumber: 90,
+                        lineNumber: 95,
                         columnNumber: 29
                     }, this);
                 })
             }, void 0, false, {
                 fileName: "[project]/src/app/documentos/page.jsx",
-                lineNumber: 85,
+                lineNumber: 90,
                 columnNumber: 17
             }, this),
             showPhoneSelection && selectedPedido && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(PhoneNumberSelection, {
@@ -616,13 +648,13 @@ function ListDocuments() {
                 onCancel: handleClosePhoneSelection
             }, void 0, false, {
                 fileName: "[project]/src/app/documentos/page.jsx",
-                lineNumber: 141,
+                lineNumber: 146,
                 columnNumber: 17
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/documentos/page.jsx",
-        lineNumber: 79,
+        lineNumber: 84,
         columnNumber: 9
     }, this);
 }

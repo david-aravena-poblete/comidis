@@ -4,29 +4,29 @@ import { listenPedidos } from '../../serverless/db/listenPedidos';
 import LoadingSpinner from '../components/loading';
 
 const PhoneNumberSelection = ({ pedido, totalPedido, onSelect, onCancel }) => {
-    const phoneNumbers = ['56990059578', '56990059578', '56990059578'];
+    const phoneNumbers = [{user:'david', phone: '56990059578'}, {user:'israel', phone: '56981249214'}, {user: 'jc', phone: '56973894350'}];
 
     const formatCurrency = (value) => {
         return new Intl.NumberFormat('es-CL', { style: 'currency', currency: 'CLP' }).format(value);
     };
 
     const handleSelectPhone = (phone) => {
-        let message = `*Nuevo Pedido:*\\n`;
-        message += `*Cliente:* ${pedido.client}\\n`;
-        message += `*Detalle del pedido:*\\n`;
+        let message = `*Nuevo Pedido*\n\n`;
+        message += `*Cliente:* \n ${pedido.client}\n\n`;
+        message += `*Detalle del pedido:*\n`;
     
         pedido.products.forEach(item => {
             const totalItem = formatCurrency(item.quantity * item.product.selectedPrice.price);
-            message += `${item.quantity}x ${item.product.nombre} ${item.product.peso}Kg - ${totalItem}\\n`;
+            message += `${item.quantity}x ${item.product.nombre} ${item.product.peso}Kg - ${totalItem}\n\n`;
         });
     
-        message += `\\n\`\`\`\\n`;
-        message += `*Total Pedido:* ${formatCurrency(totalPedido)}`;
+        message += `*Total Pedido:* \n ${formatCurrency(totalPedido)}`;
     
-        const whatsappUrl = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message)}`;
+        const whatsappUrl = `https://api.whatsapp.com/send?phone=${phone.phone}&text=${encodeURIComponent(message)}`;
         window.open(whatsappUrl, '_blank');
         onSelect();
     };
+    
 
     return (
         <div style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: 'rgba(0,0,0,0.5)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -35,7 +35,12 @@ const PhoneNumberSelection = ({ pedido, totalPedido, onSelect, onCancel }) => {
                 <ul style={{ listStyle: 'none', padding: 0, margin: '20px 0' }}>
                     {phoneNumbers.map((phone, index) => (
                         <li key={index} onClick={() => handleSelectPhone(phone)} style={{ padding: '10px', border: '1px solid #ddd', borderRadius: '4px', marginBottom: '10px', cursor: 'pointer' }}>
-                            {phone}
+                            <div>
+                                <p>{phone.user}</p>
+                            </div>
+                            <div>
+                                <p>{phone.phone}</p>
+                            </div>
                         </li>
                     ))}
                 </ul>
@@ -107,7 +112,7 @@ export default function ListDocuments() {
                                                 <td style={{ padding: '4px', border: '1px solid #ddd', textAlign: 'right' }}>{formatCurrency(item.product.selectedPrice.price)}</td>
                                                 <td style={{ padding: '4px', border: '1px solid #ddd', textAlign: 'right' }}>{formatCurrency(item.product.selectedPrice.price * item.quantity)}</td>
                                             </tr>
-                                        ))}\
+                                        ))}
                                     </tbody>
                                 </table>
                                 

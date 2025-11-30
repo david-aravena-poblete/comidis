@@ -1,16 +1,101 @@
-[00:00:11.402] Server  LOG      ✓ Ready in 8.1s
-[00:02:27.926] Server  LOG      ○ Compiling / ...
-[00:02:57.022] Server  LOG     Firebase App Initialized Successfully
-[00:03:03.129] Server  WARN     ⚠ Cross origin request detected from 9000-firebase-comidinapp-1762540520986.cluster-thle3dudhffpwss7zs5hxaeu2o.cloudworkstations.dev to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+[00:00:22.908] Server  LOG      ✓ Ready in 18.7s
+[00:00:26.528] Server  LOG      ○ Compiling / ...
+[00:01:29.363] Server  LOG     Firebase App Initialized Successfully
+[00:01:34.210] Server  WARN     ⚠ Cross origin request detected from 9000-firebase-comidinapp-1762540520986.cluster-thle3dudhffpwss7zs5hxaeu2o.cloudworkstations.dev to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
 Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
-[00:03:05.529] Browser LOG     Firebase App Initialized Successfully
-[00:11:13.683] Browser LOG     Firebase App Initialized Successfully
-[00:20:16.824] Browser LOG     Firebase App Initialized Successfully
-[00:26:00.651] Browser LOG     Firebase App Initialized Successfully
-[00:26:08.257] Server  LOG      ○ Compiling /documentos ...
-[00:26:37.626] Browser LOG     Firebase App Initialized Successfully
-[00:26:40.149] Browser LOG     Firebase App Initialized Successfully
-[00:26:41.659] Browser ERROR   In HTML, text nodes cannot be a child of <%s>.
+[00:01:35.442] Browser LOG     Firebase App Initialized Successfully
+[00:01:49.591] Server  LOG      ○ Compiling /documentos ...
+[00:09:22.558] Server  LOG      ✓ Compiled in 201ms
+[00:09:34.340] Server  LOG      ✓ Compiled in 280ms
+[00:09:37.187] Server  LOG      ✓ Compiled in 175ms
+[00:09:38.780] Server  LOG      ✓ Compiled in 235ms
+[00:09:44.656] Server  LOG      ✓ Compiled in 249ms
+[00:09:47.462] Server  LOG      ✓ Compiled in 1402ms
+[00:09:51.477] Server  LOG      ✓ Compiled in 2s
+[00:09:52.826] Server  ERROR    ⨯ ./src/app/documentos/page.jsx:7:77
+Parsing ecmascript source code failed
+   5 |
+   6 | const PhoneNumberSelection = ({ pedido, totalPedido, onSelect, onCancel }) => {
+>  7 |     const phoneNumbers = [{phone: '56990059578'}, {phone: '56990059578'}, {p'56990059578'];
+     |                                                                             ^^^^^^^^^^^^^
+   8 |
+   9 |     const formatCurrency = (value) => {
+  10 |         return new Intl.NumberFormat('es-CL', { style: 'currency', currency: 'CLP' }).format(value);
+
+Unexpected token `string literal (56990059578, '56990059578')`. Expected ... , *,  (, [, :, , ?, = or an identifier
+
+Import traces:
+  Client Component Browser:
+    ./src/app/documentos/page.jsx [Client Component Browser]
+    ./src/app/documentos/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/documentos/page.jsx [Client Component SSR]
+    ./src/app/documentos/page.jsx [Server Component]
+
+
+[00:09:52.990] Server  ERROR    ⨯ ./src/app/documentos/page.jsx:7:77
+Parsing ecmascript source code failed
+   5 |
+   6 | const PhoneNumberSelection = ({ pedido, totalPedido, onSelect, onCancel }) => {
+>  7 |     const phoneNumbers = [{phone: '56990059578'}, {phone: '56990059578'}, {p'56990059578'];
+     |                                                                             ^^^^^^^^^^^^^
+   8 |
+   9 |     const formatCurrency = (value) => {
+  10 |         return new Intl.NumberFormat('es-CL', { style: 'currency', currency: 'CLP' }).format(value);
+
+Unexpected token `string literal (56990059578, '56990059578')`. Expected ... , *,  (, [, :, , ?, = or an identifier
+
+Import traces:
+  Client Component Browser:
+    ./src/app/documentos/page.jsx [Client Component Browser]
+    ./src/app/documentos/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/documentos/page.jsx [Client Component SSR]
+    ./src/app/documentos/page.jsx [Server Component]
+
+
+[00:09:55.906] Server  LOG      ○ Compiling /_error ...
+[00:10:04.949] Server  LOG      ✓ Compiled in 12s
+[00:10:06.168] Server  LOG      ✓ Compiled in 1264ms
+[00:10:06.506] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./src/app/documentos/page.jsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:10:11.235] Server  LOG     Firebase App Initialized Successfully
+[00:10:18.954] Browser LOG     Firebase App Initialized Successfully
+[00:10:36.682] Browser LOG     Firebase App Initialized Successfully
+[00:10:37.730] Server  LOG      ✓ Compiled in 101ms
+[00:10:52.543] Server  LOG      ✓ Compiled in 145ms
+[00:11:00.361] Server  LOG      ✓ Compiled in 193ms
+[00:11:03.862] Server  LOG      ✓ Compiled in 261ms
+[00:11:23.125] Server  LOG      ✓ Compiled in 137ms
+[00:11:29.091] Server  LOG      ✓ Compiled in 202ms
+[00:11:36.519] Server  LOG      ✓ Compiled in 189ms
+[00:11:46.667] Server  LOG      ✓ Compiled in 160ms
+[00:11:52.735] Server  LOG      ✓ Compiled in 150ms
+[00:12:08.218] Server  LOG      ✓ Compiled in 215ms
+[00:12:10.262] Server  LOG      ✓ Compiled in 197ms
+[00:12:18.418] Server  LOG      ✓ Compiled in 84ms
+[00:12:25.065] Server  LOG      ✓ Compiled in 299ms
+[00:15:12.821] Server  LOG      ✓ Compiled in 172ms
+[00:15:15.345] Server  LOG      ✓ Compiled in 248ms
+[00:15:16.954] Server  LOG      ✓ Compiled in 267ms
+[00:15:19.884] Server  LOG      ✓ Compiled in 136ms
+[00:15:21.327] Server  LOG      ✓ Compiled in 122ms
+[00:15:39.769] Server  LOG      ✓ Compiled in 101ms
+[00:15:42.815] Server  LOG      ✓ Compiled in 174ms
+[00:15:46.610] Server  LOG      ✓ Compiled in 239ms
+[00:15:53.581] Server  LOG      ✓ Compiled in 196ms
+[00:16:21.763] Server  LOG      ✓ Compiled in 229ms
+[00:16:25.086] Server  LOG      ✓ Compiled in 302ms
+[00:16:27.041] Server  LOG      ✓ Compiled in 218ms
+[00:16:32.139] Server  LOG      ✓ Compiled in 254ms
+[00:16:41.374] Server  LOG      ✓ Compiled in 201ms
+[00:16:46.797] Server  LOG      ✓ Compiled in 209ms
+[00:16:55.134] Server  LOG      ✓ Compiled in 123ms
+[00:17:02.473] Server  LOG     Firebase App Initialized Successfully
+[00:17:06.603] Browser LOG     Firebase App Initialized Successfully
+[00:17:29.287] Browser LOG     Firebase App Initialized Successfully
+[00:17:30.741] Browser ERROR   In HTML, text nodes cannot be a child of <%s>.
 This will cause a hydration error.%s tbody 
 
   ...
@@ -19,7 +104,7 @@ This will cause a hydration error.%s tbody
         <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
           <RedirectBoundary>
             <RedirectErrorBoundary router={{...}}>
-              <InnerLayoutRouter url="/documentos" tree={[...]} params={{}} cacheNode={{lazyData:null, ...}} ...>
+              <InnerLayoutRouter url={"/documen..."} tree={[...]} params={{}} cacheNode={{lazyData:null, ...}} ...>
                 <SegmentViewNode type="page" pagePath="documentos...">
                   <SegmentTrieNode>
                   <ClientPageRoot Component={function ListDocuments} serverProvidedParams={{...}}>
@@ -40,10 +125,279 @@ This will cause a hydration error.%s tbody
                 ...
               ...
 
-[00:27:15.490] Browser WARN    [2025-11-28T17:59:02.996Z]  @firebase/firestore: Firestore (12.5.0): WebChannelConnection RPC 'Listen' stream 0x871e95e4 transport errored. Name: undefined Message: undefined
-[00:27:15.492] Browser WARN    [2025-11-28T17:59:03.007Z]  @firebase/firestore: Firestore (12.5.0): WebChannelConnection RPC 'Listen' stream 0x871e95e5 transport errored. Name: undefined Message: undefined
-[00:27:15.492] Browser WARN    [2025-11-28T17:59:08.928Z]  @firebase/firestore: Firestore (12.5.0): WebChannelConnection RPC 'Listen' stream 0x871e95e6 transport errored. Name: undefined Message: undefined
-[00:27:15.492] Browser WARN    [2025-11-28T17:59:11.332Z]  @firebase/firestore: Firestore (12.5.0): WebChannelConnection RPC 'Listen' stream 0x871e95e7 transport errored. Name: undefined Message: undefined
-[00:27:15.492] Browser WARN    [2025-11-28T17:59:13.335Z]  @firebase/firestore: Firestore (12.5.0): WebChannelConnection RPC 'Listen' stream 0x871e95e8 transport errored. Name: undefined Message: undefined
-[00:27:15.492] Browser WARN    [2025-11-28T17:59:14.824Z]  @firebase/firestore: Firestore (12.5.0): WebChannelConnection RPC 'Listen' stream 0x871e95e9 transport errored. Name: undefined Message: undefined
-[00:27:15.492] Browser WARN    [2025-11-28T17:59:14.835Z]  @firebase/firestore: Firestore (12.5.0): WebChannelConnection RPC 'Listen' stream 0x871e95ea transport errored. Name: undefined Message: undefined
+[00:19:12.511] Browser LOG     Firebase App Initialized Successfully
+[00:23:03.412] Server  LOG      ✓ Compiled in 152ms
+[00:23:14.959] Server  LOG     Firebase App Initialized Successfully
+[00:23:19.950] Browser LOG     Firebase App Initialized Successfully
+[00:23:20.990] Browser ERROR   In HTML, text nodes cannot be a child of <%s>.
+This will cause a hydration error.%s tbody 
+
+  ...
+    <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+      <LoadingBoundary name="documentos/" loading={null}>
+        <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+          <RedirectBoundary>
+            <RedirectErrorBoundary router={{...}}>
+              <InnerLayoutRouter url={"/documen..."} tree={[...]} params={{}} cacheNode={{lazyData:null, ...}} ...>
+                <SegmentViewNode type="page" pagePath="documentos...">
+                  <SegmentTrieNode>
+                  <ClientPageRoot Component={function ListDocuments} serverProvidedParams={{...}}>
+                    <ListDocuments params={Promise} searchParams={Promise}>
+                      <div style={{...}}>
+                        <h1>
+                        <div style={{width:"100%", ...}}>
+                          <div style={{width:"100%", ...}}>
+                            <h2>
+                            <table style={{width:"100%", ...}}>
+                              <thead>
+>                             <tbody>
+                                <tr>
+                                <tr>
+>                               \
+                            ...
+                          ...
+                ...
+              ...
+
+[00:24:42.017] Server  LOG      ✓ Compiled in 269ms
+[00:24:44.401] Server  LOG      ✓ Compiled in 255ms
+[00:24:44.935] Browser ERROR   ./src/app/documentos/page.jsx:40:35
+Parsing ecmascript source code failed
+  38 |                             <div>
+  39 |                                 <p>{phone.user}
+> 40 |                             </div>
+     |                                   ^
+> 41 |                             <div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  42 |                                 {phone.phone}
+  43 |                             </div>
+  44 |                         </li>
+
+Expected '</', got 'jsx text (
+                            )'
+
+Import traces:
+  Client Component Browser:
+    ./src/app/documentos/page.jsx [Client Component Browser]
+    ./src/app/documentos/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/documentos/page.jsx [Client Component SSR]
+    ./src/app/documentos/page.jsx [Server Component]
+[00:24:49.928] Server  LOG      ✓ Compiled in 259ms
+[00:24:52.889] Server  LOG      ✓ Compiled in 338ms
+[00:24:53.996] Browser ERROR   ./src/app/documentos/page.jsx:42:50
+Parsing ecmascript source code failed
+  40 |                             </div>
+  41 |                             <div>
+> 42 |                                 {phone.phone}</p>
+     |                                                  ^
+> 43 |                             </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  44 |                         </li>
+  45 |                     ))}
+  46 |                 </ul>
+
+Expected '</', got 'jsx text (
+                            )'
+
+Import traces:
+  Client Component Browser:
+    ./src/app/documentos/page.jsx [Client Component Browser]
+    ./src/app/documentos/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/documentos/page.jsx [Client Component SSR]
+    ./src/app/documentos/page.jsx [Server Component]
+[00:24:59.122] Server  LOG      ✓ Compiled in 431ms
+[00:25:08.772] Server  LOG     Firebase App Initialized Successfully
+[00:25:38.491] Browser LOG     Firebase App Initialized Successfully
+[00:25:39.945] Browser ERROR   In HTML, text nodes cannot be a child of <%s>.
+This will cause a hydration error.%s tbody 
+
+  ...
+    <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+      <LoadingBoundary name="documentos/" loading={null}>
+        <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+          <RedirectBoundary>
+            <RedirectErrorBoundary router={{...}}>
+              <InnerLayoutRouter url={"/documen..."} tree={[...]} params={{}} cacheNode={{lazyData:null, ...}} ...>
+                <SegmentViewNode type="page" pagePath="documentos...">
+                  <SegmentTrieNode>
+                  <ClientPageRoot Component={function ListDocuments} serverProvidedParams={{...}}>
+                    <ListDocuments params={Promise} searchParams={Promise}>
+                      <div style={{...}}>
+                        <h1>
+                        <div style={{width:"100%", ...}}>
+                          <div style={{width:"100%", ...}}>
+                            <h2>
+                            <table style={{width:"100%", ...}}>
+                              <thead>
+>                             <tbody>
+                                <tr>
+                                <tr>
+>                               \
+                            ...
+                          ...
+                ...
+              ...
+
+[00:31:40.997] Server  LOG      ✓ Compiled in 173ms
+[00:31:50.794] Server  LOG     Firebase App Initialized Successfully
+[00:31:55.043] Browser LOG     Firebase App Initialized Successfully
+[00:31:55.675] Browser ERROR   In HTML, text nodes cannot be a child of <%s>.
+This will cause a hydration error.%s tbody 
+
+  ...
+    <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+      <LoadingBoundary name="documentos/" loading={null}>
+        <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+          <RedirectBoundary>
+            <RedirectErrorBoundary router={{...}}>
+              <InnerLayoutRouter url={"/documen..."} tree={[...]} params={{}} cacheNode={{lazyData:null, ...}} ...>
+                <SegmentViewNode type="page" pagePath="documentos...">
+                  <SegmentTrieNode>
+                  <ClientPageRoot Component={function ListDocuments} serverProvidedParams={{...}}>
+                    <ListDocuments params={Promise} searchParams={Promise}>
+                      <div style={{...}}>
+                        <h1>
+                        <div style={{width:"100%", ...}}>
+                          <div style={{width:"100%", ...}}>
+                            <h2>
+                            <table style={{width:"100%", ...}}>
+                              <thead>
+>                             <tbody>
+                                <tr>
+                                <tr>
+>                               \
+                            ...
+                          ...
+                ...
+              ...
+
+[00:32:37.719] Server  LOG      ✓ Compiled in 187ms
+[00:33:11.828] Server  LOG     Firebase App Initialized Successfully
+[00:33:15.355] Browser LOG     Firebase App Initialized Successfully
+[00:33:16.632] Browser ERROR   In HTML, text nodes cannot be a child of <%s>.
+This will cause a hydration error.%s tbody 
+
+  ...
+    <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+      <LoadingBoundary name="documentos/" loading={null}>
+        <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+          <RedirectBoundary>
+            <RedirectErrorBoundary router={{...}}>
+              <InnerLayoutRouter url={"/documen..."} tree={[...]} params={{}} cacheNode={{lazyData:null, ...}} ...>
+                <SegmentViewNode type="page" pagePath="documentos...">
+                  <SegmentTrieNode>
+                  <ClientPageRoot Component={function ListDocuments} serverProvidedParams={{...}}>
+                    <ListDocuments params={Promise} searchParams={Promise}>
+                      <div style={{...}}>
+                        <h1>
+                        <div style={{width:"100%", ...}}>
+                          <div style={{width:"100%", ...}}>
+                            <h2>
+                            <table style={{width:"100%", ...}}>
+                              <thead>
+>                             <tbody>
+                                <tr>
+                                <tr>
+>                               \
+                            ...
+                          ...
+                ...
+              ...
+
+[00:41:09.886] Server  LOG      ✓ Compiled in 804ms
+[00:42:27.042] Server  LOG     Firebase App Initialized Successfully
+[00:42:27.152] Server  LOG      ✓ Compiled in 1ms
+[00:42:30.501] Browser LOG     Firebase App Initialized Successfully
+[00:43:35.574] Browser LOG     Firebase App Initialized Successfully
+[00:46:22.153] Browser LOG     Firebase App Initialized Successfully
+[00:49:37.806] Browser WARN    [2025-11-30T13:25:27.905Z]  @firebase/firestore: Firestore (12.5.0): WebChannelConnection RPC 'Listen' stream 0x1f040151 transport errored. Name: undefined Message: undefined
+[00:49:37.806] Browser WARN    [2025-11-30T13:25:27.917Z]  @firebase/firestore: Firestore (12.5.0): WebChannelConnection RPC 'Listen' stream 0x1f040152 transport errored. Name: undefined Message: undefined
+[00:49:37.806] Browser WARN    [2025-11-30T13:25:28.529Z]  @firebase/firestore: Firestore (12.5.0): WebChannelConnection RPC 'Listen' stream 0x1f040153 transport errored. Name: undefined Message: undefined
+[00:49:37.807] Browser WARN    [2025-11-30T13:25:30.538Z]  @firebase/firestore: Firestore (12.5.0): WebChannelConnection RPC 'Listen' stream 0x1f040154 transport errored. Name: undefined Message: undefined
+[00:49:37.807] Browser WARN    [2025-11-30T13:25:48.325Z]  @firebase/firestore: Firestore (12.5.0): WebChannelConnection RPC 'Listen' stream 0x1f040155 transport errored. Name: undefined Message: undefined
+[00:49:37.807] Browser WARN    [2025-11-30T13:25:51.544Z]  @firebase/firestore: Firestore (12.5.0): WebChannelConnection RPC 'Listen' stream 0x1f040156 transport errored. Name: undefined Message: undefined
+[00:49:37.807] Browser WARN    [2025-11-30T13:25:54.122Z]  @firebase/firestore: Firestore (12.5.0): WebChannelConnection RPC 'Listen' stream 0x1f040157 transport errored. Name: undefined Message: undefined
+[00:49:37.807] Browser WARN    [2025-11-30T13:25:54.128Z]  @firebase/firestore: Firestore (12.5.0): WebChannelConnection RPC 'Listen' stream 0x1f040158 transport errored. Name: undefined Message: undefined
+[00:59:22.866] Server  LOG      ✓ Compiled in 315ms
+[00:59:33.777] Server  LOG     Firebase App Initialized Successfully
+[00:59:36.379] Browser LOG     Firebase App Initialized Successfully
+[01:02:51.863] Server  LOG      ✓ Compiled in 61ms
+[01:02:56.258] Server  LOG      ✓ Compiled in 89ms
+[01:03:17.433] Server  LOG      ✓ Compiled in 29ms
+[01:03:20.123] Server  LOG      ✓ Compiled in 73ms
+[01:03:29.014] Server  LOG      ✓ Compiled in 36ms
+[01:03:34.857] Server  LOG      ✓ Compiled in 305ms
+[01:03:35.990] Browser ERROR   ./src/app/documentos/page.jsx:27:9
+Parsing ecmascript source code failed
+  25 |         message +=
+  26 |     
+> 27 |         const whatsappUrl = `https://api.whatsapp.com/send?phone=${phone.phone}&text=${encodeURIComponent(message)}`;
+     |         ^^^^^
+  28 |         window.open(whatsappUrl, '_blank');
+  29 |         onSelect();
+  30 |     };
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./src/app/documentos/page.jsx [Client Component Browser]
+    ./src/app/documentos/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/documentos/page.jsx [Client Component SSR]
+    ./src/app/documentos/page.jsx [Server Component]
+[01:03:47.993] Browser ERROR   ./src/app/documentos/page.jsx:27:9
+Parsing ecmascript source code failed
+  25 |         message += 
+  26 |     
+> 27 |         const whatsappUrl = `https://api.whatsapp.com/send?phone=${phone.phone}&text=${encodeURIComponent(message)}`;
+     |         ^^^^^
+  28 |         window.open(whatsappUrl, '_blank');
+  29 |         onSelect();
+  30 |     };
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./src/app/documentos/page.jsx [Client Component Browser]
+    ./src/app/documentos/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/documentos/page.jsx [Client Component SSR]
+    ./src/app/documentos/page.jsx [Server Component]
+[01:04:08.338] Server  LOG      ✓ Compiled in 65ms
+[01:04:12.142] Server  LOG      ✓ Compiled in 107ms
+[01:04:19.077] Server  LOG      ✓ Compiled in 52ms
+[01:04:26.299] Server  LOG     Firebase App Initialized Successfully
+[01:04:28.587] Browser LOG     Firebase App Initialized Successfully
+[01:05:39.427] Server  LOG      ✓ Compiled in 232ms
+[01:06:06.484] Server  LOG      ✓ Compiled in 159ms
+[01:06:14.923] Server  LOG     Firebase App Initialized Successfully
+[01:06:17.293] Browser LOG     Firebase App Initialized Successfully
+[01:08:44.516] Server  LOG      ✓ Compiled in 40ms
+[01:08:49.657] Server  LOG     Firebase App Initialized Successfully
+[01:08:52.092] Browser LOG     Firebase App Initialized Successfully
+[01:09:22.319] Server  LOG      ✓ Compiled in 40ms
+[01:09:26.103] Server  LOG     Firebase App Initialized Successfully
+[01:09:29.100] Browser LOG     Firebase App Initialized Successfully
+[01:10:04.143] Server  LOG      ✓ Compiled in 29ms
+[01:10:13.111] Server  LOG     Firebase App Initialized Successfully
+[01:10:15.679] Browser LOG     Firebase App Initialized Successfully
+[01:10:54.319] Browser LOG     Firebase App Initialized Successfully
+[01:12:06.298] Server  LOG      ✓ Compiled in 153ms
+[01:12:10.482] Server  LOG      ✓ Compiled in 191ms
+[01:12:25.535] Server  LOG     Firebase App Initialized Successfully
+[01:12:27.878] Browser LOG     Firebase App Initialized Successfully
+[01:14:49.293] Server  LOG      ✓ Compiled in 122ms
+[01:15:27.505] Server  LOG     Firebase App Initialized Successfully
+[01:15:29.863] Browser LOG     Firebase App Initialized Successfully
+[01:15:48.159] Server  LOG      ✓ Compiled in 40ms
+[01:15:57.070] Server  LOG     Firebase App Initialized Successfully
+[01:15:59.605] Browser LOG     Firebase App Initialized Successfully
+[01:16:40.662] Server  LOG      ✓ Compiled in 156ms
