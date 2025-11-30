@@ -80,6 +80,57 @@ export default function ListDocuments() {
         setSelectedPedido(null);
     };
 
+    const handlePrintPedido = (pedido, totalPedido) => {
+        const printContent = `
+            <html>
+                <head>
+                    <title>Pedido - ${pedido.client}</title>
+                    <style>
+                        body { font-family: Arial, sans-serif; padding: 20px; }
+                        table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+                        th, td { border: 1px solid #ddd; padding: 6px; text-align: left; }
+                        th { background-color: #f2f2f2; }
+                        h2 { margin-bottom: 15px; }
+                        .total { text-align: right; font-weight: bold; font-size: 1.2em; }
+                    </style>
+                </head>
+                <body>
+                    <h2>Pedido: ${pedido.client}</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Cant.</th>
+                                <th>Detalle</th>
+                                <th>Unitario</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${(pedido.products || []).map(item => {
+                                return `
+                                    <tr>
+                                        <td>${item.quantity}</td>
+                                        <td>${item.product.nombre} ${item.product.peso}Kg</td>
+                                        <td style="text-align:right;">${formatCurrency(item.product.selectedPrice.price)}</td>
+                                        <td style="text-align:right;">${formatCurrency(item.product.selectedPrice.price * item.quantity)}</td>
+                                    </tr>
+                                `;
+                            }).join("")}
+                        </tbody>
+                    </table>
+                    <div class="total">Total Pedido: ${formatCurrency(totalPedido)}</div>
+                </body>
+            </html>
+        `;
+    
+        const printWindow = window.open('', '', 'width=800,height=600');
+        printWindow.document.write(printContent);
+        printWindow.document.close();
+        printWindow.focus();
+        printWindow.print();
+    };
+    
+
     return (
         <div style={{ fontFamily: 'Arial, sans-serif', padding: '20px', backgroundColor: '#f0f2f5', width:"100vw" }}>
            {isLoading && <LoadingSpinner />}
@@ -121,6 +172,22 @@ export default function ListDocuments() {
                                 </div>
 
                                 <div style={{display:"flex", justifyContent:"flex-end", padding:"1rem"}}>
+                                    <button
+                                        onClick={() => handlePrintPedido(pedido, totalPedido)}
+                                        style={{
+                                            padding:'10px 20px',
+                                            backgroundColor: '#007bff',
+                                            color: 'white',
+                                            border: 'none',
+                                            borderRadius: '5px',
+                                            cursor: 'pointer',
+                                            fontWeight: 'bold',
+                                            boxShadow: '0 2px 4px rgba(0,0,0,0.2)'
+                                        }}
+                                    >
+                                        🖨️ Imprimir
+                                    </button>
+
                                     <button 
                                         onClick={() => handleOpenWhatsApp(pedido)} 
                                         style={{
