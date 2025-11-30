@@ -345,9 +345,22 @@ __turbopack_context__.s([
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$formSearchProducts$2f$utils$2f$index$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/app/components/formSearchProducts/utils/index.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
+;
 ;
 ;
 const FormSearchProducts = ({ onSearchResults, setIsLoading })=>{
+    const inputRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        // Foco inicial
+        inputRef.current.focus();
+        // Capturar cualquier tecla global y devolver el foco
+        const handleKeyDown = ()=>{
+            inputRef.current.focus();
+        };
+        window.addEventListener('keydown', handleKeyDown);
+        return ()=>window.removeEventListener('keydown', handleKeyDown);
+    }, []);
     const handleSubmitFormSearchProducts = async (e)=>{
         e.preventDefault();
         const searchTerm = e.target.elements.searchTerm.value;
@@ -365,6 +378,8 @@ const FormSearchProducts = ({ onSearchResults, setIsLoading })=>{
             onSearchResults([]); // Limpiar resultados en caso de error
         } finally{
             setIsLoading(false);
+            e.target.elements.searchTerm.value = "";
+            e.target.elements.searchTerm.focus();
         }
     };
     const handleReset = (e)=>{
@@ -410,17 +425,18 @@ const FormSearchProducts = ({ onSearchResults, setIsLoading })=>{
                 children: "Limpiar"
             }, void 0, false, {
                 fileName: "[project]/src/app/components/formSearchProducts/index.jsx",
-                lineNumber: 62,
+                lineNumber: 82,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                 type: "text",
                 name: "searchTerm",
                 style: inputStyle,
-                placeholder: "Buscar..."
+                placeholder: "Buscar...",
+                ref: inputRef
             }, void 0, false, {
                 fileName: "[project]/src/app/components/formSearchProducts/index.jsx",
-                lineNumber: 65,
+                lineNumber: 85,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -429,13 +445,13 @@ const FormSearchProducts = ({ onSearchResults, setIsLoading })=>{
                 children: "Buscar"
             }, void 0, false, {
                 fileName: "[project]/src/app/components/formSearchProducts/index.jsx",
-                lineNumber: 71,
+                lineNumber: 92,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/components/formSearchProducts/index.jsx",
-        lineNumber: 61,
+        lineNumber: 81,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };

@@ -277,9 +277,30 @@ __turbopack_context__.s([
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$formSearchProducts$2f$utils$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/app/components/formSearchProducts/utils/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+;
+var _s = __turbopack_context__.k.signature();
 ;
 ;
 const FormSearchProducts = ({ onSearchResults, setIsLoading })=>{
+    _s();
+    const inputRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "FormSearchProducts.useEffect": ()=>{
+            // Foco inicial
+            inputRef.current.focus();
+            // Capturar cualquier tecla global y devolver el foco
+            const handleKeyDown = {
+                "FormSearchProducts.useEffect.handleKeyDown": ()=>{
+                    inputRef.current.focus();
+                }
+            }["FormSearchProducts.useEffect.handleKeyDown"];
+            window.addEventListener('keydown', handleKeyDown);
+            return ({
+                "FormSearchProducts.useEffect": ()=>window.removeEventListener('keydown', handleKeyDown)
+            })["FormSearchProducts.useEffect"];
+        }
+    }["FormSearchProducts.useEffect"], []);
     const handleSubmitFormSearchProducts = async (e)=>{
         e.preventDefault();
         const searchTerm = e.target.elements.searchTerm.value;
@@ -297,6 +318,8 @@ const FormSearchProducts = ({ onSearchResults, setIsLoading })=>{
             onSearchResults([]); // Limpiar resultados en caso de error
         } finally{
             setIsLoading(false);
+            e.target.elements.searchTerm.value = "";
+            e.target.elements.searchTerm.focus();
         }
     };
     const handleReset = (e)=>{
@@ -342,17 +365,18 @@ const FormSearchProducts = ({ onSearchResults, setIsLoading })=>{
                 children: "Limpiar"
             }, void 0, false, {
                 fileName: "[project]/src/app/components/formSearchProducts/index.jsx",
-                lineNumber: 62,
+                lineNumber: 82,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                 type: "text",
                 name: "searchTerm",
                 style: inputStyle,
-                placeholder: "Buscar..."
+                placeholder: "Buscar...",
+                ref: inputRef
             }, void 0, false, {
                 fileName: "[project]/src/app/components/formSearchProducts/index.jsx",
-                lineNumber: 65,
+                lineNumber: 85,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -361,16 +385,17 @@ const FormSearchProducts = ({ onSearchResults, setIsLoading })=>{
                 children: "Buscar"
             }, void 0, false, {
                 fileName: "[project]/src/app/components/formSearchProducts/index.jsx",
-                lineNumber: 71,
+                lineNumber: 92,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/components/formSearchProducts/index.jsx",
-        lineNumber: 61,
+        lineNumber: 81,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
+_s(FormSearchProducts, "cBQ6FQ+sf5H+lvNONLKqtm4aeQ8=");
 _c = FormSearchProducts;
 const __TURBOPACK__default__export__ = FormSearchProducts;
 var _c;

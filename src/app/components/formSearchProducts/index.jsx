@@ -1,6 +1,23 @@
 import { getQueryUser } from './utils/';
+import { useRef, useEffect } from 'react';
+
 
 const FormSearchProducts = ({ onSearchResults, setIsLoading }) => {
+  const inputRef = useRef(null);
+  
+  useEffect(() => {
+    // Foco inicial
+    inputRef.current.focus();
+  
+    // Capturar cualquier tecla global y devolver el foco
+    const handleKeyDown = () => {
+      inputRef.current.focus();
+    };
+  
+    window.addEventListener('keydown', handleKeyDown);
+  
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
 
   const handleSubmitFormSearchProducts = async (e) => {
     e.preventDefault();
@@ -22,6 +39,8 @@ const FormSearchProducts = ({ onSearchResults, setIsLoading }) => {
       onSearchResults([]); // Limpiar resultados en caso de error
     } finally {
       setIsLoading(false);
+      e.target.elements.searchTerm.value = "";
+      e.target.elements.searchTerm.focus();
     }
   }
 
@@ -29,6 +48,7 @@ const FormSearchProducts = ({ onSearchResults, setIsLoading }) => {
     // Cuando se limpia el formulario, pasamos un array vacío para resetear la lista
     onSearchResults([]);
   }
+  
 
   const formStyle = {
     width: "100%",
@@ -67,6 +87,7 @@ const FormSearchProducts = ({ onSearchResults, setIsLoading }) => {
         name="searchTerm" 
         style={inputStyle} 
         placeholder="Buscar..." 
+        ref={inputRef}
       />
       <button type="submit" style={buttonStyle}>Buscar</button>
     </form>
