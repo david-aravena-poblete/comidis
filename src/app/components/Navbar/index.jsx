@@ -34,6 +34,9 @@ export default function Navbar() {
       <Link href="/documentos" style={getLinkStyle('/documentos')}>
         Pedidos
       </Link>
+      <Link href="/lista" style={getLinkStyle('/lista')}>
+        Lista
+      </Link>
     </nav>
   );
 }

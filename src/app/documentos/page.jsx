@@ -55,6 +55,8 @@ export default function ListDocuments() {
     const [isLoading, setIsLoading] = useState(true);
     const [showPhoneSelection, setShowPhoneSelection] = useState(false);
     const [selectedPedido, setSelectedPedido] = useState(null);
+    const [filterMode, setFilterMode] = useState("HOY"); // ← filtro actual
+    const [selectedDate, setSelectedDate] = useState(null);
 
     useEffect(() => {
         const unsubscribe = listenPedidos((newPedidos) => {
@@ -62,7 +64,6 @@ export default function ListDocuments() {
             setIsLoading(false);
         });
 
-        // Cleanup subscription on component unmount
         return () => unsubscribe();
     }, []);
 
@@ -122,24 +123,74 @@ export default function ListDocuments() {
                 </body>
             </html>
         `;
-    
+
         const printWindow = window.open('', '', 'width=800,height=600');
         printWindow.document.write(printContent);
         printWindow.document.close();
         printWindow.focus();
         printWindow.print();
     };
-    
+
+    // -----------------------------------------
+    // FILTRO DE FECHAS
+    // -----------------------------------------
+    const today = new Date();
+    const todayString = today.toLocaleDateString("es-CL");
+
+    const ayer = new Date();
+    ayer.setDate(ayer.getDate() - 1);
+    const ayerString = ayer.toLocaleDateString("es-CL");
+
+    const pedidosFiltrados = pedidos.filter(pedido => {
+        if (!pedido.createdAt) return false;
+
+        const dateString = pedido.createdAt.toDate().toLocaleDateString("es-CL");
+
+        if (filterMode === "HOY") return dateString === todayString;
+        if (filterMode === "AYER") return dateString === ayerString;
+
+        // Esta semana
+        if (filterMode === "SEMANA") {
+            const d = pedido.createdAt.toDate();
+            const diff = today - d;
+            return diff <= 7 * 24 * 60 * 60 * 1000;
+        }
+
+        // Calendario - comparar con fecha seleccionada
+        if (filterMode === "CALENDARIO" && selectedDate) {
+            const sel = new Date(selectedDate).toLocaleDateString("es-CL");
+            return dateString === sel;
+        }
+
+        return true;
+    });
 
     return (
         <div style={{ fontFamily: 'Arial, sans-serif', padding: '20px', backgroundColor: '#f0f2f5', width:"100vw" }}>
-           {isLoading && <LoadingSpinner />}
-            <h1 style={{ color: '#333', borderBottom: '2px solid #ccc', paddingBottom: '10px', marginBottom: '20px' }}>Lista de Pedidos</h1>
-            {pedidos.length === 0 ? (
-                <p style={{ textAlign: 'center', color: '#666' }}>No hay pedidos para mostrar.</p>
+
+            {/* SELECTOR DE FECHA */}
+            <div style={{display:"flex", gap:"10px", marginBottom:"20px"}}>
+                <button onClick={() => setFilterMode("HOY")} style={{padding:"8px", background:"#ddd", borderRadius:"6px", border:"none"}}>Hoy</button>
+                <button onClick={() => setFilterMode("AYER")} style={{padding:"8px", background:"#ddd", borderRadius:"6px", border:"none"}}>Ayer</button>
+                <button onClick={() => setFilterMode("SEMANA")} style={{padding:"8px", background:"#ddd", borderRadius:"6px", border:"none"}}>Esta semana</button>
+                <button onClick={() => setFilterMode("CALENDARIO")} style={{padding:"8px", background:"#ddd", borderRadius:"6px", border:"none"}}>Calendario</button>
+
+                {filterMode === "CALENDARIO" && (
+                    <input type="date" onChange={(e)=> setSelectedDate(e.target.value)} style={{padding:"6px"}} />
+                )}
+            </div>
+
+            {isLoading && <LoadingSpinner />}
+
+            <h1 style={{ color: '#333', borderBottom: '2px solid #ccc', paddingBottom: '10px', marginBottom: '20px' }}>
+                Lista de Pedidos
+            </h1>
+
+            {pedidosFiltrados.length === 0 ? (
+                <p style={{ textAlign: 'center', color: '#666' }}>No hay pedidos disponibles.</p>
             ) : (
                 <div style={{ width:"100%", display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(400px, 1fr))', gap: '20px' }}>
-                    {pedidos.map((pedido) => {
+                    {pedidosFiltrados.map((pedido) => {
                         const totalPedido = (pedido.products || []).reduce((acc, item) => acc + (item.quantity * item.product.selectedPrice.price), 0);
 
                         return (
@@ -166,12 +217,12 @@ export default function ListDocuments() {
                                         ))}
                                     </tbody>
                                 </table>
-                                
+
                                 <div style={{ textAlign: 'right', fontWeight: 'bold', fontSize: '1.2em', color: '#333', marginTop: '15px' }}>
                                     Total Pedido: {formatCurrency(totalPedido)}
                                 </div>
 
-                                <div style={{display:"flex", justifyContent:"flex-end", padding:"1rem"}}>
+                                <div style={{display:"flex", justifyContent:"flex-end", padding:"1rem", gap:"10px"}}>
                                     <button
                                         onClick={() => handlePrintPedido(pedido, totalPedido)}
                                         style={{
@@ -203,12 +254,13 @@ export default function ListDocuments() {
                                     >
                                         Enviar por WhatsApp
                                     </button>
-                                </div> 
+                                </div>
                             </div>
-                        )
+                        );
                     })}
                 </div>
             )}
+
             {showPhoneSelection && selectedPedido && (
                 <PhoneNumberSelection
                     pedido={selectedPedido}
