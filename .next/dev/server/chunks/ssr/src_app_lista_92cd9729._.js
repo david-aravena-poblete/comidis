@@ -1,4 +1,7 @@
 module.exports = [
+"[project]/src/app/lista/utils/index.js [app-ssr] (ecmascript)", ((__turbopack_context__, module, exports) => {
+
+}),
 "[project]/src/app/lista/page.jsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
@@ -8,11 +11,7 @@ __turbopack_context__.s([
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
-(()=>{
-    const e = new Error("Cannot find module './utils/'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$lista$2f$utils$2f$index$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/app/lista/utils/index.js [app-ssr] (ecmascript)");
 'use client';
 ;
 ;
@@ -32,7 +31,7 @@ function DocumentSearch() {
         setIsLoading(true);
         console.log(`Buscando en 'initialsNames' el valor: ${searchTerm}`);
         try {
-            const results = await getQueryUser(searchTerm);
+            const results = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$lista$2f$utils$2f$index$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["getQueryUser"])(searchTerm);
             console.log('Resultados encontrados:', results);
             onSearchResults(results);
         } catch (error) {
@@ -108,4 +107,4 @@ function DocumentSearch() {
 }),
 ];
 
-//# sourceMappingURL=src_app_lista_page_jsx_ce2a85bd._.js.map
+//# sourceMappingURL=src_app_lista_92cd9729._.js.map
