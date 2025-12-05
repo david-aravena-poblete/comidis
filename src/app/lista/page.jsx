@@ -2,7 +2,9 @@
 
 import { useState } from 'react';
 import { getQueryUser } from './utils/';
-import {updateFirebaseDocument} from "@/serverless/db/updateDocument/"
+import { updateFirebaseDocument } from "@/serverless/db/updateDocument/";
+import { addDocument } from "@/serverless/db/addDocument/";
+import { deleteDocument } from "@/serverless/db/deleteDocument/"; // Import delete function
 import Loading from '../components/loading';
 
 export default function DocumentSearch() {
@@ -11,36 +13,88 @@ export default function DocumentSearch() {
     const [documents, setDocuments] = useState(null);
     const [editingIndex, setEditingIndex] = useState(null);
     const [editValues, setEditValues] = useState({});
+    const [isCreating, setIsCreating] = useState(false);
+    const [newProduct, setNewProduct] = useState({
+        nombre: '',
+        peso: '',
+        precioPublico: '',
+        preciox5sacos: '',
+        preciox10sacos: '',
+        preciox15sacos: '',
+        amount: ''
+    });
 
     const startEditing = (document, index) => {
-      setEditingIndex(index);
-      setEditValues(document);
+        setEditingIndex(index);
+        setEditValues(document);
     };
 
     const handleEditChange = (e) => {
-      const { name, value } = e.target;
-      setEditValues(prev => ({ ...prev, [name]: value }));
+        const { name, value } = e.target;
+        setEditValues(prev => ({ ...prev, [name]: value }));
     };
 
     const cancelEditing = () => {
-      setEditingIndex(null);
-      setEditValues({});
+        setEditingIndex(null);
+        setEditValues({});
     };
 
     const updateDocument = async () => {
-      setIsLoading(true);
-      try {
-        await updateFirebaseDocument("ingresos", editValues.id, editValues);
-        const updatedDocuments = [...documents];
-        updatedDocuments[editingIndex] = editValues;
-        setDocuments(updatedDocuments);
-      } catch (error) {
-        console.error("Error al actualizar el documento:", error);
-      } finally {
-        setIsLoading(false);
-        setEditingIndex(null);
-        setEditValues({});
-      }
+        setIsLoading(true);
+        try {
+            await updateFirebaseDocument("ingresos", editValues.id, editValues);
+            const updatedDocuments = [...documents];
+            updatedDocuments[editingIndex] = editValues;
+            setDocuments(updatedDocuments);
+        } catch (error) {
+            console.error("Error al actualizar el documento:", error);
+        } finally {
+            setIsLoading(false);
+            setEditingIndex(null);
+            setEditValues({});
+        }
+    };
+
+    const handleNewProductChange = (e) => {
+        const { name, value } = e.target;
+        setNewProduct(prev => ({ ...prev, [name]: value }));
+    };
+
+    const handleSaveNewProduct = async () => {
+        setIsLoading(true);
+        try {
+            const result = await addDocument('ingresos', newProduct);
+            if (result.success) {
+                const results = await getQueryUser(newProduct.nombre);
+                setDocuments(results);
+                setIsCreating(false);
+                setNewProduct({ nombre: '', peso: '', precioPublico: '', preciox5sacos: '', preciox10sacos: '', preciox15sacos: '', amount: '' });
+            } else {
+                console.error("Error al crear el producto:", result.error);
+            }
+        } catch (error) {
+            console.error("Error al crear el producto:", error);
+        } finally {
+            setIsLoading(false);
+        }
+    };
+
+    const handleDeleteProduct = async (docId) => {
+        if (window.confirm("¿Estás seguro de que deseas eliminar este producto?")) {
+            setIsLoading(true);
+            try {
+                const result = await deleteDocument('ingresos', docId);
+                if (result.success) {
+                    setDocuments(prev => prev.filter(doc => doc.id !== docId));
+                } else {
+                    console.error("Error al eliminar el producto:", result.error);
+                }
+            } catch (error) {
+                console.error("Error al eliminar el producto:", error);
+            } finally {
+                setIsLoading(false);
+            }
+        }
     };
 
     const handleSubmitFormSearchProducts = async (e) => {
@@ -123,6 +177,17 @@ export default function DocumentSearch() {
         fontWeight: '600'
     };
 
+    const buttonDanger = {
+        backgroundColor: '#e53e3e',
+        color: 'white',
+        border: 'none',
+        borderRadius: '6px',
+        padding: '12px 20px',
+        cursor: 'pointer',
+        fontSize: '1rem',
+        fontWeight: '600'
+    };
+
     const infoTextStyle = {
         fontSize: '1rem',
         color: '#555',
@@ -139,8 +204,34 @@ export default function DocumentSearch() {
     return (
         <div style={pageContainerStyle}>
             <div style={contentAreaStyle}>
+                <div style={{ padding: '16px', paddingBottom: '0' }}>
+                    {!isCreating && <button onClick={() => setIsCreating(true)} style={buttonPrimary}>Crear producto</button>}
+                </div>
+
+                {isCreating && (
+                    <div style={cardStyle}>
+                        <h3>Crear Nuevo Producto</h3>
+                        {Object.keys(newProduct).map(key => (
+                            <div key={key}>
+                                <label style={labelStyle}>{key.charAt(0).toUpperCase() + key.slice(1)}</label>
+                                <input 
+                                    name={key} 
+                                    value={newProduct[key]} 
+                                    onChange={handleNewProductChange} 
+                                    style={inputStyle} 
+                                    placeholder={`Ingrese ${key}`}
+                                />
+                            </div>
+                        ))}
+                        <div style={{ display: "flex", gap: "10px", marginTop: "20px" }}>
+                            <button onClick={handleSaveNewProduct} style={buttonPrimary}>Guardar</button>
+                            <button onClick={() => setIsCreating(false)} style={buttonSecondary}>Cancelar</button>
+                        </div>
+                    </div>
+                )}
+
                 {documents?.map((document, index) => (
-                    <div key={index} style={cardStyle}>
+                    <div key={document.id || index} style={cardStyle}>
                         {editingIndex === index ? (
                             <div>
                                 {Object.keys(editValues).map(key => {
@@ -171,7 +262,10 @@ export default function DocumentSearch() {
                                 <p style={infoTextStyle}>Precio x10 sacos: ${document.preciox10sacos}</p>
                                 <p style={infoTextStyle}>Precio x15 sacos: ${document.preciox15sacos}</p>
                                 <p style={amountStyle}>Cantidad: {document.amount}</p>
-                                <button onClick={() => startEditing(document, index)} style={{...buttonPrimary, marginTop: '15px'}}>Editar</button>
+                                <div style={{ display: "flex", gap: "10px", marginTop: "15px" }}>
+                                  <button onClick={() => startEditing(document, index)} style={buttonPrimary}>Editar</button>
+                                  <button onClick={() => handleDeleteProduct(document.id)} style={buttonDanger}>Eliminar</button>
+                                </div>
                             </div>
                         )}
                     </div>

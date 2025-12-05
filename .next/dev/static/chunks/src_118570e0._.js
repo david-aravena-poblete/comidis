@@ -108,6 +108,41 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
 }
 }),
+"[project]/src/serverless/db/addDocument/index.js [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "addDocument",
+    ()=>addDocument
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$firebase$2f$firestore$2f$dist$2f$esm$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__ = __turbopack_context__.i("[project]/node_modules/firebase/firestore/dist/esm/index.esm.js [app-client] (ecmascript) <locals>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@firebase/firestore/dist/index.esm.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$serverless$2f$config$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/serverless/config.js [app-client] (ecmascript)");
+;
+;
+const db = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["getFirestore"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$serverless$2f$config$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"]);
+const addDocument = async (collectionName, data)=>{
+    try {
+        const docRef = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["addDoc"])((0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["collection"])(db, collectionName), {
+            ...data,
+            createdAt: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["serverTimestamp"])()
+        });
+        return {
+            success: true,
+            id: docRef.id
+        };
+    } catch (error) {
+        console.error(`Error adding document to ${collectionName}: `, error);
+        return {
+            success: false,
+            error: error.message
+        };
+    }
+};
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
+}),
 "[project]/src/app/components/loading/index.jsx [app-client] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
@@ -170,10 +205,12 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$lista$2f$utils$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/app/lista/utils/index.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$serverless$2f$db$2f$updateDocument$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/serverless/db/updateDocument/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$serverless$2f$db$2f$addDocument$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/serverless/db/addDocument/index.js [app-client] (ecmascript)"); // Correct import
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$loading$2f$index$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/app/components/loading/index.jsx [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
 'use client';
+;
 ;
 ;
 ;
@@ -184,6 +221,16 @@ function DocumentSearch() {
     const [documents, setDocuments] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
     const [editingIndex, setEditingIndex] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
     const [editValues, setEditValues] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])({});
+    const [isCreating, setIsCreating] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [newProduct, setNewProduct] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])({
+        nombre: '',
+        peso: '',
+        precioPublico: '',
+        preciox5sacos: '',
+        preciox10sacos: '',
+        preciox15sacos: '',
+        amount: ''
+    });
     const startEditing = (document, index)=>{
         setEditingIndex(index);
         setEditValues(document);
@@ -214,6 +261,49 @@ function DocumentSearch() {
             setIsLoading(false);
             setEditingIndex(null);
             setEditValues({});
+        }
+    };
+    const handleNewProductChange = (e)=>{
+        const { name, value } = e.target;
+        setNewProduct((prev)=>({
+                ...prev,
+                [name]: value
+            }));
+    };
+    const handleSaveNewProduct = async ()=>{
+        setIsLoading(true);
+        try {
+            const productToSave = {
+                ...newProduct,
+                initialsNames: newProduct.nombre.slice(0, 3).toLowerCase()
+            };
+            const result = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$serverless$2f$db$2f$addDocument$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["addDocument"])('ingresos', productToSave);
+            if (result.success) {
+                // Optimistically update the UI
+                setDocuments((prev)=>[
+                        ...prev || [],
+                        {
+                            ...productToSave,
+                            id: result.id
+                        }
+                    ]);
+                setIsCreating(false);
+                setNewProduct({
+                    nombre: '',
+                    peso: '',
+                    precioPublico: '',
+                    preciox5sacos: '',
+                    preciox10sacos: '',
+                    preciox15sacos: '',
+                    amount: ''
+                });
+            } else {
+                console.error("Error al crear el producto:", result.error);
+            }
+        } catch (error) {
+            console.error("Error al crear el producto:", error);
+        } finally{
+            setIsLoading(false);
         }
     };
     const handleSubmitFormSearchProducts = async (e)=>{
@@ -309,18 +399,93 @@ function DocumentSearch() {
                             padding: '16px',
                             paddingBottom: '0'
                         },
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                        children: !isCreating && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                            onClick: ()=>setIsCreating(true),
                             style: buttonPrimary,
                             children: "Crear producto"
                         }, void 0, false, {
                             fileName: "[project]/src/app/lista/page.jsx",
-                            lineNumber: 143,
-                            columnNumber: 17
+                            lineNumber: 179,
+                            columnNumber: 37
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/lista/page.jsx",
-                        lineNumber: 142,
-                        columnNumber: 15
+                        lineNumber: 178,
+                        columnNumber: 17
+                    }, this),
+                    isCreating && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        style: cardStyle,
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                children: "Crear Nuevo Producto"
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/lista/page.jsx",
+                                lineNumber: 184,
+                                columnNumber: 25
+                            }, this),
+                            Object.keys(newProduct).map((key)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                            style: labelStyle,
+                                            children: key.charAt(0).toUpperCase() + key.slice(1)
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/lista/page.jsx",
+                                            lineNumber: 187,
+                                            columnNumber: 33
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                            name: key,
+                                            value: newProduct[key],
+                                            onChange: handleNewProductChange,
+                                            style: inputStyle,
+                                            placeholder: `Ingrese ${key}`
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/lista/page.jsx",
+                                            lineNumber: 188,
+                                            columnNumber: 33
+                                        }, this)
+                                    ]
+                                }, key, true, {
+                                    fileName: "[project]/src/app/lista/page.jsx",
+                                    lineNumber: 186,
+                                    columnNumber: 29
+                                }, this)),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                style: {
+                                    display: "flex",
+                                    gap: "10px",
+                                    marginTop: "20px"
+                                },
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                        onClick: handleSaveNewProduct,
+                                        style: buttonPrimary,
+                                        children: "Guardar"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/app/lista/page.jsx",
+                                        lineNumber: 198,
+                                        columnNumber: 29
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                        onClick: ()=>setIsCreating(false),
+                                        style: buttonSecondary,
+                                        children: "Cancelar"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/app/lista/page.jsx",
+                                        lineNumber: 199,
+                                        columnNumber: 29
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/app/lista/page.jsx",
+                                lineNumber: 197,
+                                columnNumber: 25
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/app/lista/page.jsx",
+                        lineNumber: 183,
+                        columnNumber: 21
                     }, this),
                     documents?.map((document, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             style: cardStyle,
@@ -335,7 +500,7 @@ function DocumentSearch() {
                                                     children: key.charAt(0).toUpperCase() + key.slice(1)
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/lista/page.jsx",
-                                                    lineNumber: 153,
+                                                    lineNumber: 212,
                                                     columnNumber: 41
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -345,13 +510,13 @@ function DocumentSearch() {
                                                     style: inputStyle
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/lista/page.jsx",
-                                                    lineNumber: 154,
+                                                    lineNumber: 213,
                                                     columnNumber: 41
                                                 }, this)
                                             ]
                                         }, key, true, {
                                             fileName: "[project]/src/app/lista/page.jsx",
-                                            lineNumber: 152,
+                                            lineNumber: 211,
                                             columnNumber: 37
                                         }, this);
                                     }),
@@ -368,7 +533,7 @@ function DocumentSearch() {
                                                 children: "Actualizar"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/lista/page.jsx",
-                                                lineNumber: 164,
+                                                lineNumber: 223,
                                                 columnNumber: 37
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -377,19 +542,19 @@ function DocumentSearch() {
                                                 children: "Cancelar"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/lista/page.jsx",
-                                                lineNumber: 165,
+                                                lineNumber: 224,
                                                 columnNumber: 37
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/lista/page.jsx",
-                                        lineNumber: 163,
+                                        lineNumber: 222,
                                         columnNumber: 33
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/lista/page.jsx",
-                                lineNumber: 148,
+                                lineNumber: 207,
                                 columnNumber: 29
                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 children: [
@@ -405,7 +570,7 @@ function DocumentSearch() {
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/lista/page.jsx",
-                                        lineNumber: 170,
+                                        lineNumber: 229,
                                         columnNumber: 33
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -416,7 +581,7 @@ function DocumentSearch() {
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/lista/page.jsx",
-                                        lineNumber: 171,
+                                        lineNumber: 230,
                                         columnNumber: 33
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -427,7 +592,7 @@ function DocumentSearch() {
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/lista/page.jsx",
-                                        lineNumber: 172,
+                                        lineNumber: 231,
                                         columnNumber: 33
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -438,7 +603,7 @@ function DocumentSearch() {
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/lista/page.jsx",
-                                        lineNumber: 173,
+                                        lineNumber: 232,
                                         columnNumber: 33
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -449,7 +614,7 @@ function DocumentSearch() {
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/lista/page.jsx",
-                                        lineNumber: 174,
+                                        lineNumber: 233,
                                         columnNumber: 33
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -460,7 +625,7 @@ function DocumentSearch() {
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/lista/page.jsx",
-                                        lineNumber: 175,
+                                        lineNumber: 234,
                                         columnNumber: 33
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -471,7 +636,7 @@ function DocumentSearch() {
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/lista/page.jsx",
-                                        lineNumber: 176,
+                                        lineNumber: 235,
                                         columnNumber: 33
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -483,24 +648,24 @@ function DocumentSearch() {
                                         children: "Editar"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/lista/page.jsx",
-                                        lineNumber: 177,
+                                        lineNumber: 236,
                                         columnNumber: 33
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/lista/page.jsx",
-                                lineNumber: 169,
+                                lineNumber: 228,
                                 columnNumber: 29
                             }, this)
-                        }, index, false, {
+                        }, document.id || index, false, {
                             fileName: "[project]/src/app/lista/page.jsx",
-                            lineNumber: 146,
+                            lineNumber: 205,
                             columnNumber: 21
                         }, this))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/lista/page.jsx",
-                lineNumber: 141,
+                lineNumber: 177,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -512,7 +677,7 @@ function DocumentSearch() {
                 children: [
                     isLoading && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$loading$2f$index$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                         fileName: "[project]/src/app/lista/page.jsx",
-                        lineNumber: 185,
+                        lineNumber: 244,
                         columnNumber: 31
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -533,7 +698,7 @@ function DocumentSearch() {
                                 }
                             }, void 0, false, {
                                 fileName: "[project]/src/app/lista/page.jsx",
-                                lineNumber: 187,
+                                lineNumber: 246,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -542,29 +707,29 @@ function DocumentSearch() {
                                 children: "Buscar"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/lista/page.jsx",
-                                lineNumber: 193,
+                                lineNumber: 252,
                                 columnNumber: 21
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/lista/page.jsx",
-                        lineNumber: 186,
+                        lineNumber: 245,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/lista/page.jsx",
-                lineNumber: 184,
+                lineNumber: 243,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/lista/page.jsx",
-        lineNumber: 140,
+        lineNumber: 176,
         columnNumber: 9
     }, this);
 }
-_s(DocumentSearch, "htCZs2ptUV1EacS19+wL4RFQCBU=");
+_s(DocumentSearch, "2HYyjUOY40mKkXM77hm1C0RKlT8=");
 _c = DocumentSearch;
 var _c;
 __turbopack_context__.k.register(_c, "DocumentSearch");
@@ -574,4 +739,4 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 }),
 ]);
 
-//# sourceMappingURL=src_c20be42b._.js.map
+//# sourceMappingURL=src_118570e0._.js.map
