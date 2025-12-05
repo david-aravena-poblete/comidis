@@ -114,6 +114,57 @@ __turbopack_context__.v({
   "item": "lista-module__eAYhBa__item",
 });
 }),
+"[project]/src/app/components/loading/index.jsx [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>__TURBOPACK__default__export__
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/image.js [app-client] (ecmascript)");
+;
+;
+const LoadingSpinner = ()=>{
+    const overlayStyle = {
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        width: '100vw',
+        height: '100vh',
+        backgroundColor: 'rgba(255, 255, 255, 0.8)',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        zIndex: 1000
+    };
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        style: overlayStyle,
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+            src: "/spinner.svg",
+            alt: "Cargando...",
+            width: 100,
+            height: 100,
+            priority: true
+        }, void 0, false, {
+            fileName: "[project]/src/app/components/loading/index.jsx",
+            lineNumber: 19,
+            columnNumber: 7
+        }, ("TURBOPACK compile-time value", void 0))
+    }, void 0, false, {
+        fileName: "[project]/src/app/components/loading/index.jsx",
+        lineNumber: 18,
+        columnNumber: 5
+    }, ("TURBOPACK compile-time value", void 0));
+};
+_c = LoadingSpinner;
+const __TURBOPACK__default__export__ = LoadingSpinner;
+var _c;
+__turbopack_context__.k.register(_c, "LoadingSpinner");
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
+}),
 "[project]/src/app/lista/page.jsx [app-client] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
@@ -126,9 +177,11 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$lista$2f$utils$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/app/lista/utils/index.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$serverless$2f$db$2f$updateDocument$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/serverless/db/updateDocument/index.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$lista$2f$lista$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__ = __turbopack_context__.i("[project]/src/app/lista/lista.module.css [app-client] (css module)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$loading$2f$index$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/app/components/loading/index.jsx [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
 'use client';
+;
 ;
 ;
 ;
@@ -155,9 +208,21 @@ function DocumentSearch() {
         setEditValues({});
     };
     const updateDocument = async ()=>{
-        await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$serverless$2f$db$2f$updateDocument$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["updateFirebaseDocument"])("ingresos", editValues.id, editValues);
-        setEditingIndex(null);
-        setEditValues({});
+        setIsLoading(true);
+        try {
+            await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$serverless$2f$db$2f$updateDocument$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["updateFirebaseDocument"])("ingresos", editValues.id, editValues);
+            const updatedDocuments = [
+                ...documents
+            ];
+            updatedDocuments[editingIndex] = editValues;
+            setDocuments(updatedDocuments);
+        } catch (error) {
+            console.error("Error al actualizar el documento:", error);
+        } finally{
+            setIsLoading(false);
+            setEditingIndex(null);
+            setEditValues({});
+        }
     };
     const handleChange = (e)=>{
         const value = e.target.value;
@@ -213,87 +278,12 @@ function DocumentSearch() {
                                             children: "Nombre"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/lista/page.jsx",
-                                            lineNumber: 88,
+                                            lineNumber: 100,
                                             columnNumber: 11
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                                             name: "nombre",
                                             value: editValues.nombre,
-                                            onChange: handleEditChange,
-                                            className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$lista$2f$lista$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].item
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/app/lista/page.jsx",
-                                            lineNumber: 89,
-                                            columnNumber: 11
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/src/app/lista/page.jsx",
-                                    lineNumber: 87,
-                                    columnNumber: 9
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                            children: "Peso"
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/app/lista/page.jsx",
-                                            lineNumber: 92,
-                                            columnNumber: 11
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                            name: "peso",
-                                            value: editValues.peso,
-                                            onChange: handleEditChange,
-                                            className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$lista$2f$lista$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].item
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/app/lista/page.jsx",
-                                            lineNumber: 93,
-                                            columnNumber: 11
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/src/app/lista/page.jsx",
-                                    lineNumber: 91,
-                                    columnNumber: 9
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                            children: "Precio publico"
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/app/lista/page.jsx",
-                                            lineNumber: 96,
-                                            columnNumber: 11
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                            name: "precioPublico",
-                                            value: editValues.precioPublico,
-                                            onChange: handleEditChange,
-                                            className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$lista$2f$lista$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].item
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/app/lista/page.jsx",
-                                            lineNumber: 97,
-                                            columnNumber: 11
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/src/app/lista/page.jsx",
-                                    lineNumber: 95,
-                                    columnNumber: 9
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                            children: "Precio por 5 sacos"
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/app/lista/page.jsx",
-                                            lineNumber: 100,
-                                            columnNumber: 11
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                            name: "preciox5sacos",
-                                            value: editValues.preciox5sacos,
                                             onChange: handleEditChange,
                                             className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$lista$2f$lista$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].item
                                         }, void 0, false, {
@@ -310,15 +300,15 @@ function DocumentSearch() {
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                            children: "Precio por 10 sacos"
+                                            children: "Peso"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/lista/page.jsx",
                                             lineNumber: 104,
                                             columnNumber: 11
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                            name: "preciox10sacos",
-                                            value: editValues.preciox10sacos,
+                                            name: "peso",
+                                            value: editValues.peso,
                                             onChange: handleEditChange,
                                             className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$lista$2f$lista$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].item
                                         }, void 0, false, {
@@ -335,15 +325,15 @@ function DocumentSearch() {
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                            children: "Precio por 15 sacos"
+                                            children: "Precio publico"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/lista/page.jsx",
                                             lineNumber: 108,
                                             columnNumber: 11
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                            name: "preciox15sacos",
-                                            value: editValues.preciox15sacos,
+                                            name: "precioPublico",
+                                            value: editValues.precioPublico,
                                             onChange: handleEditChange,
                                             className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$lista$2f$lista$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].item
                                         }, void 0, false, {
@@ -360,10 +350,85 @@ function DocumentSearch() {
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                            children: "Cantidad"
+                                            children: "Precio por 5 sacos"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/lista/page.jsx",
                                             lineNumber: 112,
+                                            columnNumber: 11
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                            name: "preciox5sacos",
+                                            value: editValues.preciox5sacos,
+                                            onChange: handleEditChange,
+                                            className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$lista$2f$lista$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].item
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/lista/page.jsx",
+                                            lineNumber: 113,
+                                            columnNumber: 11
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/src/app/lista/page.jsx",
+                                    lineNumber: 111,
+                                    columnNumber: 9
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                            children: "Precio por 10 sacos"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/lista/page.jsx",
+                                            lineNumber: 116,
+                                            columnNumber: 11
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                            name: "preciox10sacos",
+                                            value: editValues.preciox10sacos,
+                                            onChange: handleEditChange,
+                                            className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$lista$2f$lista$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].item
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/lista/page.jsx",
+                                            lineNumber: 117,
+                                            columnNumber: 11
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/src/app/lista/page.jsx",
+                                    lineNumber: 115,
+                                    columnNumber: 9
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                            children: "Precio por 15 sacos"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/lista/page.jsx",
+                                            lineNumber: 120,
+                                            columnNumber: 11
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                            name: "preciox15sacos",
+                                            value: editValues.preciox15sacos,
+                                            onChange: handleEditChange,
+                                            className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$lista$2f$lista$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].item
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/lista/page.jsx",
+                                            lineNumber: 121,
+                                            columnNumber: 11
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/src/app/lista/page.jsx",
+                                    lineNumber: 119,
+                                    columnNumber: 9
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                            children: "Cantidad"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/lista/page.jsx",
+                                            lineNumber: 124,
                                             columnNumber: 11
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -375,13 +440,13 @@ function DocumentSearch() {
                                             }
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/lista/page.jsx",
-                                            lineNumber: 113,
+                                            lineNumber: 125,
                                             columnNumber: 11
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/lista/page.jsx",
-                                    lineNumber: 111,
+                                    lineNumber: 123,
                                     columnNumber: 9
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -396,7 +461,7 @@ function DocumentSearch() {
                                             children: "Actualizar"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/lista/page.jsx",
-                                            lineNumber: 116,
+                                            lineNumber: 128,
                                             columnNumber: 11
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -404,13 +469,13 @@ function DocumentSearch() {
                                             children: "Cancelar"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/lista/page.jsx",
-                                            lineNumber: 117,
+                                            lineNumber: 129,
                                             columnNumber: 11
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/lista/page.jsx",
-                                    lineNumber: 115,
+                                    lineNumber: 127,
                                     columnNumber: 9
                                 }, this)
                             ]
@@ -424,7 +489,7 @@ function DocumentSearch() {
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/lista/page.jsx",
-                                    lineNumber: 122,
+                                    lineNumber: 134,
                                     columnNumber: 9
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -435,7 +500,7 @@ function DocumentSearch() {
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/lista/page.jsx",
-                                    lineNumber: 123,
+                                    lineNumber: 135,
                                     columnNumber: 9
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -446,7 +511,7 @@ function DocumentSearch() {
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/lista/page.jsx",
-                                    lineNumber: 124,
+                                    lineNumber: 136,
                                     columnNumber: 9
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -457,7 +522,7 @@ function DocumentSearch() {
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/lista/page.jsx",
-                                    lineNumber: 125,
+                                    lineNumber: 137,
                                     columnNumber: 9
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -468,7 +533,7 @@ function DocumentSearch() {
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/lista/page.jsx",
-                                    lineNumber: 126,
+                                    lineNumber: 138,
                                     columnNumber: 9
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -479,7 +544,7 @@ function DocumentSearch() {
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/lista/page.jsx",
-                                    lineNumber: 127,
+                                    lineNumber: 139,
                                     columnNumber: 9
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -492,7 +557,7 @@ function DocumentSearch() {
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/lista/page.jsx",
-                                    lineNumber: 128,
+                                    lineNumber: 140,
                                     columnNumber: 9
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -500,19 +565,19 @@ function DocumentSearch() {
                                     children: "Editar"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/lista/page.jsx",
-                                    lineNumber: 130,
+                                    lineNumber: 142,
                                     columnNumber: 9
                                 }, this)
                             ]
                         }, void 0, true)
                     }, index, false, {
                         fileName: "[project]/src/app/lista/page.jsx",
-                        lineNumber: 83,
+                        lineNumber: 95,
                         columnNumber: 3
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/src/app/lista/page.jsx",
-                lineNumber: 76,
+                lineNumber: 88,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -521,47 +586,54 @@ function DocumentSearch() {
                     padding: "1rem",
                     backgroundColor: "#fff"
                 },
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
-                    onSubmit: handleSubmitFormSearchProducts,
-                    children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                            type: "text",
-                            placeholder: "Buscar...",
-                            onChange: handleChange,
-                            name: "searchTerm",
-                            style: {
-                                width: "100%",
-                                padding: "0.5rem",
-                                fontSize: "1rem"
-                            }
-                        }, void 0, false, {
-                            fileName: "[project]/src/app/lista/page.jsx",
-                            lineNumber: 147,
-                            columnNumber: 13
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                            type: "submit",
-                            value: "buscar"
-                        }, void 0, false, {
-                            fileName: "[project]/src/app/lista/page.jsx",
-                            lineNumber: 158,
-                            columnNumber: 13
-                        }, this)
-                    ]
-                }, void 0, true, {
-                    fileName: "[project]/src/app/lista/page.jsx",
-                    lineNumber: 146,
-                    columnNumber: 11
-                }, this)
-            }, void 0, false, {
+                children: [
+                    isLoading && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$loading$2f$index$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
+                        fileName: "[project]/src/app/lista/page.jsx",
+                        lineNumber: 158,
+                        columnNumber: 25
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
+                        onSubmit: handleSubmitFormSearchProducts,
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                type: "text",
+                                placeholder: "Buscar...",
+                                onChange: handleChange,
+                                name: "searchTerm",
+                                style: {
+                                    width: "100%",
+                                    padding: "0.5rem",
+                                    fontSize: "1rem"
+                                }
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/lista/page.jsx",
+                                lineNumber: 160,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                type: "submit",
+                                value: "buscar"
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/lista/page.jsx",
+                                lineNumber: 171,
+                                columnNumber: 13
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/app/lista/page.jsx",
+                        lineNumber: 159,
+                        columnNumber: 11
+                    }, this)
+                ]
+            }, void 0, true, {
                 fileName: "[project]/src/app/lista/page.jsx",
-                lineNumber: 141,
+                lineNumber: 153,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/lista/page.jsx",
-        lineNumber: 70,
+        lineNumber: 82,
         columnNumber: 5
     }, this);
 }
@@ -575,4 +647,4 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 }),
 ]);
 
-//# sourceMappingURL=src_b233b470._.js.map
+//# sourceMappingURL=src_ba9409de._.js.map
