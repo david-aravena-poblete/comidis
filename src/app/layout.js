@@ -1,6 +1,6 @@
 
 import { Geist, Geist_Mono } from "next/font/google";
-import Navbar from './components/Navbar'; // Importamos el nuevo componente
+import AuthGate from "./components/authGate";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -20,22 +20,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body 
-        style={{
-          display:"flex", 
-          flexDirection:'column', 
-          margin: 0,
-          height: '100vh'
-        }} 
-        className={`${geistSans.variable} ${geistMono.variable}`}>
-        <div style={{ width: '100vw', height: 'auto' }}>
-          <Navbar />
-        </div>
-        <main style={{ width: '100vw', flexGrow: "1", boxSizing: 'border-box' }}>
-          {children}
-        </main>
-      </body>
-    </html>
-  );
+        <html lang="es">
+              <body style={{ display: "flex", flexDirection: "column", margin: 0, height: "100vh" }}>
+                              <AuthGate>
+                                        {children}
+                                                </AuthGate>
+                                                      </body>
+                                                          </html>
+                                                            
+  )
 }
