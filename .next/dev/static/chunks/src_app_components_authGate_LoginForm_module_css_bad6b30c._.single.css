@@ -1,0 +1,52 @@
+/* [project]/src/app/components/authGate/LoginForm.module.css [app-client] (css) */
+.LoginForm-module__7rILdG__loginForm {
+  background-color: #f0f2f5;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  display: flex;
+}
+
+.LoginForm-module__7rILdG__form {
+  background: #fff;
+  border-radius: 8px;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+  display: flex;
+  box-shadow: 0 4px 8px #0000001a;
+}
+
+.LoginForm-module__7rILdG__title {
+  color: #333;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.LoginForm-module__7rILdG__input {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  padding: .75rem;
+  font-size: 1rem;
+}
+
+.LoginForm-module__7rILdG__button {
+  color: #fff;
+  cursor: pointer;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  padding: .75rem;
+  font-size: 1rem;
+  transition: background-color .3s;
+}
+
+.LoginForm-module__7rILdG__button:hover {
+  background-color: #0056b3;
+}
+
+/*# sourceMappingURL=src_app_components_authGate_LoginForm_module_css_bad6b30c._.single.css.map*/
