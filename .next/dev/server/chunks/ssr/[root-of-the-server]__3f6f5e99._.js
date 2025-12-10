@@ -128,17 +128,17 @@ function RootLayout({ children }) {
             }, void 0, false, {
                 fileName: "[project]/src/app/layout.js",
                 lineNumber: 25,
-                columnNumber: 31
+                columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/src/app/layout.js",
             lineNumber: 24,
-            columnNumber: 15
+            columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/app/layout.js",
         lineNumber: 23,
-        columnNumber: 9
+        columnNumber: 5
     }, this);
 }
 }),

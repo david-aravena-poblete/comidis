@@ -20,13 +20,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-        <html lang="es">
-              <body style={{ display: "flex", flexDirection: "column", margin: 0, height: "100vh" }}>
-                              <AuthGate>
-                                        {children}
-                                                </AuthGate>
-                                                      </body>
-                                                          </html>
+    <html lang="es">
+      <body style={{ display: "flex", flexDirection: "column", margin: 0, height: "100vh" }}>
+        <AuthGate>
+          {children}
+        </AuthGate>
+      </body>
+    </html>
                                                             
   )
 }

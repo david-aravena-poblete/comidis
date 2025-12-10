@@ -203,16 +203,33 @@ export default function ListDocuments() {
                                             <th style={{ padding: '4px', border: '1px solid #ddd', textAlign: 'left' }}>Cant.</th>
                                             <th style={{ padding: '4px', border: '1px solid #ddd', textAlign: 'left' }}>Detalle</th>
                                             <th style={{ padding: '4px', border: '1px solid #ddd', textAlign: 'right' }}>Unitario</th>
-                                            <th style={{ padding: '4px', border: '1px solid #ddd', textAlign: 'right' }}>Total</th>
+                                            <th style={{ padding: '4px', border: '1px solid #ddd', textAlign: 'right' }}>Unitario sin iva</th>
+
+                                            <th style={{ padding: '4px', border: '1px solid #ddd', textAlign: 'right' }}>Total con iva</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         {(pedido.products || []).map((item, index) => (
                                             <tr key={index}>
                                                 <td style={{ padding: '4px', border: '1px solid #ddd' }}>{item.quantity}</td>
-                                                <td style={{ padding: '4px', border: '1px solid #ddd' }}>{`${item.product.nombre} ${item.product.peso}Kg`}</td>
-                                                <td style={{ padding: '4px', border: '1px solid #ddd', textAlign: 'right' }}>{formatCurrency(item.product.selectedPrice.price)}</td>
-                                                <td style={{ padding: '4px', border: '1px solid #ddd', textAlign: 'right' }}>{formatCurrency(item.product.selectedPrice.price * item.quantity)}</td>
+                                                <td style={{ padding: '4px', border: '1px solid #ddd' }}>
+                                                    {`${item.product.nombre} ${item.product.peso}Kg`}
+                                                </td>
+
+                                                {/* Precio unitario original */}
+                                                <td style={{ padding: '4px', border: '1px solid #ddd', textAlign: 'right' }}>
+                                                    {formatCurrency(item.product.selectedPrice.price)}
+                                                </td>
+
+                                                {/* Precio unitario sin IVA (19% menos) */}
+                                                <td style={{ padding: '4px', border: '1px solid #ddd', textAlign: 'right' }}>
+                                                    {formatCurrency(item.product.selectedPrice.price * 0.81)}
+                                                </td>
+
+                                                {/* Total normal */}
+                                                <td style={{ padding: '4px', border: '1px solid #ddd', textAlign: 'right' }}>
+                                                    {formatCurrency(item.product.selectedPrice.price * item.quantity)}
+                                                </td>
                                             </tr>
                                         ))}
                                     </tbody>
